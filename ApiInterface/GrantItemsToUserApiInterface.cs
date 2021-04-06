@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 
-public class GrantItemToUserApiInterface
+public class GrantItemsToUserApiInterface
 {
-    public static string functionName = "GrantItemToUser";
+    public static string functionName = "GrantItemsToUser";
 }
 
-public class GrantItemToUserApiRequest
+public class GrantItemsToUserApiRequest
 {
     /// <summary>
     /// 付与するアイテムのアイテムIDリスト
