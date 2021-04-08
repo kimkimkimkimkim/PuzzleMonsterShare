@@ -1,11 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using PM.Enum.Data;
+
 /// <summary>
 /// ユーザーデータに関するUtil
 /// </summary>
 public static class UserDataUtil
 {
+    /// <summary>
+    /// ユーザーデータのIdを作成して返す
+    /// </summary>
+    public static string CreateUserDataId()
+    {
+        return Guid.NewGuid().ToString();
+    }
+
     /// <summary>
     /// パラム名とその値のJsonからユーザーデータを返します
     /// </summary>
