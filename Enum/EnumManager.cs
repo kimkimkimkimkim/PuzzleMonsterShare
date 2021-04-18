@@ -86,6 +86,7 @@ namespace PM
             {
                 None,
                 Monster,
+                MonsterAttribute,
             }
         }
 
@@ -195,7 +196,22 @@ namespace PM
             /// </summary>
             public enum QuestType
             {
-                Normal,
+                Normal = 1,
+            }
+        }
+
+        namespace Monster
+        {
+            /// <summary>
+            /// 属性
+            /// </summary>
+            public enum MonsterAttribute
+            {
+                Red = 1,
+                Blue = 2,
+                Green = 3,
+                Yellow = 4,
+                Purple = 5,
             }
         }
     }
