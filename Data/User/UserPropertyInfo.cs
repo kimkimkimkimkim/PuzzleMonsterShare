@@ -34,4 +34,13 @@ public static class UserPropertyExtensions
     {
         return list.FirstOrDefault(u => u.propertyId == (int)type);
     }
+
+    /// <summary>
+    /// 指定したユーザー資産の所持数を返す
+    /// </summary>
+    public static int GetNum(this List<UserPropertyInfo> list, PropertyType type)
+    {
+        var userProperty = list.GetOrDefault(type);
+        return userProperty == null ? 0 : userProperty.num;
+    }
 }
