@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 
-public class UpdateUserMonsterFormationListApiInterface
+public class UpdateUserMonsterFormationApiInterface
 {
-    public static string functionName = "UpdateUserMonsterFormationList";
+    public static string functionName = "UpdateUserMonsterFormation";
 }
 
 // APIリクエストの変数はプロパティにしてはいけない！(シリアライズの関係)
-public class UpdateUserMonsterFormationListApiRequest : PMApiRequestBase
+public class UpdateUserMonsterFormationApiRequest : PMApiRequestBase
 {
     /// <summary>
     /// パーティID
@@ -19,6 +19,6 @@ public class UpdateUserMonsterFormationListApiRequest : PMApiRequestBase
     public List<string> userMonsterIdList;
 }
 
-public class UpdateUserMonsterFormationListApiResponse : PMApiResponseBase
+public class UpdateUserMonsterFormationApiResponse : PMApiResponseBase
 {
 }
