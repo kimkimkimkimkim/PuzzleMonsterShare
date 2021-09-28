@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PM
 {
@@ -43,6 +44,27 @@ namespace PM
                 None,
                 Win,
                 Lose,
+                Continue,
+            }
+
+            /// <summary>
+            /// ピースの色
+            /// </summary>
+            public enum PieceColor
+            {
+                TransParent,
+                LightBrown,
+                DarkBrown,
+            }
+
+            /// <summary>
+            /// ピースのステータス
+            /// </summary>
+            public enum PieceStatus
+            {
+                None,
+                Free,
+                Normal,
             }
         }
 
@@ -84,9 +106,30 @@ namespace PM
             /// </summary>
             public enum IconImageType
             {
-                None,
-                Monster,
-                MonsterAttribute,
+                /// <summary>
+                /// 初期値
+                /// </summary>
+                None = 0,
+
+                /// <summary>
+                /// 仮想通貨
+                /// </summary>
+                VirtualCurrency = 1,
+
+                /// <summary>
+                /// モンスター
+                /// </summary>
+                Monster = 2,
+
+                /// <summary>
+                /// 資産
+                /// </summary>
+                Property = 3,
+
+                /// <summary>
+                /// モンスター属性
+                /// </summary>
+                MonsterAttribute = 4,
             }
         }
 
@@ -111,16 +154,27 @@ namespace PM
                 /// <summary>
                 /// モンスター
                 /// </summary>
-                Monster,
+                Monster = 2,
 
                 /// <summary>
                 /// 資産
                 /// </summary>
-                Property,
+                Property = 3,
+
+                /// <summary>
+                /// ドロップテーブル
+                /// </summary>
+                DropTable = 4,
+
+                /// <summary>
+                /// バンドル
+                /// </summary>
+                Bundle = 5,
             }
 
             /// <summary>
             /// 仮想通貨タイプ
+            /// VirtualCurrencyMBのIDと対応
             /// </summary>
             public enum VirtualCurrencyType
             {
@@ -150,6 +204,47 @@ namespace PM
                 /// モンスター経験値
                 /// </summary>
                 MonsterExp = 2,
+            }
+
+            /// <summary>
+            /// アイコン色タイプ
+            /// </summary>
+            public enum IconColorType
+            {
+                None = 0,
+                Red = 1,
+                Blue = 2,
+                Green = 3,
+                Yellow = 4,
+                Purple = 5,
+            }
+
+            /// <summary>
+            /// テキスト色タイプ
+            /// </summary>
+            public enum TextColorType
+            {
+                White = 0,
+                Focus = 1,
+            }
+
+            /// <summary>
+            /// テキストカラー拡張
+            /// </summary>
+            public static class TextColorTypeExtends
+            {
+                private static readonly Dictionary<TextColorType, string> ColorDictionary = new Dictionary<TextColorType, string>() {
+                    { TextColorType.White, "#FFFFFF" },
+                    { TextColorType.Focus, "#F6E19C" },
+                };
+
+                /// <summary>
+                /// テキストカラーを取得
+                /// </summary>
+                public static string Color(this TextColorType textColorType)
+                {
+                    return ColorDictionary.ContainsKey(textColorType) ? ColorDictionary[textColorType] : "#FFFFFF";
+                }
             }
         }
 
