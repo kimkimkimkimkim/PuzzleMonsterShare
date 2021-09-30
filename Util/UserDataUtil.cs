@@ -118,8 +118,8 @@ public static class UserDataUtil
             {"grade",customData.grade.ToString()},
             {"hp",customData.hp.ToString()},
             {"attack",customData.attack.ToString()},
-            // {"heal",customData.heal.ToString()}, // TODO: 何故か6要素以上のDictionaryは更新されない
-        };
+            {"heal",customData.heal.ToString()},
+        }.Where(kvp => kvp.Value != "0").ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
         return dict;
     }
 }
