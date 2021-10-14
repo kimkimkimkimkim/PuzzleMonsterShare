@@ -21,4 +21,8 @@ public class UpdateUserMonsterFormationApiRequest : PMApiRequestBase
 
 public class UpdateUserMonsterFormationApiResponse : PMApiResponseBase
 {
+    /// <summary>
+    /// ユーザーパーティ情報
+    /// </summary>
+    public UserMonsterPartyInfo userMonsterParty;
 }
