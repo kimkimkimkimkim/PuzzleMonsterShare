@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 public class UserMonsterPartyInfo
 {
@@ -28,5 +29,16 @@ public class UserMonsterPartyInfo
             partyIndex = partyIndex,
             userMonsterIdList = new List<string>(userMonsterIdList),
         };
+    }
+
+    /// <summary>
+    /// 指定したユーザーパーティ情報を等しいか返す
+    /// </summary>
+    public bool IsSame(UserMonsterPartyInfo userMonsterParty)
+    {
+        if (id != userMonsterParty.id) return false;
+        if (partyIndex != userMonsterParty.partyIndex) return false;
+        if (!userMonsterIdList.SequenceEqual(userMonsterParty.userMonsterIdList)) return false;
+        return true;
     }
 }
