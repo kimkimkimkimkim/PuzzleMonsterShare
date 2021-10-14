@@ -16,4 +16,17 @@ public class UserMonsterPartyInfo
     /// ユーザーモンスターIDリスト（空の場合はnullが入っている）
     /// </summary>
     public List<string> userMonsterIdList { get; set; }
+
+    /// <summary>
+    /// コピーを作成する
+    /// </summary>
+    public UserMonsterPartyInfo Clone()
+    {
+        return new UserMonsterPartyInfo()
+        {
+            id = id,
+            partyIndex = partyIndex,
+            userMonsterIdList = new List<string>(userMonsterIdList),
+        };
+    }
 }
