@@ -58,5 +58,10 @@ public class ConstManager
         /// 盤面の縦のピース数
         /// </summary>
         public static int BOARD_HEIGHT = 8;
+
+        /// <summary>
+        /// CTの最大値
+        /// </summary>
+        public static float MAX_CT_VALUE = 100.0f;
     }
 }
