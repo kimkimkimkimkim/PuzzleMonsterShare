@@ -66,6 +66,14 @@ namespace PM
                 Free,
                 Normal,
             }
+            
+            /// <summary>
+            /// 状態異常タイプ
+            /// </summary>
+            public enum BattleConditionType
+            {
+                None,
+            }
         }
 
         namespace UI
