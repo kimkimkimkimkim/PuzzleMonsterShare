@@ -32,4 +32,14 @@ public class UserMonsterCustomData
     /// 回復力
     /// </summary>
     public int heal { get; set; }
+
+    /// <summary>
+    /// 防御力
+    /// </summary>
+    public int defense { get; set; }
+
+    /// <summary>
+    /// スピード
+    /// </summary>
+    public int speed { get; set; }
 }

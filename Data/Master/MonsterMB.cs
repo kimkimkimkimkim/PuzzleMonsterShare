@@ -45,6 +45,16 @@ public class MonsterMB : MasterBookBase
     public int level1Heal { get; set; }
 
     /// <summary>
+    /// レベル1での防御力
+    /// </summary>
+    public int level1Defense { get; set; }
+
+    /// <summary>
+    /// レベル1でのスピード
+    /// </summary>
+    public int level1Speed { get; set; }
+
+    /// <summary>
     /// レベル100でのHP
     /// </summary>
     public int level100Hp { get; set; }
@@ -58,4 +68,14 @@ public class MonsterMB : MasterBookBase
     /// レベル100での回復力
     /// </summary>
     public int level100Heal { get; set; }
+
+    /// <summary>
+    /// レベル100での防御力
+    /// </summary>
+    public int level100Defense { get; set; }
+
+    /// <summary>
+    /// レベル100でのスピード
+    /// </summary>
+    public int level100Speed { get; set; }
 }

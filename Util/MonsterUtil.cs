@@ -16,7 +16,15 @@ public static class MonsterUtil
         var healIntercept = monster.level1Heal - healSlope;
         var heal = (int)(healSlope * level + healIntercept);
 
-        return new MonsterStatus (){ hp = hp, attack = attack, heal = heal};
+        var defenseSlope = (float)(monster.level100Defense - monster.level1Defense) / (100 - 1);
+        var defenseIntercept = monster.level1Defense - defenseSlope;
+        var defense = (int)(defenseSlope * level + defenseIntercept);
+
+        var speedSlope = (float)(monster.level100Speed - monster.level1Speed) / (100 - 1);
+        var speedIntercept = monster.level1Speed - speedSlope;
+        var speed = (int)(speedSlope * level + speedIntercept);
+
+        return new MonsterStatus (){ hp = hp, attack = attack, heal = heal, defense = defense, speed = speed};
     }
 
 }
@@ -26,4 +34,6 @@ public class MonsterStatus {
     public int hp { get; set; }
     public int attack { get; set; }
     public int heal { get; set; }
+    public int defense { get; set; }
+    public int speed { get; set; }
 }
