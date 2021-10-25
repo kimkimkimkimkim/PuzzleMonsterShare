@@ -68,6 +68,18 @@ namespace PM
             }
             
             /// <summary>
+            /// ログタイプ
+            /// </summary>
+            public enum BattleLogType
+            {
+                StartAction,
+                Attack,
+                TakeDamage,
+                MoveWave,
+                Result,
+            }
+            
+            /// <summary>
             /// 状態異常タイプ
             /// </summary>
             public enum BattleConditionType
