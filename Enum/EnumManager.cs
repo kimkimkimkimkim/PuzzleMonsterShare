@@ -76,6 +76,7 @@ namespace PM
                 Attack,
                 TakeDamage,
                 MoveWave,
+                MoveTurn,
                 Result,
             }
             
