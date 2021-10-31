@@ -72,9 +72,9 @@ namespace PM
             /// </summary>
             public enum BattleLogType
             {
-                StartAction,
-                Attack,
+                StartAttack,
                 TakeDamage,
+                Die,
                 MoveWave,
                 MoveTurn,
                 Result,
