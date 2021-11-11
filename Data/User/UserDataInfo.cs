@@ -31,4 +31,9 @@ public class UserDataInfo
     /// ランク
     /// </summary>
     public int rank { get; set; }
+
+    /// <summary>
+    /// ユーザーバトル結果リスト
+    /// </summary>
+    public List<UserBattleResultInfo> userBattleResultList { get; set; }
 }

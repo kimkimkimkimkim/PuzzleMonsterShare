@@ -22,7 +22,7 @@ public class GetBattleResultApiRequest : PMApiRequestBase
 public class GetBattleResultApiResponse : PMApiResponseBase
 {
     /// <summary>
-    /// バトルログリスト
+    /// ユーザーバトル結果情報
     /// </summary>
-    public List<BattleLogInfo> battleLogList;
+    public UserBattleResultInfo userBattleResult;
 }
