@@ -10,17 +10,17 @@ public class UserDataInfo
     /// <summary>
     /// ユーザーモンスターパーティーリスト
     /// </summary>
-    public List<UserMonsterPartyInfo> userMonsterPartyList { get; set; }
+    public List<UserMonsterPartyInfo> userMonsterPartyList { get; set; } = new List<UserMonsterPartyInfo>();
 
     /// <summary>
     /// 前回のログイン日時
     /// </summary>
-    public DateTime lastLoginDateTime { get; set; }
+    public DateTime lastLoginDateTime { get; set; } = DateTimeUtil.Epoch;
 
     /// <summary>
     /// 前回スタミナ計算を行った日時
     /// </summary>
-    public DateTime lastCalculatedStaminaDateTime { get; set; }
+    public DateTime lastCalculatedStaminaDateTime { get; set; } = DateTimeUtil.Epoch;
 
     /// <summary>
     /// スタミナ
@@ -35,5 +35,5 @@ public class UserDataInfo
     /// <summary>
     /// ユーザーバトル結果リスト
     /// </summary>
-    public List<UserBattleResultInfo> userBattleResultList { get; set; }
+    public List<UserBattleResultInfo> userBattleResultList { get; set; } = new List<UserBattleResultInfo>();
 }
