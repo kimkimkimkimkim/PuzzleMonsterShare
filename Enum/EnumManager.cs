@@ -307,7 +307,7 @@ namespace PM
                 lastCalculatedStaminaDateTime,
                 stamina,
                 rank,
-                userBattleResultList,
+                userBattleList,
             }
         }
 

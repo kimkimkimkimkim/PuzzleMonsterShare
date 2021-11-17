@@ -33,7 +33,7 @@ public class UserDataInfo
     public int rank { get; set; }
 
     /// <summary>
-    /// ユーザーバトル結果リスト
+    /// ユーザーバトルリスト
     /// </summary>
-    public List<UserBattleResultInfo> userBattleResultList { get; set; } = new List<UserBattleResultInfo>();
+    public List<UserBattleInfo> userBattleList { get; set; } = new List<UserBattleInfo>();
 }

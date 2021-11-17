@@ -1,12 +1,10 @@
-using System.Collections.Generic;
-
-public class GetBattleResultApiInterface
+public class ExecuteBattleApiInterface
 {
-    public static string functionName = "GetBattleResult";
+    public static string functionName = "ExecuteBattle";
 }
 
 // APIリクエストの変数はプロパティにしてはいけない！(シリアライズの関係)
-public class GetBattleResultApiRequest : PMApiRequestBase
+public class ExecuteBattleApiRequest : PMApiRequestBase
 {
     /// <summary>
     /// ユーザーパーティID
@@ -19,10 +17,10 @@ public class GetBattleResultApiRequest : PMApiRequestBase
     public long questId;
 }
 
-public class GetBattleResultApiResponse : PMApiResponseBase
+public class ExecuteBattleApiResponse : PMApiResponseBase
 {
     /// <summary>
-    /// ユーザーバトル結果情報
+    /// ユーザーバトル情報
     /// </summary>
-    public UserBattleResultInfo userBattleResult;
+    public UserBattleInfo userBattle;
 }
