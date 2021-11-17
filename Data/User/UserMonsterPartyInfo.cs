@@ -1,13 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-public class UserMonsterPartyInfo
+public class UserMonsterPartyInfo: UserDataBase
 {
-    /// <summary>
-    /// ID
-    /// </summary>
-    public string id { get; set; }
-
     /// <summary>
     /// パーティーインデックス（0 ~ MAX_PARTY_NUM - 1）
     /// </summary>

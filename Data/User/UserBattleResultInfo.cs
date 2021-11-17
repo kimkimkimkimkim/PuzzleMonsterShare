@@ -4,7 +4,7 @@ using PM.Enum.Battle;
 /// <summary>
 /// ユーザーバトル結果情報
 /// </summary>
-public class UserBattleResultInfo
+public class UserBattleResultInfo: UserDataBase
 {
     /// <summary>
     /// バトルログリスト

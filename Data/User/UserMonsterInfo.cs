@@ -1,13 +1,8 @@
 ﻿/// <summary>
 /// ユーザーのモンスター情報
 /// </summary>
-public class UserMonsterInfo
+public class UserMonsterInfo: InventoryDataBase
 {
-    /// <summary>
-    /// PlayFabのItemInstanceID
-    /// </summary>
-    public string id { get; set; }
-
     /// <summary>
     /// モンスターID
     /// </summary>

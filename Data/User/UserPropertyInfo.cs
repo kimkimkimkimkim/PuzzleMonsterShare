@@ -4,13 +4,8 @@ using PM.Enum.Item;
 /// <summary>
 /// ユーザー資産情報
 /// </summary>
-public class UserPropertyInfo
+public class UserPropertyInfo: InventoryDataBase
 {
-    /// <summary>
-    /// PlayFabのItemInstanceID
-    /// </summary>
-    public string id { get; set; }
-
     /// <summary>
     /// 資産ID
     /// </summary>
