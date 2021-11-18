@@ -31,4 +31,14 @@ public class QuestMB : MasterBookBase
     /// クエストウェーブIDリスト
     /// </summary>
     public List<long> questWaveIdList { get; set; }
+
+    /// <summary>
+    /// クエストが表示されるのに必要な条件リスト
+    /// </summary>
+    public List<ConditionMI> displayConditionList { get; set; }
+
+    /// <summary>
+    /// クエストに挑戦可能になる条件リスト
+    /// </summary>
+    public List<ConditionMI> canExecuteConditionList { get; set; }
 }

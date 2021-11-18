@@ -1,4 +1,6 @@
 using PM.Enum.Condition;
+using System.Collections.Generic;
+using System.Linq;
 
 public static class ConditionUtil {
     /// <summary>
@@ -11,9 +13,9 @@ public static class ConditionUtil {
         // すべての条件を満たしていればtrueを返す
         return conditionList.All(condition => {
             switch(condition.type) {
-                // 指定クエストをクリアしているか
                 case ConditionType.UpperQuestId:
-                    return userData.userBattleList.Any(u => u.questId == condition.intValue && u.completedTime <= DateTimeUtil.Epoch);
+                    // 指定クエスト以上進んでいるか
+                    return userData.userBattleList.Any(u => u.questId == condition.valueInt && u.completedDate > DateTimeUtil.Epoch);
                 default:
                     return true;
             }

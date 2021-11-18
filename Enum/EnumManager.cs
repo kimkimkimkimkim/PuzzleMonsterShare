@@ -344,7 +344,8 @@ namespace PM
             /// </summary>
             public enum ConditionType
             {
-                UpperQuestId,
+                UpperQuestId = 1,
+                LowerQuestId = 2,
             }
         }
     }
