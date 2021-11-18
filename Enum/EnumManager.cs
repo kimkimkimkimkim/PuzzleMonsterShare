@@ -336,5 +336,16 @@ namespace PM
                 Purple = 5,
             }
         }
+        
+        namespace Condition
+        {
+            /// <summary>
+            /// 条件タイプ
+            /// </summary>
+            public enum ConditionType
+            {
+                UpperQuestId,
+            }
+        }
     }
 }
