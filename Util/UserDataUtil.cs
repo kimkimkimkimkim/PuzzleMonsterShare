@@ -116,11 +116,6 @@ public static class UserDataUtil
             {"level",customData.level.ToString()},
             {"exp",customData.exp.ToString()},
             {"grade",customData.grade.ToString()},
-            {"hp",customData.hp.ToString()},
-            {"attack",customData.attack.ToString()},
-            {"heal",customData.heal.ToString()},
-            {"defense",customData.defense.ToString() },
-            {"speed", customData.speed.ToString() },
         }.Where(kvp => kvp.Value != "0").ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
         return dict;
     }

@@ -17,29 +17,4 @@ public class UserMonsterCustomData
     /// グレード
     /// </summary>
     public int grade { get; set; }
-
-    /// <summary>
-    /// 体力
-    /// </summary>
-    public int hp { get; set; }
-
-    /// <summary>
-    /// 攻撃力
-    /// </summary>
-    public int attack { get; set; }
-
-    /// <summary>
-    /// 回復力
-    /// </summary>
-    public int heal { get; set; }
-
-    /// <summary>
-    /// 防御力
-    /// </summary>
-    public int defense { get; set; }
-
-    /// <summary>
-    /// スピード
-    /// </summary>
-    public int speed { get; set; }
 }
