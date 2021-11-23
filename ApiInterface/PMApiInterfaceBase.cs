@@ -6,8 +6,7 @@ public class PMApiRequestBase
 
 public class PMApiResponseBase
 {
-    public PMErrorCode errorCode;
-    public string message;
+    public PMApiException exception;
 }
 
 public enum PMErrorCode
