@@ -20,7 +20,7 @@ public class ExecuteBattleApiRequest : PMApiRequestBase
 public class ExecuteBattleApiResponse : PMApiResponseBase
 {
     /// <summary>
-    /// ユーザーバトル情報
+    /// ユーザーバトルID
     /// </summary>
-    public UserBattleInfo userBattle;
+    public string userBattleId;
 }
