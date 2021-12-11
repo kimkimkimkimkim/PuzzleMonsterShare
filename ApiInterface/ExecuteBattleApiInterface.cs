@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class ExecuteBattleApiInterface
 {
     public static string functionName = "ExecuteBattle";
@@ -20,7 +22,12 @@ public class ExecuteBattleApiRequest : PMApiRequestBase
 public class ExecuteBattleApiResponse : PMApiResponseBase
 {
     /// <summary>
-    /// ユーザーバトルID
+    /// ユーザーバトル情報
     /// </summary>
-    public string userBattleId;
+    public UserBattleInfo userBattle;
+
+    /// <summary>
+    /// バトルログリスト
+    /// </summary>
+    public List<BattleLogInfo> battleLogList { get; set; }
 }

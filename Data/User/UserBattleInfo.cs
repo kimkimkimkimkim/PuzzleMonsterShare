@@ -18,11 +18,6 @@ public class UserBattleInfo: UserDataBase
     public string userMonsterPartyId { get; set; }
 
     /// <summary>
-    /// バトルログリスト
-    /// </summary>
-    public List<BattleLogInfo> battleLogList { get; set; }
-
-    /// <summary>
     /// 勝敗
     /// </summary>
     public WinOrLose winOrLose { get; set; }
