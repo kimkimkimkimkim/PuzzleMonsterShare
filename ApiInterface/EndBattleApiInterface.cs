@@ -1,4 +1,6 @@
-﻿public class EndBattleApiInterface
+﻿using PM.Enum.Battle;
+
+public class EndBattleApiInterface
 {
     public static string functionName = "EndBattle";
 }
@@ -15,6 +17,11 @@ public class EndBattleApiRequest : PMApiRequestBase
     /// クエストID
     /// </summary>
     public long questId;
+
+    /// <summary>
+    /// 勝敗
+    /// </summary>
+    public WinOrLose winOrLose;
 }
 
 public class EndBattleApiResponse : PMApiResponseBase
