@@ -12,4 +12,14 @@ public class UserVirtualCurrencyInfo
     /// コイン
     /// </summary>
     public int coin { get; set; } = 0;
+
+    /// <summary>
+    /// プレイヤー経験値
+    /// </summary>
+    public int playerExp { get; set; } = 0;
+
+    /// <summary>
+    /// モンスター経験値
+    /// </summary>
+    public int monsterExp { get; set; } = 0;
 }

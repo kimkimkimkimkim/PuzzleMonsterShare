@@ -208,6 +208,16 @@ namespace PM
                 /// コイン
                 /// </summary>
                 CN = 2,
+
+                /// <summary>
+                /// プレイヤー経験値
+                /// </summary>
+                PE = 3,
+
+                /// <summary>
+                /// モンスター経験値
+                /// </summary>
+                ME = 4,
             }
 
             /// <summary>
