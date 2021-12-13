@@ -87,6 +87,74 @@ namespace PM
             {
                 None,
             }
+
+            /// <summary>
+            /// スキル対象タイプ
+            /// </summary>
+            public enum SkillTargetType
+            {
+                /// <summary>
+                /// 自分
+                /// </summary>
+                Myself,
+
+                /// <summary>
+                /// 味方全体
+                /// </summary>
+                PlayerAll,
+
+                /// <summary>
+                /// 敵全体
+                /// </summary>
+                EnemyAll,
+
+                /// <summary>
+                /// 味方全体の中からランダムで1体
+                /// </summary>
+                PlayerAllRandom1,
+
+                /// <summary>
+                /// 敵全体の中からランダムで1体
+                /// </summary>
+                EnemyAllRandom1,
+            }
+
+            /// <summary>
+            /// スキルトリガータイプ
+            /// </summary>
+            public enum SkillTriggerType
+            {
+                /// <summary>
+                /// バトル開始時
+                /// </summary>
+                OnBattleStart,
+            }
+
+            /// <summary>
+            /// スキルタイプ
+            /// </summary>
+            public enum SkillType
+            {
+                /// <summary>
+                /// 攻撃
+                /// </summary>
+                Damage,
+
+                /// <summary>
+                /// 回復
+                /// </summary>
+                Heal,
+
+                /// <summary>
+                /// バフ
+                /// </summary>
+                StatusUp,
+
+                /// <summary>
+                /// デバフ
+                /// </summary>
+                StatusDown,
+            }
         }
 
         namespace UI
