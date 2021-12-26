@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
-using PM.Enum.Battle;
 
 /// <summary>
 /// パッシブスキルマスタ
@@ -21,5 +20,5 @@ public class PassiveSkillMB : MasterBookBase
     /// <summary>
     /// パッシブスキル効果リスト
     /// </summary>
-    public List<PassiveSkillEffectMI> passiveSkillEffectList { get; set; }
+    public List<PassiveSkillEffectMI> effectList { get; set; }
 }

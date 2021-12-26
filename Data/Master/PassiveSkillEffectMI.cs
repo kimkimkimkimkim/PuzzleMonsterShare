@@ -1,4 +1,5 @@
 ﻿using PM.Enum.Battle;
+
 /// <summary>
 /// パッシブスキル効果を扱うためのクラス
 /// </summary>

@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
-using PM.Enum.Battle;
 
 /// <summary>
 /// アルティメットスキルマスタ
@@ -21,5 +20,5 @@ public class UltimateSkillMB : MasterBookBase
     /// <summary>
     /// スキル効果リスト
     /// </summary>
-    public List<SkillEffectMI> skillEffectList { get; set; }
+    public List<UltimateSkillEffectMI> skillEffectList { get; set; }
 }

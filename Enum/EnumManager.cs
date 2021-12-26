@@ -146,14 +146,9 @@ namespace PM
                 Heal,
 
                 /// <summary>
-                /// バフ
+                /// 状態異常
                 /// </summary>
-                StatusUp,
-
-                /// <summary>
-                /// デバフ
-                /// </summary>
-                StatusDown,
+                Condition,
             }
         }
 

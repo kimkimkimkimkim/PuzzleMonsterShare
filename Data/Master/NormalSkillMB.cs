@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
-using PM.Enum.Battle;
 
 /// <summary>
-/// アクティブスキルマスタ
+/// 通常スキルマスタ
 /// </summary>
-[Description("ActiveSkillMB")]
-public class ActiveSkillMB : MasterBookBase
+[Description("NormalSkillMB")]
+public class NormalSkillMB : MasterBookBase
 {
     /// <summary>
     /// 名前
@@ -21,5 +20,5 @@ public class ActiveSkillMB : MasterBookBase
     /// <summary>
     /// スキル効果リスト
     /// </summary>
-    public List<SkillEffectMI> skillEffectList { get; set; }
+    public List<NormalSkillEffectMI> effectList { get; set; }
 }
