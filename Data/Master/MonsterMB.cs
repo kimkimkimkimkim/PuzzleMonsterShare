@@ -78,4 +78,19 @@ public class MonsterMB : MasterBookBase
     /// レベル100でのスピード
     /// </summary>
     public int level100Speed { get; set; }
+
+    /// <summary>
+    /// パッシブスキルID
+    /// </summary>
+    public long passiveSkillId { get; set; }
+
+    /// <summary>
+    /// 通常スキルID
+    /// </summary>
+    public long normalSkillId { get; set; }
+
+    /// <summary>
+    /// アルティメットスキルID
+    /// </summary>
+    public long ultimateSkillId { get; set; }
 }

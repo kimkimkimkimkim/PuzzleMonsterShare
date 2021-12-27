@@ -85,7 +85,57 @@ namespace PM
             /// </summary>
             public enum BattleConditionType
             {
-                None,
+                None = 0,
+
+                /// <summary>
+                /// 攻撃力上昇
+                /// </summary>
+                AttackUp = 1,
+
+                /// <summary>
+                /// 攻撃力減少
+                /// </summary>
+                AttackDown = 2,
+
+                /// <summary>
+                /// 防御力上昇
+                /// </summary>
+                DefenseUp = 3,
+
+                /// <summary>
+                /// 防御力減少
+                /// </summary>
+                DefenseDown = 4,
+
+                /// <summary>
+                /// 回復力上昇
+                /// </summary>
+                HealUp = 5,
+
+                /// <summary>
+                /// 回復力減少
+                /// </summary>
+                HealDown = 6,
+
+                /// <summary>
+                /// スピード上昇
+                /// </summary>
+                SpeedUp = 7,
+
+                /// <summary>
+                /// スピード減少
+                /// </summary>
+                SpeedDown = 8,
+
+                /// <summary>
+                /// リジェネ状態
+                /// </summary>
+                Regeneration = 9,
+
+                /// <summary>
+                /// 継続ダメージ状態
+                /// </summary>
+                DamageOverTime = 10,
             }
 
             /// <summary>
@@ -93,41 +143,250 @@ namespace PM
             /// </summary>
             public enum SkillTargetType
             {
+                None = 0,
+
                 /// <summary>
                 /// 自分
                 /// </summary>
-                Myself,
+                Myself = 1,
 
                 /// <summary>
                 /// 味方全体
                 /// </summary>
-                PlayerAll,
+                AllyAll = 2,
 
                 /// <summary>
                 /// 敵全体
                 /// </summary>
-                EnemyAll,
+                EnemyAll = 3,
 
                 /// <summary>
                 /// 味方全体の中からランダムで1体
                 /// </summary>
-                PlayerAllRandom1,
+                AllyAllRandom1 = 4,
+
+                /// <summary>
+                /// 味方全体の中からランダムで2体
+                /// </summary>
+                AllyAllRandom2 = 5,
+
+                /// <summary>
+                /// 味方全体の中からランダムで3体
+                /// </summary>
+                AllyAllRandom3 = 6,
+
+                /// <summary>
+                /// 味方全体の中からランダムで4体
+                /// </summary>
+                AllyAllRandom4 = 7,
+
+                /// <summary>
+                /// 味方全体の中からランダムで5体
+                /// </summary>
+                AllyAllRandom5 = 8,
 
                 /// <summary>
                 /// 敵全体の中からランダムで1体
                 /// </summary>
-                EnemyAllRandom1,
+                EnemyAllRandom1 = 9,
+
+                /// <summary>
+                /// 敵全体の中からランダムで2体
+                /// </summary>
+                EnemyAllRandom2 = 10,
+
+                /// <summary>
+                /// 敵全体の中からランダムで3体
+                /// </summary>
+                EnemyAllRandom3 = 11,
+
+                /// <summary>
+                /// 敵全体の中からランダムで4体
+                /// </summary>
+                EnemyAllRandom4 = 12,
+
+                /// <summary>
+                /// 敵全体の中からランダムで5体
+                /// </summary>
+                EnemyAllRandom5 = 13,
+
+                /// <summary>
+                /// 攻撃したモンスター
+                /// </summary>
+                DoAttack = 14,
+
+                /// <summary>
+                /// 攻撃されたモンスター
+                /// </summary>
+                BeAttacked = 15,
+
+                /// <summary>
+                /// 味方前衛全体
+                /// </summary>
+                AllyFrontAll = 16,
+
+                /// <summary>
+                /// 味方後衛全体
+                /// </summary>
+                AllyBackAll = 17,
+
+                /// <summary>
+                /// 敵前衛全体
+                /// </summary>
+                EnemyFrontAll = 18,
+
+                /// <summary>
+                /// 敵後衛全体
+                /// </summary>
+                EnemyBackAll = 19,
+
+                /// <summary>
+                /// 一番前の味方
+                /// </summary>
+                AllyMostFront = 20,
+
+                /// <summary>
+                /// 一番前の敵
+                /// </summary>
+                EnemyMostFront = 21,
+
+                /// <summary>
+                /// 味方全体の中からHPが低い順に1体
+                /// </summary>
+                AllyAllHPLowest1 = 22,
+
+                /// <summary>
+                /// 味方全体の中からHPが低い順に2体
+                /// </summary>
+                AllyAllHPLowest2 = 23,
+
+                /// <summary>
+                /// 味方全体の中からHPが低い順に3体
+                /// </summary>
+                AllyAllHPLowest3 = 24,
+
+                /// <summary>
+                /// 味方全体の中からHPが低い順に4体
+                /// </summary>
+                AllyAllHPLowest4 = 25,
+
+                /// <summary>
+                /// 敵全体の中からHPが低い順に1体
+                /// </summary>
+                EnemyAllHPLowest1 = 26,
+
+                /// <summary>
+                /// 敵全体の中からHPが低い順に2体
+                /// </summary>
+                EnemyAllHPLowest2 = 27,
+
+                /// <summary>
+                /// 敵全体の中からHPが低い順に3体
+                /// </summary>
+                EnemyAllHPLowest3 = 28,
+
+                /// <summary>
+                /// 敵全体の中からHPが低い順に4体
+                /// </summary>
+                EnemyAllHPLowest4 = 29,
+
+                /// <summary>
+                /// すでに対象にしたモンスター
+                /// リストの最初の要素の対象
+                /// </summary>
+                Target = 30,
+            }
+
+            /// <summary>
+            /// 効果量ターゲットタイプ
+            /// </summary>
+            public enum ValueTargetType
+            {
+                None = 0,
+
+                /// <summary>
+                /// 自身の体力
+                /// </summary>
+                MyHP = 1,
+
+                /// <summary>
+                /// 自身の攻撃力
+                /// </summary>
+                MyAttack = 2,
+
+                /// <summary>
+                /// 自身の防御力
+                /// </summary>
+                MyDefense = 3,
+
+                /// <summary>
+                /// 自身の回復力
+                /// </summary>
+                MyHeal = 4,
+
+                /// <summary>
+                /// 自身のスピード
+                /// </summary>
+                MySpeed = 5,
             }
 
             /// <summary>
             /// スキルトリガータイプ
+            /// 時＋主語＋動作＋前後
             /// </summary>
             public enum SkillTriggerType
             {
+                None = 0,
+
+                /// <summary>
+                /// 毎アクション毎
+                /// </summary>
+                EveryTimeEnd = 1,
+
                 /// <summary>
                 /// バトル開始時
                 /// </summary>
-                OnBattleStart,
+                OnBattleStart = 2,
+                
+                /// <summary>
+                /// 自分のターン終了時
+                /// </summary>
+                OnMeTurnEnd = 3,
+
+                /// <summary>
+                /// 自分の通常攻撃終了時
+                /// </summary>
+                OnMeNormalSkillEnd = 4,
+
+                /// <summary>
+                /// 自分のウルト終了時
+                /// </summary>
+                OnMeUltimateSkillEnd = 5,
+
+                /// <summary>
+                /// 自分がダメージを受けたとき
+                /// </summary>
+                OnMeTakeDamageEnd = 6,
+
+                /// <summary>
+                /// 自分が倒れたとき
+                /// </summary>
+                OnMeDeadEnd = 7,
+            }
+
+            /// <summary>
+            /// 発動条件タイプ
+            /// above: より大きい, upper: 以上
+            /// under: 未満, lower: 以下
+            /// </summary>
+            public enum ActivateConditionType
+            {
+                None = 0,
+
+                /// <summary>
+                /// HPが50%未満の時
+                /// </summary>
+                Under50PercentMyHP = 1,
             }
 
             /// <summary>
@@ -135,6 +394,8 @@ namespace PM
             /// </summary>
             public enum SkillType
             {
+                None,
+
                 /// <summary>
                 /// 攻撃
                 /// </summary>

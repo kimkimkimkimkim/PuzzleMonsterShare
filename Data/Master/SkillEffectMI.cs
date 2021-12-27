@@ -13,7 +13,7 @@ public class SkillEffectMI
     /// <summary>
     /// 効果量の対象タイプ
     /// </summary>
-    public SkillTargetType valueTargetType { get; set; }
+    public ValueTargetType valueTargetType { get; set; }
 
     /// <summary>
     /// スキルタイプ
