@@ -6,8 +6,7 @@ public class PMApiException : Exception
     public PMApiException(){}
     public PMApiException(SerializationInfo info, StreamingContext context)
     {
-        if (info != null)
-            this.message = info.GetString("ErrorMessage");
+        if (info != null) this.message = info.GetString("message");
     }
 
     public PMErrorCode errorCode { get; set; }
