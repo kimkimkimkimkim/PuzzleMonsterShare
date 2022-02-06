@@ -27,9 +27,9 @@ public class BattleLogInfo
     public BattleMonsterIndex doBattleMonsterIndex { get; set; }
     
     /// <summary>
-    /// される側のモンスターのインデックス
+    /// 対象モンスターがされたことリスト
     /// </summary>
-    public BattleMonsterIndex beDoneBattleMonsterIndex { get; set; }
+    public List<BeDoneBattleMonsterData> beDoneBattleMonsterDataList { get; set; }
     
     /// <summary>
     /// ウェーブ数
@@ -52,7 +52,23 @@ public class BattleLogInfo
     public string log { get; set; }
 
     /// <summary>
-    /// 発生したダメージ
+    /// スキル演出ID
     /// </summary>
-    public int damage { get; set; }
+    public long skillFxId { get; set; }
+}
+
+/// <summary>
+/// スキル対象となったモンスターが何をされたのかを表す
+/// </summary>
+public class BeDoneBattleMonsterData
+{
+    /// <summary>
+    /// 対象のモンスターのインデックス
+    /// </summary>
+    public BattleMonsterIndex battleMonsterIndex { get; set; }
+
+    /// <summary>
+    /// HPの変化量
+    /// </summary>
+    public int hpChanges { get; set; }
 }

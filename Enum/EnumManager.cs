@@ -305,29 +305,34 @@ namespace PM
                 None = 0,
 
                 /// <summary>
-                /// 自身の体力
+                /// 自身の現在の体力
                 /// </summary>
-                MyHP = 1,
+                MyCurrentHP = 1,
 
                 /// <summary>
-                /// 自身の攻撃力
+                /// 自身の現在の攻撃力
                 /// </summary>
-                MyAttack = 2,
+                MyCurrentAttack = 2,
 
                 /// <summary>
-                /// 自身の防御力
+                /// 自身の現在の防御力
                 /// </summary>
-                MyDefense = 3,
+                MyCurrentDefense = 3,
 
                 /// <summary>
-                /// 自身の回復力
+                /// 自身の現在の回復力
                 /// </summary>
-                MyHeal = 4,
+                MyCurrentHeal = 4,
 
                 /// <summary>
-                /// 自身のスピード
+                /// 自身の現在のスピード
                 /// </summary>
-                MySpeed = 5,
+                MyCurrentSpeed = 5,
+
+                /// <summary>
+                /// 自身の最大の体力
+                /// </summary>
+                MyMaxHp = 6,
             }
 
             /// <summary>
@@ -387,6 +392,11 @@ namespace PM
                 /// HPが50%未満の時
                 /// </summary>
                 Under50PercentMyHP = 1,
+
+                /// <summary>
+                /// 生きている時
+                /// </summary>
+                Alive = 2,
             }
 
             /// <summary>

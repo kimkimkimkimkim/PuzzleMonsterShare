@@ -20,5 +20,5 @@ public class UltimateSkillMB : MasterBookBase
     /// <summary>
     /// スキル効果リスト
     /// </summary>
-    public List<UltimateSkillEffectMI> skillEffectList { get; set; }
+    public List<UltimateSkillEffectMI> effectList { get; set; }
 }

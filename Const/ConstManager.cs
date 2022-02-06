@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class ConstManager
 {
@@ -60,8 +61,29 @@ public class ConstManager
         public static int BOARD_HEIGHT = 8;
 
         /// <summary>
-        /// CTの最大値
+        /// エネルギーの最大値
         /// </summary>
-        public static float MAX_CT_VALUE = 100.0f;
+        public static int MAX_ENERGY_VALUE = 100;
+
+        /// <summary>
+        /// 行動したときのエネルギー上昇量
+        /// </summary>
+        public static int ENERGY_RISE_VALUE_ON_ACT = 50;
+
+        /// <summary>
+        /// ダメージを受けたときのエネルギー上昇量
+        /// </summary>
+        public static int ENERGY_RISE_VALUE_ON_TAKE_DAMAGE = 25;
+
+        /// <summary>
+        /// 前衛のインデックスリスト
+        /// </summary>
+        public static List<int> FRONT_INDEX_LIST = new List<int>() { 0, 1 };
+
+        /// <summary>
+        /// 後衛のインデックスリスト
+        /// </summary>
+        public static List<int> BACK_INDEX_LIST = new List<int>() { 2, 3, 4 };
+
     }
 }

@@ -8,7 +8,7 @@ using System.ComponentModel;
 public class QuestMB : MasterBookBase
 {
     /// <summary>
-    /// クエストカテゴリ名
+    /// クエスト名
     /// </summary>
     public string name { get; set; }
 

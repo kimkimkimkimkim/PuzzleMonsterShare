@@ -11,6 +11,11 @@ public class SkillEffectMI
     public SkillTargetType skillTargetType { get; set; }
 
     /// <summary>
+    /// 発動条件タイプ
+    /// </summary>
+    public ActivateConditionType activateConditionType { get; set; }
+
+    /// <summary>
     /// 効果量の対象タイプ
     /// </summary>
     public ValueTargetType valueTargetType { get; set; }
@@ -34,4 +39,9 @@ public class SkillEffectMI
     /// 継続ターン数（状態異常用）
     /// </summary>
     public int durationTurnNum { get; set; }
+
+    /// <summary>
+    /// スキル演出ID
+    /// </summary>
+    public long skillFxId { get; set; }
 }

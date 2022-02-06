@@ -58,14 +58,14 @@ public class BattleMonsterInfo
     public float currentHeal{ get; set; }
     
     /// <summary>
-    /// 最大のクールタイム
+    /// 最大のエネルギー
     /// </summary>
-    public float maxCt{ get; set; }
+    public int maxEnergy{ get; set; }
      
     /// <summary>
-    /// 現在のクールタイム
+    /// 現在のエネルギー
     /// </summary>
-    public float currentCt{ get; set; }
+    public int currentEnergy{ get; set; }
      
     /// <summary>
     /// 状態異常リスト
@@ -81,4 +81,9 @@ public class BattleMonsterInfo
     /// バトルモンスターインデックス
     /// </summary>
     public BattleMonsterIndex index{ get; set; }
+
+    /// <summary>
+    /// モンスターID
+    /// </summary>
+    public long monsterId { get; set; }
 }

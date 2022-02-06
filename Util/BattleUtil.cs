@@ -19,11 +19,12 @@ public static class BattleUtil
             currentSpeed = status.speed,
             baseHeal = status.heal,
             currentHeal = status.heal,
-            maxCt = ConstManager.Battle.MAX_CT_VALUE,
-            currentCt = 0,
+            maxEnergy = ConstManager.Battle.MAX_ENERGY_VALUE,
+            currentEnergy = 0,
             battleConditionList = new List<BattleConditionInfo>(),
             isActed = false,
             index = new BattleMonsterIndex() { isPlayer = isPlayer, index = index},
+            monsterId = monster.id,
         };
     }
 }

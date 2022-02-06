@@ -9,9 +9,4 @@ public class PassiveSkillEffectMI: SkillEffectMI
     /// スキルトリガータイプ
     /// </summary>
     public SkillTriggerType triggerType { get; set; }
-
-    /// <summary>
-    /// 発動条件タイプ
-    /// </summary>
-    public ActivateConditionType activateConditionType { get; set; }
 }
