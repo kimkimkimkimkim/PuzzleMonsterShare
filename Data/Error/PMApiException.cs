@@ -3,6 +3,7 @@ using System.Runtime.Serialization;
 
 public class PMApiException : Exception
 {
+    public PMApiException(){}
     public PMApiException(SerializationInfo info, StreamingContext context)
     {
         if (info != null)
