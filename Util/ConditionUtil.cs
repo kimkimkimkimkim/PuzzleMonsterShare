@@ -1,6 +1,7 @@
 using PM.Enum.Condition;
 using System.Collections.Generic;
 using System.Linq;
+using PM.Enum.Battle;
 
 public static class ConditionUtil {
     /// <summary>
@@ -15,7 +16,7 @@ public static class ConditionUtil {
             switch(condition.type) {
                 case ConditionType.UpperQuestId:
                     // 指定クエスト以上進んでいるか
-                    return userData.userBattleList.Any(u => u.questId == condition.valueInt && u.completedDate > DateTimeUtil.Epoch);
+                    return userData.userBattleList.Any(u => u.questId == condition.valueInt && u.winOrLose == WinOrLose.Win && u.completedDate > DateTimeUtil.Epoch);
                 default:
                     return true;
             }
