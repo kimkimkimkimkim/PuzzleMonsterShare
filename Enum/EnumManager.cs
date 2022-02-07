@@ -560,15 +560,6 @@ namespace PM
             /// </summary>
             public enum PropertyType
             {
-                /// <summary>
-                /// プレイヤー経験値
-                /// </summary>
-                PlayerExp = 1,
-
-                /// <summary>
-                /// モンスター経験値
-                /// </summary>
-                MonsterExp = 2,
             }
 
             /// <summary>
