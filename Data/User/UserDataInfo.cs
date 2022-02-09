@@ -28,6 +28,11 @@ public class UserDataInfo
     public int stamina { get; set; }
 
     /// <summary>
+    /// プレイヤー経験値の総獲得量
+    /// </summary>
+    public int totalPlayerExp { get; set; }
+
+    /// <summary>
     /// ランク
     /// </summary>
     public int rank { get; set; }

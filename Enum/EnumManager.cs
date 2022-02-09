@@ -675,6 +675,7 @@ namespace PM
                 lastLoginDateTime,
                 lastCalculatedStaminaDateTime,
                 stamina,
+                totalPlayerExp,
                 rank,
                 userBattleList,
             }
