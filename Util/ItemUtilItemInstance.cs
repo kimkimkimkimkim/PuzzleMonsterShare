@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using PM.Enum.Item;
-using PM.Enum.Monster;
-using PM.Enum.UI;
 
 public static partial class ItemUtil
 {
