@@ -17,9 +17,4 @@ public class QuestCategoryMB : MasterBookBase
     /// クエストタイプ
     /// </summary>
     public QuestType questType { get; set; }
-
-    /// <summary>
-    /// 報酬アイテムリスト
-    /// </summary>
-    public List<ItemMI> rewardItemList { get; set; }
 }

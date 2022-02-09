@@ -625,6 +625,40 @@ namespace PM
             {
                 Normal = 1,
             }
+
+            public enum GachaExecuteType
+            {
+                /// <summary>
+                /// 通常単発
+                /// </summary>
+                One = 1,
+
+                /// <summary>
+                /// 通常十連
+                /// </summary>
+                Ten = 2,
+            }
+
+            /// <summary>
+            /// ガチャ実行タイプ拡張
+            /// </summary>
+            public static class GachaExecuteTypeExtends
+            {
+                /// <summary>
+                /// ガチャ実行タイプごとのガチャ回数を取得
+                /// </summary>
+                public static int Num(this GachaExecuteType type)
+                {
+                    switch (type) {
+                        case GachaExecuteType.One:
+                            return 1;
+                        case GachaExecuteType.Ten:
+                            return 10;
+                        default:
+                            return 1;
+                    }
+                }
+            }
         }
 
         namespace Data
@@ -654,6 +688,7 @@ namespace PM
             public enum QuestType
             {
                 Normal = 1,
+                Event = 2,
             }
         }
 
@@ -679,8 +714,27 @@ namespace PM
             /// </summary>
             public enum ConditionType
             {
+                /// <summary>
+                /// 指定したクエストIDをクリアしているか
+                /// </summary>
                 UpperQuestId = 1,
+
+                /// <summary>
+                /// 指定したクエストIDまでをクリアしているか
+                /// </summary>
                 LowerQuestId = 2,
+
+                /// <summary>
+                /// 指定した日時を過ぎているか
+                /// String（XXXX-XX-XX XX:XX:XX）
+                /// </summary>
+                UpperDate = 3,
+
+                /// <summary>
+                /// 指定した日時を過ぎていないか
+                /// String（XXXX-XX-XX XX:XX:XX）
+                /// </summary>
+                LowerDate = 4,
             }
         }
     }

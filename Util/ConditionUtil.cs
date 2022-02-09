@@ -17,6 +17,12 @@ public static class ConditionUtil {
                 case ConditionType.UpperQuestId:
                     // 指定クエスト以上進んでいるか
                     return userData.userBattleList.Any(u => u.questId == condition.valueInt && u.winOrLose == WinOrLose.Win && u.completedDate > DateTimeUtil.Epoch);
+                case ConditionType.UpperDate:
+                    // 指定日時以降か
+                    return DateTimeUtil.GetDateFromMasterString(condition.valueString) <= DateTimeUtil.Now;
+                case ConditionType.LowerDate:
+                    // 指定日時以前か
+                    return DateTimeUtil.Now < DateTimeUtil.GetDateFromMasterString(condition.valueString);
                 default:
                     return true;
             }

@@ -11,7 +11,12 @@ public class ConditionMI
     public ConditionType type { get; set; }
 
     /// <summary>
-    /// 値
+    /// 値（整数）
     /// </summary>
     public int valueInt { get; set; }
+
+    /// <summary>
+    /// 値（文字列）
+    /// </summary>
+    public string valueString { get; set; }
 }
