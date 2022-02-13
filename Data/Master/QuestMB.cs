@@ -41,4 +41,9 @@ public class QuestMB : MasterBookBase
     /// クエストに挑戦可能になる条件リスト
     /// </summary>
     public List<ConditionMI> canExecuteConditionList { get; set; }
+
+    /// <summary>
+    /// 消費するスタミナ量
+    /// </summary>
+    public int consumeStamina { get; set; }
 }

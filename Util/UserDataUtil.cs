@@ -121,4 +121,19 @@ public static class UserDataUtil
         }.Where(kvp => kvp.Value != "0").ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
         return dict;
     }
+
+    /// <summary>
+    /// 現在のスタミナ値などの情報を返す
+    /// </summary>
+    public static (int currentStamina, DateTime lastCalculatedStaminaDateTime) GetCurrentStaminaAndLastCalculatedStaminaDateTime(DateTime lastCalculatedStaminaDateTime, int stamina, int maxStamina)
+    {
+        var now = DateTimeUtil.Now;
+        var span = now - lastCalculatedStaminaDateTime;
+        var totalMilliSeconds = span.TotalMilliseconds;
+        var increasedStamina = (int)Math.Floor(totalMilliSeconds / ConstManager.User.millSecondsPerStamina); // 経過時間を間隔で割った商が回復したスタミナ
+        var remainMilliSeconds = totalMilliSeconds - (increasedStamina * ConstManager.User.millSecondsPerStamina); // 今のスタミナになってから経過した時間
+        var currentStamina = Math.Min(stamina + increasedStamina, maxStamina);
+        var newLastCalculatedStaminaDateTime = now.AddMilliseconds(-remainMilliSeconds); // lastCalculatedStaminaDateTimeには今のスタミナになったちょうどの日時を登録する
+        return (currentStamina, newLastCalculatedStaminaDateTime);
+    }
 }
