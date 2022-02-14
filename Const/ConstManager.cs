@@ -14,6 +14,21 @@ public class ConstManager
         /// ユーザー名の最大文字数
         /// </summary>
         public static int userNameMaxWordCount = 10;
+
+        /// <summary>
+        /// 一日の開始時（24時間表記での時）
+        /// </summary>
+        public static int START_DAY_HOUR = 4;
+
+        /// <summary>
+        /// 週の開始曜日
+        /// </summary>
+        public static DayOfWeek START_WEEK_DAY_OF_WEEK = DayOfWeek.Monday;
+
+        /// <summary>
+        /// 月の開始日
+        /// </summary>
+        public static int START_MONTH_DATE = 1;
     }
 
     public class User

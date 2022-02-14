@@ -678,6 +678,7 @@ namespace PM
                 totalPlayerExp,
                 rank,
                 userBattleList,
+                userMissionList,
             }
         }
 
@@ -690,6 +691,21 @@ namespace PM
             {
                 Normal = 1,
                 Event = 2,
+            }
+        }
+
+        namespace Mission
+        {
+            /// <summary>
+            /// ミッションタイプ
+            /// </summary>
+            public enum MissionType
+            {
+                Main = 1,
+                Daily = 2,
+                Weekly = 3,
+                Monthly = 4,
+                Event = 5,
             }
         }
 
@@ -736,6 +752,51 @@ namespace PM
                 /// String（XXXX-XX-XX XX:XX:XX）
                 /// </summary>
                 LowerDate = 4,
+
+                /// <summary>
+                /// 指定したミッションをクリアしているか
+                /// </summary>
+                UpperMissionId = 5,
+
+                /// <summary>
+                /// 指定したミッションまでクリアしているか
+                /// </summary>
+                LowerMissionId = 6,
+
+                /// <summary>
+                /// 指定したプレイヤーランク以上か
+                /// </summary>
+                UpperPlayerRank = 7,
+
+                /// <summary>
+                /// 指定したプレイヤーランク以下か
+                /// </summary>
+                LowerPlayerRank = 8,
+
+                /// <summary>
+                /// デイリーミッションをすべてクリアしているか
+                /// </summary>
+                AllClearDailyMission = 9,
+
+                /// <summary>
+                /// 通算ログイン日数が指定日数以上か
+                /// </summary>
+                UpperTotalLoginDate = 10,
+
+                /// <summary>
+                /// 通算ログイン日数が指定日数以下か
+                /// </summary>
+                LowerTotalLoginDate = 11,
+
+                /// <summary>
+                /// 本日ログインしたか
+                /// </summary>
+                LoginToday = 12,
+
+                /// <summary>
+                /// 本日クエストを一つでもクリアしたか
+                /// </summary>
+                ClearQuestToday = 13,
             }
         }
     }

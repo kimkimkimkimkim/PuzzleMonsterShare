@@ -36,4 +36,9 @@ public class UserDataInfo
     /// ユーザーバトルリスト
     /// </summary>
     public List<UserBattleInfo> userBattleList { get; set; } = new List<UserBattleInfo>();
+
+    /// <summary>
+    /// ユーザーミッションリスト
+    /// </summary>
+    public List<UserMissionInfo> userMissionList { get; set; } = new List<UserMissionInfo>();
 }
