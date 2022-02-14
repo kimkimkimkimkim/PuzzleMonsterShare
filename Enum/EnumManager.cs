@@ -554,6 +554,25 @@ namespace PM
                 ME = 4,
             }
 
+            public static class VirtualCurrencyTypeExtends
+            {
+                public static string Name(this VirtualCurrencyType type)
+                {
+                    switch (type) {
+                        case VirtualCurrencyType.OB:
+                            return "オーブ";
+                        case VirtualCurrencyType.CN:
+                            return "コイン";
+                        case VirtualCurrencyType.PE:
+                            return "プレイヤー経験値";
+                        case VirtualCurrencyType.ME:
+                            return "モンスター経験値";
+                        default:
+                            return "";
+                    }
+                }
+            }
+
             /// <summary>
             /// 資産タイプ
             /// PropertyMBのIDと対応
