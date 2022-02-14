@@ -65,8 +65,7 @@ public static class DateTimeUtil
                 var baseDate = isSameDate ? Now : Now.AddDays(-1);
 
                 var startDate = new DateTime(baseDate.Year, baseDate.Month, baseDate.Day, ConstManager.System.START_DAY_HOUR, 0, 0);
-                var endDate = startDate;
-                endDate.AddDays(1);
+                var endDate = startDate.AddDays(1);
                 endDate = new DateTime(endDate.Year, endDate.Month, endDate.Day, endDayHour, 59, 59, 999);
 
                 return (startDate, endDate);
