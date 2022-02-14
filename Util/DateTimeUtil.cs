@@ -36,4 +36,22 @@ public static class DateTimeUtil
             return Epoch;
         }
     }
+
+    /// <summary>
+    /// 指定した日時がゲーム内の今日かどうかを判定する
+    /// </summary>
+    public static bool IsToday(DateTime date)
+    {
+        // 現在時刻とゲーム内の今日が同じ日にちか否か
+        var isSameDate = Now.Hour >= ConstManager.System.START_DAY_HOUR;
+
+        // 現在時刻とゲーム内の今日が同じ日にちなら基準日は現在時刻、違うなら基準日は現在時刻の一日前
+        var baseDate = isSameDate ? Now : Now.AddDays(-1);
+
+        var startDate = new DateTime(baseDate.Year, baseDate.Month, baseDate.Day, ConstManager.System.START_DAY_HOUR, 0, 0);
+        var endDate = startDate;
+        endDate.AddDays(1);
+
+        return startDate <= date && date < endDate;
+    }
 }
