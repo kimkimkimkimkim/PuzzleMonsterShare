@@ -40,7 +40,9 @@ public static class ConditionUtil {
                     // 今日のデイリーミッションをすべてクリアしているか
                     // TODO: もっといい判定
                     var dailyMissionIdList = new List<long>() { 200010001, 200010002 };
-                    var validMissionList = userData.userMissionList.Where(u => u.completedDate > DateTimeUtil.Epoch && u.startExpirationDate <= DateTimeUtil.Now && DateTimeUtil.Now < u.endExpirationDate).ToList();
+                    var validMissionList = userData.userMissionList.Where(u => u.completedDate > DateTimeUtil.Epoch)
+                        .Where(u => (u.startExpirationDate <= DateTimeUtil.Epoch && u.endExpirationDate <= DateTimeUtil.Epoch) || (u.startExpirationDate > DateTimeUtil.Epoch && u.endExpirationDate > DateTimeUtil.Epoch && u.startExpirationDate <= DateTimeUtil.Now && DateTimeUtil.Now < u.endExpirationDate))
+                        .ToList();
                     return dailyMissionIdList.All(id => validMissionList.Any(u => u.missionId == id));
                 case ConditionType.UpperTotalLoginDate:
                     // 通算ログイン日数が指定日数以上か
