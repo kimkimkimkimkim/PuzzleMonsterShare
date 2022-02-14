@@ -9,19 +9,9 @@ public class EndBattleApiInterface
 public class EndBattleApiRequest : PMApiRequestBase
 {
     /// <summary>
-    /// ユーザーパーティID
+    /// ユーザーバトル情報ID
     /// </summary>
-    public string userMonsterPartyId;
-
-    /// <summary>
-    /// クエストID
-    /// </summary>
-    public long questId;
-
-    /// <summary>
-    /// 勝敗
-    /// </summary>
-    public WinOrLose winOrLose;
+    public string userBattleId;
 }
 
 public class EndBattleApiResponse : PMApiResponseBase

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using PM.Enum.Battle;
 
 public class ExecuteBattleApiInterface
 {
@@ -17,6 +18,11 @@ public class ExecuteBattleApiRequest : PMApiRequestBase
     /// クエストID
     /// </summary>
     public long questId;
+
+    /// <summary>
+    /// 勝敗
+    /// </summary>
+    public WinOrLose winOrLose;
 }
 
 public class ExecuteBattleApiResponse : PMApiResponseBase
@@ -25,9 +31,4 @@ public class ExecuteBattleApiResponse : PMApiResponseBase
     /// ユーザーバトル情報
     /// </summary>
     public UserBattleInfo userBattle;
-
-    /// <summary>
-    /// バトルログリスト
-    /// </summary>
-    public List<BattleLogInfo> battleLogList { get; set; }
 }
