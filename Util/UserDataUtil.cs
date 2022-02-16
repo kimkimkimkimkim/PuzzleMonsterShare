@@ -98,9 +98,19 @@ public static class UserDataUtil
                     {
                         id = i.ItemInstanceId,
                         monsterId = ItemUtil.GetItemId(i),
+                        num = i.RemainingUses ?? 0,
                         customData = userMonsterCustomData,
                     };
                     userInventory.userMonsterList.Add(userMonster);
+                    break;
+                case ItemType.Container:
+                    var userContainer = new UserContainerInfo()
+                    {
+                        id = i.ItemInstanceId,
+                        containerId = ItemUtil.GetItemId(i),
+                        num = i.RemainingUses ?? 0,
+                    };
+                    userInventory.userContainerList.Add(userContainer);
                     break;
                 default:
                     break;

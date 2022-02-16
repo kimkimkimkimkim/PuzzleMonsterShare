@@ -15,4 +15,9 @@ public class UserInventoryInfo
     /// ユーザーモンスター情報
     /// </summary>
     public List<UserMonsterInfo> userMonsterList { get; set; } = new List<UserMonsterInfo>();
+
+    /// <summary>
+    /// ユーザーコンテナ情報
+    /// </summary>
+    public List<UserContainerInfo> userContainerList { get; set; } = new List<UserContainerInfo>();
 }

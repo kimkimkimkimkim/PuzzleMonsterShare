@@ -525,6 +525,11 @@ namespace PM
                 /// バンドル
                 /// </summary>
                 Bundle = 5,
+
+                /// <summary>
+                /// コンテナ
+                /// </summary>
+                Container = 6,
             }
 
             /// <summary>
