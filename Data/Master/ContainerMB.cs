@@ -4,7 +4,7 @@ using System.ComponentModel;
 /// <summary>
 /// コンテナマスタ
 /// </summary>
-[Description("BundleMB")]
+[Description("ContainerMB")]
 public class ContainerMB : MasterBookBase
 {
     /// <summary>
