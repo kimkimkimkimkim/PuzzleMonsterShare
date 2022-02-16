@@ -51,4 +51,26 @@ public static partial class ItemUtil
     {
         return $"{type}{id}";
     }
+
+    /// <summary>
+    /// 渡されたアイテムリストをすべて個数一つのアイテムに分解してリストで返す
+    /// </summary>
+    public static List<ItemMI> GetSeparatedItemMIList(List<ItemMI> itemList)
+    {
+        var separatedItemList = new List<ItemMI>();
+        itemList.ForEach(item =>
+        {
+            var singleItem = new ItemMI()
+            {
+                itemType = item.itemType,
+                itemId = item.itemId,
+                num = 1,
+            };
+            for (var i = 0; i < item.num; i++)
+            {
+                separatedItemList.Add(singleItem);
+            }
+        });
+        return separatedItemList;
+    }
 }
