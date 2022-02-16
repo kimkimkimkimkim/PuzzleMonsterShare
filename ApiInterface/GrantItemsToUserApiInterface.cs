@@ -18,9 +18,5 @@ public class GrantItemsToUserApiResponse : PMApiResponseBase
     /// <summary>
     /// 取得したアイテムリスト
     /// </summary>
-#if UNITY_EDITOR || UNITY_IOS || UNITY_ANDROID || UNITY_STANDALONE_OSX || UNITY_STANDALONE_WIN
-    public List<PlayFab.ClientModels.ItemInstance> itemInstanceList { get; set; }
-#else
-    public List<PlayFab.ServerModels.GrantedItemInstance> itemInstanceList { get; set; }
-#endif
+    public List<ItemMI> itemList { get; set;}
 }

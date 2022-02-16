@@ -3,6 +3,7 @@ using System;
 using PlayFab.ServerModels;
 using PM.Enum.Item;
 using System.Collections.Generic;
+using System.Linq;
 
 public static partial class ItemUtil
 {
@@ -41,8 +42,16 @@ public static partial class ItemUtil
         {
             itemType = GetItemType(itemInstance),
             itemId = GetItemId(itemInstance),
-            num = itemInstance.UsesIncrementedBy ?? 0,
+            num = itemInstance.RemainingUses ?? 0,
         };
+    }
+
+    /// <summary>
+    /// GrantedItemInstanceListからItemMIListを返す
+    /// </summary>
+    public static List<ItemMI> GetItemMIList(List<GrantedItemInstance> itemInstanceList)
+    {
+        return itemInstanceList.Select(i => GetItemMI(i)).ToList();
     }
 
     /// <summary>
@@ -53,7 +62,7 @@ public static partial class ItemUtil
         {
             ItemClass = "VirtualCurrency",
             ItemId = $"VirtualCurrency{virtualCurrencyNum.virtualCurrencyId}",
-            UsesIncrementedBy = virtualCurrencyNum.num,
+            RemainingUses = virtualCurrencyNum.num,
         };
     }
 }
