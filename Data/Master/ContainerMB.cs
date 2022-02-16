@@ -13,6 +13,11 @@ public class ContainerMB : MasterBookBase
     public string name { get; set; }
 
     /// <summary>
+    /// 説明文
+    /// </summary>
+    public string description { get; set; }
+
+    /// <summary>
     /// アイテムリスト
     /// </summary>
     public List<ItemMI> itemList { get; set; }
