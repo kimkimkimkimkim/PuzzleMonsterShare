@@ -11,6 +11,11 @@ public class UserPresentInfo : UserDataBase
     public long containerId { get; set; }
 
     /// <summary>
+    /// ユーザーコンテナID
+    /// </summary>
+    public string userContainerId { get; set; }
+
+    /// <summary>
     /// コンテナが付与された日時
     /// </summary>
     public DateTime grantedDate { get; set; }
