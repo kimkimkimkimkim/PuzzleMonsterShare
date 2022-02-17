@@ -703,6 +703,7 @@ namespace PM
                 rank,
                 userBattleList,
                 userMissionList,
+                userPresentList,
             }
         }
 

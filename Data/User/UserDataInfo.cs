@@ -41,4 +41,9 @@ public class UserDataInfo
     /// ユーザーミッションリスト
     /// </summary>
     public List<UserMissionInfo> userMissionList { get; set; } = new List<UserMissionInfo>();
+
+    /// <summary>
+    /// ユーザープレゼントリスト
+    /// </summary>
+    public List<UserPresentInfo> userPresentList { get; set; } = new List<UserPresentInfo>();
 }
