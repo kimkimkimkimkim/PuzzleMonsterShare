@@ -73,4 +73,16 @@ public static partial class ItemUtil
         });
         return separatedItemList;
     }
+
+    /// <summary>
+    /// 仮想通貨個数情報からItemMIを返す
+    /// </summary>
+    public static ItemMI GetItemMI(VirtualCurrencyNumInfo virtualCurrencyNum){
+        return new ItemMI()
+        {
+            itemType = ItemType.VirtualCurrency,
+            itemId = virtualCurrencyNum.virtualCurrencyId,
+            num = virtualCurrencyNum.num,
+        };
+    }
 }

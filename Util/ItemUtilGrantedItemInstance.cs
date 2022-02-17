@@ -55,7 +55,7 @@ public static partial class ItemUtil
     }
 
     /// <summary>
-    /// 仮想通貨個数情報からItemMIを返す
+    /// 仮想通貨個数情報からGrantedItemInstanceを返す
     /// </summary>
     public static GrantedItemInstance GetGrantedItemInstance(VirtualCurrencyNumInfo virtualCurrencyNum){
         return new GrantedItemInstance()
@@ -63,6 +63,19 @@ public static partial class ItemUtil
             ItemClass = "VirtualCurrency",
             ItemId = $"VirtualCurrency{virtualCurrencyNum.virtualCurrencyId}",
             RemainingUses = virtualCurrencyNum.num,
+        };
+    }
+    
+    /// <summary>
+    /// ItemInstanceからGrantedItemInstanceを返す
+    /// </summary>
+    public static GrantedItemInstance GetGrantedItemInstance(ItemInstance itemInstance){
+        return new GrantedItemInstance()
+        {
+            ItemClass = itemInstance.ItemClass,
+            ItemId = itemInstance.ItemId,
+            RemainingUses = itemInstance.RemainingUses,
+            ItemInstanceId = itemInstance.ItemInstanceId,
         };
     }
 }
