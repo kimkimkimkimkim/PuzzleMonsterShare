@@ -78,6 +78,11 @@ public class BattleMonsterInfo
     public bool isActed{ get; set; }
 
     /// <summary>
+    /// 戦闘不能か否か
+    /// </summary>
+    public bool isDead { get; set; }
+
+    /// <summary>
     /// バトルモンスターインデックス
     /// </summary>
     public BattleMonsterIndex index{ get; set; }

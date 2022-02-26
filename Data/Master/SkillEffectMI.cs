@@ -11,7 +11,7 @@ public class SkillEffectMI
     public SkillTargetType skillTargetType { get; set; }
 
     /// <summary>
-    /// 発動条件タイプ
+    /// スキル対象に対する発動条件タイプ
     /// </summary>
     public ActivateConditionType activateConditionType { get; set; }
 

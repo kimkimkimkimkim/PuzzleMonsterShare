@@ -72,11 +72,49 @@ namespace PM
             /// </summary>
             public enum BattleLogType
             {
-                StartAttack,
-                TakeDamage,
-                Die,
+                /// <summary>
+                /// ログ確認用
+                /// </summary>
+                None,
+
+                /// <summary>
+                /// ウェーブ進行ログ
+                /// </summary>
                 MoveWave,
+
+                /// <summary>
+                /// ターン進行ログ
+                /// </summary>
                 MoveTurn,
+
+                /// <summary>
+                /// アクション開始ログ
+                /// </summary>
+                StartAction,
+
+                /// <summary>
+                /// スキル効果発動ログ
+                /// </summary>
+                StartSkillEffect,
+
+                /// <summary>
+                /// 被アクションログ
+                /// </summary>
+                TakeAction,
+
+                /// <summary>
+                /// 死亡ログ
+                /// </summary>
+                Die,
+
+                /// <summary>
+                /// 被状態異常ログ
+                /// </summary>
+                TakeBattleCondition,
+
+                /// <summary>
+                /// バトル結果ログ
+                /// </summary>
                 Result,
             }
             
@@ -352,7 +390,7 @@ namespace PM
                 /// バトル開始時
                 /// </summary>
                 OnBattleStart = 2,
-                
+
                 /// <summary>
                 /// 自分のターン終了時
                 /// </summary>
@@ -377,6 +415,46 @@ namespace PM
                 /// 自分が倒れたとき
                 /// </summary>
                 OnMeDeadEnd = 7,
+
+                /// <summary>
+                /// ウェーブ開始時
+                /// </summary>
+                OnWaveStart = 8,
+
+                /// <summary>
+                /// ターン開始時
+                /// </summary>
+                OnTurnStart = 8,
+
+                /// <summary>
+                /// 自分のアクション開始時
+                /// </summary>
+                OnMeActionStart = 9,
+
+                /// <summary>
+                /// 自分がアクション処理される前
+                /// </summary>
+                OnMeTakeActionBefore = 10,
+
+                /// <summary>
+                /// 自分がアクション処理された後
+                /// </summary>
+                OnMeTakeActionAfter = 11,
+
+                /// <summary>
+                /// 自分のアクション終了時
+                /// </summary>
+                OnMeActionEnd = 10,
+
+                /// <summary>
+                /// ターン終了時
+                /// </summary>
+                OnTurnEnd = 11,
+
+                /// <summary>
+                /// ウェーブ終了時
+                /// </summary>
+                OnWaveEnd = 12,
             }
 
             /// <summary>
@@ -397,6 +475,11 @@ namespace PM
                 /// 生きている時
                 /// </summary>
                 Alive = 2,
+
+                /// <summary>
+                /// 戦闘不能の時
+                /// </summary>
+                Dead = 3,
             }
 
             /// <summary>
@@ -420,6 +503,29 @@ namespace PM
                 /// 状態異常
                 /// </summary>
                 Condition,
+            }
+
+            /// <summary>
+            /// アクションタイプ
+            /// </summary>
+            public enum BattleActionType
+            {
+                None,
+
+                /// <summary>
+                /// 通常攻撃
+                /// </summary>
+                NormalSkill,
+
+                /// <summary>
+                /// 必殺技
+                /// </summary>
+                UltimateSkill,
+
+                /// <summary>
+                /// パッシブスキル
+                /// </summary>
+                PassiveSkill,
             }
         }
 

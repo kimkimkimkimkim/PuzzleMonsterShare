@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using PM.Enum.Battle;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 /// <summary>
@@ -18,7 +19,17 @@ public class PassiveSkillMB : MasterBookBase
     public string description { get; set; }
 
     /// <summary>
+    /// スキル実行者に対する発動条件タイプ
+    /// </summary>
+    public ActivateConditionType activateConditionType { get; set; }
+
+    /// <summary>
     /// パッシブスキル効果リスト
     /// </summary>
     public List<PassiveSkillEffectMI> effectList { get; set; }
+
+    /// <summary>
+    /// スキルトリガータイプ
+    /// </summary>
+    public SkillTriggerType triggerType { get; set; }
 }
