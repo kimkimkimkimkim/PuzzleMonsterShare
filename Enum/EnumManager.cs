@@ -78,6 +78,11 @@ namespace PM
                 None,
 
                 /// <summary>
+                /// バトル開始ログ
+                /// </summary>
+                StartBattle,
+
+                /// <summary>
                 /// ウェーブ進行ログ
                 /// </summary>
                 MoveWave,
