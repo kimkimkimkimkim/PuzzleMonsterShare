@@ -27,9 +27,4 @@ public class PassiveSkillMB : MasterBookBase
     /// パッシブスキル効果リスト
     /// </summary>
     public List<PassiveSkillEffectMI> effectList { get; set; }
-
-    /// <summary>
-    /// スキルトリガータイプ
-    /// </summary>
-    public SkillTriggerType triggerType { get; set; }
 }
