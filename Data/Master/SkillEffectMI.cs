@@ -54,11 +54,11 @@ public class SkillEffectMI
     /// スキル演出ID（攻撃、回復、アクション系以外の状態異常用）
     /// </summary>
     public long skillFxId { get; set; }
-
+    
     /// <summary>
-    /// 状態異常タイプ（状態異常用）
+    /// 状態異常ID（状態異常用）
     /// </summary>
-    public BattleConditionType battleConditionType { get; set; }
+    public long battleConditionId { get; set; }
 
     /// <summary>
     /// 継続ターン数（状態異常用）
