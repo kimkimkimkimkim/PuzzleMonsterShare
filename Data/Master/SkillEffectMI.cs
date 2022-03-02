@@ -31,6 +31,21 @@ public class SkillEffectMI
     public int value { get; set; }
     
     /// <summary>
+    /// 効果量制限が存在するか否か（攻撃、回復、アクション系以外の状態異常用）
+    /// </summary>
+    public bool existsLimitValue { get; set; }
+    
+    /// <summary>
+    /// 効果量の対象タイプ（攻撃、回復、アクション系以外の状態異常用）
+    /// </summary>
+    public ValueTargetType limitValueTargetType { get; set; }
+
+    /// <summary>
+    /// 効果量（%）（攻撃、回復、アクション系以外の状態異常用）
+    /// </summary>
+    public int limitValue { get; set; }
+    
+    /// <summary>
     /// スキル演出ID（攻撃、回復、アクション系以外の状態異常用）
     /// </summary>
     public long skillFxId { get; set; }
