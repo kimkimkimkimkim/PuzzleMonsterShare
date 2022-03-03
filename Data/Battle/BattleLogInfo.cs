@@ -55,6 +55,11 @@ public class BattleLogInfo
     /// スキル演出ID
     /// </summary>
     public long skillFxId { get; set; }
+
+    /// <summary>
+    /// アクションタイプ
+    /// </summary>
+    public BattleActionType actionType { get; set; }
 }
 
 /// <summary>

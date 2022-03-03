@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace PM
 {
@@ -113,6 +114,11 @@ namespace PM
                 Die,
 
                 /// <summary>
+                /// アクション終了ログ
+                /// </summary>
+                EndAction,
+
+                /// <summary>
                 /// 被状態異常ログ
                 /// </summary>
                 TakeBattleCondition,
@@ -131,54 +137,59 @@ namespace PM
                 None = 0,
 
                 /// <summary>
-                /// 攻撃力上昇
+                /// ステータス上昇
                 /// </summary>
-                AttackUp = 1,
+                StatusUp = 1,
 
                 /// <summary>
-                /// 攻撃力減少
+                /// ステータス下降
                 /// </summary>
-                AttackDown = 2,
+                StatusDown = 2,
 
                 /// <summary>
-                /// 防御力上昇
+                /// 通常スキル、アルティメットスキル使用不可
                 /// </summary>
-                DefenseUp = 3,
+                NormalSkillAndUltimateSkillUnavailable = 3,
 
                 /// <summary>
-                /// 防御力減少
+                /// 通常スキル使用不可
                 /// </summary>
-                DefenseDown = 4,
+                NormalSkillUnavailable = 4,
 
                 /// <summary>
-                /// 回復力上昇
+                /// アルティメットスキル使用不可
                 /// </summary>
-                HealUp = 5,
+                UltimateSkillUnavailable = 5,
 
                 /// <summary>
-                /// 回復力減少
+                /// シールド
                 /// </summary>
-                HealDown = 6,
+                Shield = 6,
 
                 /// <summary>
-                /// スピード上昇
+                /// 状態異常特攻
                 /// </summary>
-                SpeedUp = 7,
+                BattleConditionKiller = 7,
 
                 /// <summary>
-                /// スピード減少
+                /// 特定バフタイプの個数特攻
                 /// </summary>
-                SpeedDown = 8,
+                BuffTypeNumKiller = 8,
 
                 /// <summary>
-                /// リジェネ状態
+                /// 属性特攻
                 /// </summary>
-                Regeneration = 9,
+                MonsterAttributeKiller = 9,
 
                 /// <summary>
-                /// 継続ダメージ状態
+                /// マーク
                 /// </summary>
-                DamageOverTime = 10,
+                Mark = 10,
+
+                /// <summary>
+                /// アクション
+                /// </summary>
+                Action = 11,
             }
 
             /// <summary>
@@ -462,6 +473,109 @@ namespace PM
                 OnWaveEnd = 12,
             }
 
+            public enum BattleConditionTriggerType
+            {
+                None = 0,
+
+                /// <summary>
+                /// 毎アクション毎
+                /// </summary>
+                EveryTimeEnd = 1,
+
+                /// <summary>
+                /// バトル開始時
+                /// </summary>
+                OnBattleStart = 2,
+
+                /// <summary>
+                /// 自分のターン終了時
+                /// </summary>
+                OnMeTurnEnd = 3,
+
+                /// <summary>
+                /// 自分の通常攻撃終了時
+                /// </summary>
+                OnMeNormalSkillEnd = 4,
+
+                /// <summary>
+                /// 自分のウルト終了時
+                /// </summary>
+                OnMeUltimateSkillEnd = 5,
+
+                /// <summary>
+                /// 自分がダメージを受けたとき
+                /// </summary>
+                OnMeTakeDamageEnd = 6,
+
+                /// <summary>
+                /// 自分が倒れたとき
+                /// </summary>
+                OnMeDeadEnd = 7,
+
+                /// <summary>
+                /// ウェーブ開始時
+                /// </summary>
+                OnWaveStart = 8,
+
+                /// <summary>
+                /// ターン開始時
+                /// </summary>
+                OnTurnStart = 8,
+
+                /// <summary>
+                /// 自分のアクション開始時
+                /// </summary>
+                OnMeActionStart = 9,
+
+                /// <summary>
+                /// 自分がアクション処理される前
+                /// </summary>
+                OnMeTakeActionBefore = 10,
+
+                /// <summary>
+                /// 自分がアクション処理された後
+                /// </summary>
+                OnMeTakeActionAfter = 11,
+
+                /// <summary>
+                /// 自分のアクション終了時
+                /// </summary>
+                OnMeActionEnd = 10,
+
+                /// <summary>
+                /// ターン終了時
+                /// </summary>
+                OnTurnEnd = 11,
+
+                /// <summary>
+                /// ウェーブ終了時
+                /// </summary>
+                OnWaveEnd = 12,
+
+                /// <summary>
+                /// 解除された時
+                /// </summary>
+                OnRemoved = 13,
+            }
+
+            /// <summary>
+            /// 状態異常のバフタイプ
+            /// </summary>
+            public enum BuffType
+            {
+                None = 0,
+
+                /// <summary>
+                /// 強化効果
+                /// </summary>
+                Buff = 1,
+
+                /// <summary>
+                /// 弱体効果
+                /// </summary>
+                Debuff = 2,
+            }
+
             /// <summary>
             /// 発動条件タイプ
             /// above: より大きい, upper: 以上
@@ -492,22 +606,32 @@ namespace PM
             /// </summary>
             public enum SkillType
             {
-                None,
+                None = 0,
 
                 /// <summary>
                 /// 攻撃
                 /// </summary>
-                Damage,
+                Damage = 1,
 
                 /// <summary>
                 /// 回復
                 /// </summary>
-                Heal,
+                Heal = 2,
 
                 /// <summary>
-                /// 状態異常
+                /// 状態異常付与
                 /// </summary>
-                Condition,
+                ConditionAdd = 3,
+
+                /// <summary>
+                /// 状態異常解除
+                /// </summary>
+                ConditionRemove = 4,
+
+                /// <summary>
+                /// 蘇生
+                /// </summary>
+                Revive = 5,
             }
 
             /// <summary>
@@ -857,6 +981,28 @@ namespace PM
                 Green = 3,
                 Yellow = 4,
                 Purple = 5,
+            }
+
+            public static class MonsterAttributeExtends
+            {
+                public static Color Color(this MonsterAttribute attribute)
+                {
+                    switch (attribute)
+                    {
+                        case MonsterAttribute.Red:
+                            return new Color(0.1529412f, 0.03921569f, 0.03137255f);
+                        case MonsterAttribute.Blue:
+                            return new Color(0.007843138f, 0.07450981f, 0.2039216f);
+                        case MonsterAttribute.Green:
+                            return new Color(0.07843138f, 0.1803922f, 0.1333333f);
+                        case MonsterAttribute.Yellow:
+                            return new Color(0.9647059f, 0.8823529f, 0.6117647f);
+                        case MonsterAttribute.Purple:
+                            return new Color(0.1294118f, 0.05098039f, 0.2039216f);
+                        default:
+                            return new Color(0, 0, 0);
+                    }
+                }
             }
         }
         

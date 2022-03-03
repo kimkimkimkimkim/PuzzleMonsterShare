@@ -81,6 +81,11 @@ public class ConstManager
         public static int MAX_ENERGY_VALUE = 100;
 
         /// <summary>
+        /// エネルギーの初期値
+        /// </summary>
+        public static int INITIAL_ENERGY_VALUE = 50;
+
+        /// <summary>
         /// 行動したときのエネルギー上昇量
         /// </summary>
         public static int ENERGY_RISE_VALUE_ON_ACT = 50;
@@ -88,7 +93,7 @@ public class ConstManager
         /// <summary>
         /// ダメージを受けたときのエネルギー上昇量
         /// </summary>
-        public static int ENERGY_RISE_VALUE_ON_TAKE_DAMAGE = 25;
+        public static int ENERGY_RISE_VALUE_ON_TAKE_DAMAGE = 10;
 
         /// <summary>
         /// 前衛のインデックスリスト

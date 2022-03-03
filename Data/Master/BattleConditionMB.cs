@@ -8,17 +8,27 @@ using PM.Enum.Battle;
 public class BattleConditionMB : MasterBookBase
 {
     /// <summary>
-    /// 状態異常タイプ
-    /// </summary>
-    public BattleConditionType type { get; set; }
-    
-    /// <summary>
     /// 内容
     /// </summary>
     public string description { get; set; }
-    
+
     /// <summary>
-    /// 値
+    /// 状態異常タイプ
     /// </summary>
-    public float value { get; set; }
+    public BattleConditionType battleConditionType { get; set; }
+
+    /// <summary>
+    /// バフタイプ
+    /// </summary>
+    public BuffType buffType { get; set; }
+
+    /// <summary>
+    /// 状態異常効果発動タイミングタイプ
+    /// </summary>
+    public BattleConditionTriggerType battleConditionTriggerType { get; set; }
+
+    /// <summary>
+    /// 状態異常効果発動時に解除されるか否か
+    /// </summary>
+    public bool isRemovedWhenTriggered { get; set; }
 }

@@ -1,3 +1,5 @@
+using PM.Enum.Battle;
+
 /// <summary>
 /// アクション系の状態異常効果を扱うためのクラス
 /// </summary>

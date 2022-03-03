@@ -68,10 +68,13 @@ public class SkillEffectMI
     /// <summary>
     /// 解除可能か否か（状態異常用）
     /// </summary>
-    public bool canUnlock { get; set; }
-    
+    public bool canRemove { get; set; }
+
     /// <summary>
-    /// 参照する状態異常効果リストの番号（アクション系の状態異常用）
+    /// オプション値
+    /// ステータス上昇系: BattleMonsterStatusType
+    /// 状態異常特攻系: BattleConditionId
+    /// 属性特攻系: MonsterAttributeType
     /// </summary>
-    public int actionBattleConditionEffectListNumber { get; set; }
+    public int optionValue { get; set; }
 }
