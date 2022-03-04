@@ -147,9 +147,9 @@ namespace PM
                 StatusDown = 2,
 
                 /// <summary>
-                /// 通常スキル、アルティメットスキル使用不可
+                /// 通常スキル、アルティメットスキル、パッシブスキル使用不可
                 /// </summary>
-                NormalSkillAndUltimateSkillUnavailable = 3,
+                NormalAndUltimateAndPassiveSkillUnavailable = 3,
 
                 /// <summary>
                 /// 通常スキル使用不可
@@ -162,34 +162,44 @@ namespace PM
                 UltimateSkillUnavailable = 5,
 
                 /// <summary>
+                /// パッシブスキル使用不可
+                /// </summary>
+                PassiveSkillUnavailable = 6,
+
+                /// <summary>
                 /// シールド
                 /// </summary>
-                Shield = 6,
+                Shield = 7,
 
                 /// <summary>
                 /// 状態異常特攻
                 /// </summary>
-                BattleConditionKiller = 7,
+                BattleConditionKiller = 8,
 
                 /// <summary>
                 /// 特定バフタイプの個数特攻
                 /// </summary>
-                BuffTypeNumKiller = 8,
+                BuffTypeNumKiller = 9,
+
+                /// <summary>
+                /// 状態異常耐性
+                /// </summary>
+                BattleConditionResist = 10,
 
                 /// <summary>
                 /// 属性特攻
                 /// </summary>
-                MonsterAttributeKiller = 9,
+                MonsterAttributeKiller = 10,
 
                 /// <summary>
                 /// マーク
                 /// </summary>
-                Mark = 10,
+                Mark = 11,
 
                 /// <summary>
                 /// アクション
                 /// </summary>
-                Action = 11,
+                Action = 12,
             }
 
             /// <summary>
@@ -408,9 +418,9 @@ namespace PM
                 OnBattleStart = 2,
 
                 /// <summary>
-                /// 自分のターン終了時
+                /// 自分のアクション終了時
                 /// </summary>
-                OnMeTurnEnd = 3,
+                OnMeActionEnd = 3,
 
                 /// <summary>
                 /// 自分の通常攻撃終了時
@@ -440,37 +450,32 @@ namespace PM
                 /// <summary>
                 /// ターン開始時
                 /// </summary>
-                OnTurnStart = 8,
+                OnTurnStart = 9,
 
                 /// <summary>
                 /// 自分のアクション開始時
                 /// </summary>
-                OnMeActionStart = 9,
+                OnMeActionStart = 10,
 
                 /// <summary>
                 /// 自分がアクション処理される前
                 /// </summary>
-                OnMeTakeActionBefore = 10,
+                OnMeTakeActionBefore = 11,
 
                 /// <summary>
                 /// 自分がアクション処理された後
                 /// </summary>
-                OnMeTakeActionAfter = 11,
-
-                /// <summary>
-                /// 自分のアクション終了時
-                /// </summary>
-                OnMeActionEnd = 10,
+                OnMeTakeActionAfter = 12,
 
                 /// <summary>
                 /// ターン終了時
                 /// </summary>
-                OnTurnEnd = 11,
+                OnTurnEnd = 13,
 
                 /// <summary>
                 /// ウェーブ終了時
                 /// </summary>
-                OnWaveEnd = 12,
+                OnWaveEnd = 14,
             }
 
             public enum BattleConditionTriggerType
@@ -488,9 +493,9 @@ namespace PM
                 OnBattleStart = 2,
 
                 /// <summary>
-                /// 自分のターン終了時
+                /// 自分のアクション終了時
                 /// </summary>
-                OnMeTurnEnd = 3,
+                OnMeActionEnd = 3,
 
                 /// <summary>
                 /// 自分の通常攻撃終了時
@@ -520,42 +525,42 @@ namespace PM
                 /// <summary>
                 /// ターン開始時
                 /// </summary>
-                OnTurnStart = 8,
+                OnTurnStart = 9,
 
                 /// <summary>
                 /// 自分のアクション開始時
                 /// </summary>
-                OnMeActionStart = 9,
+                OnMeActionStart = 10,
 
                 /// <summary>
                 /// 自分がアクション処理される前
                 /// </summary>
-                OnMeTakeActionBefore = 10,
+                OnMeTakeActionBefore = 11,
 
                 /// <summary>
                 /// 自分がアクション処理された後
                 /// </summary>
-                OnMeTakeActionAfter = 11,
-
-                /// <summary>
-                /// 自分のアクション終了時
-                /// </summary>
-                OnMeActionEnd = 10,
+                OnMeTakeActionAfter = 12,
 
                 /// <summary>
                 /// ターン終了時
                 /// </summary>
-                OnTurnEnd = 11,
+                OnTurnEnd = 13,
 
                 /// <summary>
                 /// ウェーブ終了時
                 /// </summary>
-                OnWaveEnd = 12,
+                OnWaveEnd = 14,
 
                 /// <summary>
                 /// 解除された時
                 /// </summary>
-                OnRemoved = 13,
+                OnRemoved = 15,
+
+                /// <summary>
+                /// 常時
+                /// </summary>
+                Always = 16,
             }
 
             /// <summary>
@@ -655,6 +660,31 @@ namespace PM
                 /// パッシブスキル
                 /// </summary>
                 PassiveSkill,
+            }
+
+            /// <summary>
+            /// バトル用のモンスターステータスタイプ
+            /// </summary>
+            public enum BattleMonsterStatusType
+            {
+                None = 0,
+                Hp = 1,
+                Attack = 2,
+                Defense = 3,
+                Heal = 4,
+                Speed = 5,
+                Sheild = 6,
+                UltimateSkillDamageRate = 7,
+                BlockRate = 8,
+                CriticalRate = 9,
+                CriticalDamage = 10,
+                BuffResistRate = 11,
+                DebuffResistRate = 12,
+                DamageResistRate = 13,
+                LuckDamageRate = 14,
+                HolyDamageRate = 15,
+                EnergyUpRate = 16,
+                HealedRate = 17,
             }
         }
 

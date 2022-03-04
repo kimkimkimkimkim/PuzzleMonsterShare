@@ -113,11 +113,6 @@ public class BattleMonsterInfo
     public int energyUpRate { get; set; }
 
     /// <summary>
-    /// 回復率（回復をする際の回復量上昇率）
-    /// </summary>
-    public int healingRate { get; set; }
-
-    /// <summary>
     /// 被回復率（回復を受ける際の回復量上昇率）
     /// </summary>
     public int healedRate { get; set; }
