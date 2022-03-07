@@ -61,19 +61,3 @@ public class BattleLogInfo
     /// </summary>
     public BattleActionType actionType { get; set; }
 }
-
-/// <summary>
-/// スキル対象となったモンスターが何をされたのかを表す
-/// </summary>
-public class BeDoneBattleMonsterData
-{
-    /// <summary>
-    /// 対象のモンスターのインデックス
-    /// </summary>
-    public BattleMonsterIndex battleMonsterIndex { get; set; }
-
-    /// <summary>
-    /// HPの変化量
-    /// </summary>
-    public int hpChanges { get; set; }
-}

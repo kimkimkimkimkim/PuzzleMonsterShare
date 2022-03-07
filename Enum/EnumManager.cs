@@ -109,6 +109,16 @@ namespace PM
                 TakeAction,
 
                 /// <summary>
+                /// 状態異常付与
+                /// </summary>
+                BattleConditionAdd,
+
+                /// <summary>
+                /// 状態異常解除
+                /// </summary>
+                BattleConditionRemove,
+
+                /// <summary>
                 /// 死亡ログ
                 /// </summary>
                 Die,
@@ -397,6 +407,36 @@ namespace PM
                 /// 自身の最大の体力
                 /// </summary>
                 MyMaxHp = 6,
+
+                /// <summary>
+                /// 対象の現在の体力
+                /// </summary>
+                TargetCurrentHP = 7,
+
+                /// <summary>
+                /// 対象の現在の攻撃力
+                /// </summary>
+                TargetCurrentAttack = 8,
+
+                /// <summary>
+                /// 対象の現在の防御力
+                /// </summary>
+                TargetCurrentDefense = 9,
+
+                /// <summary>
+                /// 対象の現在の回復力
+                /// </summary>
+                TargetCurrentHeal = 10,
+
+                /// <summary>
+                /// 対象の現在のスピード
+                /// </summary>
+                TargetCurrentSpeed = 11,
+
+                /// <summary>
+                /// 対象の最大の体力
+                /// </summary>
+                TargetMaxHp = 12,
             }
 
             /// <summary>
@@ -483,7 +523,7 @@ namespace PM
                 None = 0,
 
                 /// <summary>
-                /// 毎アクション毎
+                /// 毎アクション終了時
                 /// </summary>
                 EveryTimeEnd = 1,
 
@@ -660,6 +700,11 @@ namespace PM
                 /// パッシブスキル
                 /// </summary>
                 PassiveSkill,
+
+                /// <summary>
+                /// 状態異常効果
+                /// </summary>
+                BattleCondition,
             }
 
             /// <summary>
