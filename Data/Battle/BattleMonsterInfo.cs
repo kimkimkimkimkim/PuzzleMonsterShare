@@ -78,6 +78,11 @@ public class BattleMonsterInfo
     /// 直近で自分に攻撃されたモンスターのモンスターインデックス
     /// </summary>
     public BattleMonsterIndex currentBeDoneAttackedMonsterIndex { get; set; }
+    
+    /// <summary>
+    /// 状態異常カウンター（付与されるたびにインクリメント）
+    /// </summary>
+    public int battleConditionCount { get; set; }
 }
 
 public static class BattleMonsterInfoExtentions
