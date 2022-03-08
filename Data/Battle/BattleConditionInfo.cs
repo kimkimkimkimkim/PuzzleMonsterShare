@@ -17,9 +17,9 @@ public class BattleConditionInfo
     public int remainingTurnNum { get; set; }
 
     /// <summary>
-    /// 付与時の状態異常効果量
+    /// アクション系の状態異常効果量
     /// </summary>
-    public int value { get; set; }
+    public int actionValue { get; set; }
 
     /// <summary>
     /// シールド耐久値

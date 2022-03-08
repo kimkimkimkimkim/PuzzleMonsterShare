@@ -99,11 +99,11 @@ public static class BattleMonsterInfoExtentions
                 .OrderBy(c => c.order)
                 .ToList()
                 .ForEach(c => {
-                    if(c.value <= value){
-                        value -= c.value;
-                        c.value = 0;
+                    if(c.shieldValue <= value){
+                        value -= c.shieldValue;
+                        c.shieldValue = 0;
                     }else{
-                        c.value -= value;
+                        c.shieldValue -= value;
                         value = 0;
                     }
                 });
@@ -111,7 +111,7 @@ public static class BattleMonsterInfoExtentions
             // 耐久値が0になったシールドを解除する
             monster.battleConditionList = monster.battleConditionList.Where(c => {
                 var isNotShield = c.battleCondition.battleConditionType != BattleConditionType.Shield;
-                var isValidShield = c.battleCondition.battleConditionType == BattleConditionType.Shield && c.value > 0;
+                var isValidShield = c.battleCondition.battleConditionType == BattleConditionType.Shield && c.shieldValue > 0;
                 return isNotShield || isValidShield;
             }).ToList();
         }else{
