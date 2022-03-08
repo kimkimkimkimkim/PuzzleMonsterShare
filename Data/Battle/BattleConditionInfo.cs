@@ -25,4 +25,9 @@ public class BattleConditionInfo
     /// シールド耐久値
     /// </summary>
     public int shieldValue { get; set; }
+    
+    /// <summary>
+    /// 順序
+    /// </summary>
+    public int order { get; set; }
 }
