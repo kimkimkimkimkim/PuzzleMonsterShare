@@ -192,24 +192,29 @@ namespace PM
                 BuffTypeNumKiller = 9,
 
                 /// <summary>
-                /// 状態異常耐性
-                /// </summary>
-                BattleConditionResist = 10,
-
-                /// <summary>
                 /// 属性特攻
                 /// </summary>
                 MonsterAttributeKiller = 10,
+                
+                /// <summary>
+                /// 状態異常耐性
+                /// </summary>
+                BattleConditionResist = 11,
+                
+                /// <summary>
+                /// 指定バフタイプの耐性
+                /// </summary>
+                BuffTypeResist = 12,
 
                 /// <summary>
                 /// マーク
                 /// </summary>
-                Mark = 11,
+                Mark = 13,
 
                 /// <summary>
                 /// アクション
                 /// </summary>
-                Action = 12,
+                Action = 14,
             }
 
             /// <summary>
