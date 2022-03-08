@@ -1,3 +1,4 @@
+using GameBase;
 using PM.Enum.Battle;
 using System.Collections.Generic;
 using System.Linq;
@@ -91,11 +92,12 @@ public static class BattleMonsterInfoExtentions
     {
         var existsShield = monster.shield() > 0;
         
-        if(existsSheild && value < 0){
+        if(existsShield && value < 0){
             // ダメージかつシールドを保持していたら、体力ではなくシールドを削る
             monster.battleConditionList
                 .Where(c => c.battleCondition.battleConditionType == BattleConditionType.Shield)
                 .OrderBy(c => c.order)
+                .ToList()
                 .ForEach(c => {
                     if(c.value <= value){
                         value -= c.value;
