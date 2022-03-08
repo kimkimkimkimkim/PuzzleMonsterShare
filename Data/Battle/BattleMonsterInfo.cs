@@ -89,18 +89,43 @@ public static class BattleMonsterInfoExtentions
 { 
     public static void ChangeHp(this BattleMonsterInfo monster, int value)
     {
-        var tempHp = monster.currentHp + value;
-        if (tempHp > monster.maxHp)
-        {
-            monster.currentHp = monster.maxHp;
-        }
-        else if (tempHp < 0)
-        {
-            monster.currentHp = 0;
-        }
-        else
-        {
-            monster.currentHp = tempHp;
+        var existsShield = monster.shield() > 0;
+        
+        if(existsSheild && value < 0){
+            // ダメージかつシールドを保持していたら、体力ではなくシールドを削る
+            monster.battleConditionList
+                .Where(c => c.battleCondition.battleConditionType == BattleConditionType.Shield)
+                .OrderBy(c => c.order)
+                .ForEach(c => {
+                    if(c.value <= value){
+                        value -= c.value;
+                        c.value = 0;
+                    }else{
+                        c.value -= value;
+                        value = 0;
+                    }
+                });
+            
+            // 耐久値が0になったシールドを解除する
+            monster.battleConditionList = monster.battleConditionList.Where(c => {
+                var isNotShield = c.battleCondition.battleConditionType != BattleConditionType.Shield;
+                var isValidShield = c.battleCondition.battleConditionType == BattleConditionType.Shield && c.value > 0;
+                return isNotShield || isValidShield;
+            }).ToList();
+        }else{
+            var tempHp = monster.currentHp + value;
+            if (tempHp > monster.maxHp)
+            {
+                monster.currentHp = monster.maxHp;
+            }
+            else if (tempHp < 0)
+            {
+                monster.currentHp = 0;
+            }
+            else
+            {
+                monster.currentHp = tempHp;
+            }
         }
     }
 
