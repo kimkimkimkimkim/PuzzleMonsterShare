@@ -97,6 +97,16 @@ namespace PM
                 /// アクション開始ログ
                 /// </summary>
                 StartAction,
+                
+                /// <summary>
+                /// アクション開始アニメーションログ
+                /// </summary>
+                StartActionAnimation,
+                
+                /// <summary>
+                /// アクション失敗ログ
+                /// </summary>
+                ActionFailed,
 
                 /// <summary>
                 /// スキル効果発動ログ
@@ -104,34 +114,44 @@ namespace PM
                 StartSkillEffect,
 
                 /// <summary>
-                /// 被アクションログ
+                /// ダメージログ
                 /// </summary>
-                TakeAction,
+                TakeDamage,
+                
+                /// <summary>
+                /// 回復ログ
+                /// </summary>
+                TakeHeal,
 
                 /// <summary>
-                /// 状態異常付与
+                /// 状態異常付与ログ
                 /// </summary>
-                BattleConditionAdd,
+                TakeBattleConditionAdd,
 
                 /// <summary>
-                /// 状態異常解除
+                /// 状態異常解除ログ
                 /// </summary>
-                BattleConditionRemove,
+                TakeBattleConditionRemove,
+                
+                /// <summary>
+                /// 蘇生ログ
+                /// </summary>
+                TakeRevive,
 
                 /// <summary>
                 /// 死亡ログ
                 /// </summary>
                 Die,
+                
+                /// <summary>
+                /// 状態異常ターン進行ログ
+                /// </summary>
+                ProgressBattleConditionTurn,
 
                 /// <summary>
                 /// アクション終了ログ
                 /// </summary>
                 EndAction,
-
-                /// <summary>
-                /// 被状態異常ログ
-                /// </summary>
-                TakeBattleCondition,
 
                 /// <summary>
                 /// バトル結果ログ
