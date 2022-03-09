@@ -17,4 +17,14 @@ public class BeDoneBattleMonsterData
     /// 失敗したか否か
     /// </summary>
     public bool isMissed { get; set; }
+
+    /// <summary>
+    /// クリティカルか否か
+    /// </summary>
+    public bool isCritical { get; set; }
+
+    /// <summary>
+    /// ブロックしたか否か
+    /// </summary>
+    public bool isBlocked { get; set; }
 }
