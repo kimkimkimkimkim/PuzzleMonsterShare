@@ -54,7 +54,12 @@ public class BattleConditionMB : MasterBookBase
     public BuffType targetBuffType { get; set; }
 
     /// <summary>
-    /// c
+    /// 対象の属性（属性特攻用）
     /// </summary>
     public MonsterAttribute targetMonsterAttribute { get; set; }
+    
+    /// <summary>
+    /// スキルタイプ（アクション用）
+    /// </summary>
+    public SkillType skillType { get; set; }
 }
