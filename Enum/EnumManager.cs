@@ -820,6 +820,11 @@ namespace PM
                 /// モンスター属性
                 /// </summary>
                 MonsterAttribute = 4,
+
+                /// <summary>
+                /// 状態異常
+                /// </summary>
+                BattleCondition = 5,
             }
         }
 
