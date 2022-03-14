@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public static class BattleUtil
 {
     public static BattleMonsterInfo GetBattleMonster(MonsterMB monster, int level, bool isPlayer, int index){
+        level = 100; // TODO
         var status = MonsterUtil.GetMonsterStatus(monster, level);
 
         var battleMonster = new BattleMonsterInfo()

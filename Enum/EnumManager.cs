@@ -310,7 +310,7 @@ namespace PM
                 EnemyAllRandom5 = 13,
 
                 /// <summary>
-                /// 攻撃したモンスター
+                /// 攻撃してきたモンスター
                 /// </summary>
                 DoAttack = 14,
 
@@ -394,6 +394,56 @@ namespace PM
                 /// リストの最初の要素の対象
                 /// </summary>
                 Target = 30,
+
+                /// <summary>
+                /// 味方前衛全体の中からランダムで1体
+                /// </summary>
+                AllyFrontRandom1 = 31,
+
+                /// <summary>
+                /// 味方前衛全体の中からランダムで2体
+                /// </summary>
+                AllyFrontRandom2 = 32,
+
+                /// <summary>
+                /// 味方後衛全体の中からランダムで1体
+                /// </summary>
+                AllyBackRandom1 = 33,
+
+                /// <summary>
+                /// 味方後衛全体の中からランダムで2体
+                /// </summary>
+                AllyBackRandom2 = 34,
+
+                /// <summary>
+                /// 味方後衛全体の中からランダムで3体
+                /// </summary>
+                AllyBackRandom3 = 35,
+
+                /// <summary>
+                /// 敵前衛全体の中からランダムで1体
+                /// </summary>
+                EnemyFrontRandom1 = 36,
+
+                /// <summary>
+                /// 敵前衛全体の中からランダムで2体
+                /// </summary>
+                EnemyFrontRandom2 = 37,
+
+                /// <summary>
+                /// 敵後衛全体の中からランダムで1体
+                /// </summary>
+                EnemyBackRandom1 = 38,
+
+                /// <summary>
+                /// 敵後衛全体の中からランダムで2体
+                /// </summary>
+                EnemyBackRandom2 = 39,
+
+                /// <summary>
+                /// 敵後衛全体の中からランダムで3体
+                /// </summary>
+                EnemyBackRandom3 = 40,
             }
 
             /// <summary>
@@ -470,6 +520,9 @@ namespace PM
             /// </summary>
             public enum SkillTriggerType
             {
+                /// <summary>
+                /// 常時
+                /// </summary>
                 None = 0,
 
                 /// <summary>
@@ -541,91 +594,16 @@ namespace PM
                 /// ウェーブ終了時
                 /// </summary>
                 OnWaveEnd = 14,
-            }
-
-            public enum BattleConditionTriggerType
-            {
-                None = 0,
 
                 /// <summary>
-                /// 毎アクション終了時
+                /// 自身がダメージを与えたとき
                 /// </summary>
-                EveryTimeEnd = 1,
+                OnMeExecuteDamageAfter = 15,
 
                 /// <summary>
-                /// バトル開始時
+                /// 自身がクリティカルを発動した後
                 /// </summary>
-                OnBattleStart = 2,
-
-                /// <summary>
-                /// 自分のアクション終了時
-                /// </summary>
-                OnMeActionEnd = 3,
-
-                /// <summary>
-                /// 自分の通常攻撃終了時
-                /// </summary>
-                OnMeNormalSkillEnd = 4,
-
-                /// <summary>
-                /// 自分のウルト終了時
-                /// </summary>
-                OnMeUltimateSkillEnd = 5,
-
-                /// <summary>
-                /// 自分がダメージを受けたとき
-                /// </summary>
-                OnMeTakeDamageEnd = 6,
-
-                /// <summary>
-                /// 自分が倒れたとき
-                /// </summary>
-                OnMeDeadEnd = 7,
-
-                /// <summary>
-                /// ウェーブ開始時
-                /// </summary>
-                OnWaveStart = 8,
-
-                /// <summary>
-                /// ターン開始時
-                /// </summary>
-                OnTurnStart = 9,
-
-                /// <summary>
-                /// 自分のアクション開始時
-                /// </summary>
-                OnMeActionStart = 10,
-
-                /// <summary>
-                /// 自分がアクション処理される前
-                /// </summary>
-                OnMeTakeActionBefore = 11,
-
-                /// <summary>
-                /// 自分がアクション処理された後
-                /// </summary>
-                OnMeTakeActionAfter = 12,
-
-                /// <summary>
-                /// ターン終了時
-                /// </summary>
-                OnTurnEnd = 13,
-
-                /// <summary>
-                /// ウェーブ終了時
-                /// </summary>
-                OnWaveEnd = 14,
-
-                /// <summary>
-                /// 解除された時
-                /// </summary>
-                OnRemoved = 15,
-
-                /// <summary>
-                /// 常時
-                /// </summary>
-                Always = 16,
+                OnMeExecuteCriticcalAfter = 16,
             }
 
             /// <summary>
@@ -658,7 +636,7 @@ namespace PM
                 /// <summary>
                 /// HPが50%未満の時
                 /// </summary>
-                Under50PercentMyHP = 1,
+                Under50PercentHP = 1,
 
                 /// <summary>
                 /// 生きている時
@@ -669,6 +647,11 @@ namespace PM
                 /// 戦闘不能の時
                 /// </summary>
                 Dead = 3,
+
+                /// <summary>
+                /// HPが30%未満の時
+                /// </summary>
+                Under30PercentHP = 4,
             }
 
             /// <summary>
