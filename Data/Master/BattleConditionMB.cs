@@ -27,11 +27,16 @@ public class BattleConditionMB : MasterBookBase
     /// バフタイプ
     /// </summary>
     public BuffType buffType { get; set; }
+    
+    /// <summary>
+    /// 状態異常効果実行者に対する発動条件タイプ
+    /// </summary>
+    public ActivateConditionType activateConditionType { get; set; }
 
     /// <summary>
     /// 状態異常効果発動タイミングタイプ
     /// </summary>
-    public BattleConditionTriggerType battleConditionTriggerType { get; set; }
+    public SkillTriggerType triggerType { get; set; }
 
     /// <summary>
     /// 状態異常効果発動時に解除されるか否か
