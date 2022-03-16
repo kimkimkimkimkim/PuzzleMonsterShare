@@ -22,6 +22,12 @@ public class PassiveSkillMB : MasterBookBase
     /// スキル実行者に対する発動条件タイプ
     /// </summary>
     public ActivateConditionType activateConditionType { get; set; }
+    
+    /// <summary>
+    /// バトル内での発動制限回数
+    /// 0 は制限なし
+    /// </summary>
+    public int limitExecuteNum { get; set; }
 
     /// <summary>
     /// パッシブスキル効果リスト
