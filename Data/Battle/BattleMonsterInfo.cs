@@ -84,6 +84,11 @@ public class BattleMonsterInfo
     /// 状態異常カウンター（付与されるたびにインクリメント）
     /// </summary>
     public int battleConditionCount { get; set; }
+    
+    /// <summary>
+    /// パッシブスキル発動回数
+    /// </summary>
+    public int passiveSkillExecuteCount { get; set; }
 }
 
 public static class BattleMonsterInfoExtentions
