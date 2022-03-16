@@ -9,4 +9,10 @@ public class PassiveSkillEffectMI: SkillEffectMI
     /// スキルトリガータイプ
     /// </summary>
     public SkillTriggerType triggerType { get; set; }
+
+    /// <summary>
+    /// トリガータイプ用のオプション値
+    /// 状態異常付与トリガーの状態異常IDなど
+    /// </summary>
+    public int triggerTypeOptionValue { get; set; }
 }

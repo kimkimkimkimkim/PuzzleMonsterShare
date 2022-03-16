@@ -76,7 +76,7 @@ public class BattleMonsterInfo
     public bool isDead { get; set; }
 
     /// <summary>
-    /// 直近で自分に攻撃されたモンスターのモンスターインデックス
+    /// 直近で自分に攻撃してきたモンスターのモンスターインデックス
     /// </summary>
     public BattleMonsterIndex currentBeDoneAttackedMonsterIndex { get; set; }
     

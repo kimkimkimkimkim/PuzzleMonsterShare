@@ -604,6 +604,61 @@ namespace PM
                 /// 自身がクリティカルを発動した後
                 /// </summary>
                 OnMeExecuteCriticcalAfter = 16,
+
+                /// <summary>
+                /// 味方が戦闘不能になった時
+                /// </summary>
+                OnAllyDead = 17,
+
+                /// <summary>
+                /// 敵が戦闘不能になった時
+                /// </summary>
+                OnEnemyDead = 18,
+
+                /// <summary>
+                /// 自身に特定状態異常が付与された時
+                /// </summary>
+                OnMeBeAddedBattleCondition = 19,
+
+                /// <summary>
+                /// 味方に特定状態異常が付与された時
+                /// </summary>
+                OnAllyBeAddedBattleCondition = 20,
+
+                /// <summary>
+                /// 敵に特定状態異常が付与された時
+                /// </summary>
+                OnEnemyBeAddedBattleCondition = 21,
+
+                /// <summary>
+                /// 自身が攻撃をブロックされた時
+                /// </summary>
+                OnMeBeBlocked = 22,
+
+                /// <summary>
+                /// 自身が攻撃をブロックした時
+                /// </summary>
+                OnMeBlocked = 23,
+
+                /// <summary>
+                /// 自身が通常攻撃またはウルトを発動した時
+                /// </summary>
+                OnMeExecuteNormalOrUltimateSkill = 24,
+
+                /// <summary>
+                /// 自身が通常攻撃またはウルトを受けたとき
+                /// </summary>
+                OnMeBeExecutedNormalOrUltimateSkill = 25,
+
+                /// <summary>
+                /// 味方がブロックした時
+                /// </summary>
+                OnAllyBlocked = 26,
+
+                /// <summary>
+                /// 敵がブロックした時
+                /// </summary>
+                OnEnemyBlocked = 27,
             }
 
             /// <summary>
