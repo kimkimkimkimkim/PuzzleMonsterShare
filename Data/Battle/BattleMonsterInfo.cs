@@ -108,11 +108,21 @@ public class BattleMonsterInfo
 
 public static class BattleMonsterInfoExtentions
 { 
-    public static void ChangeHp(this BattleMonsterInfo monster, int value)
+    /// <summary>
+    /// HP値変更は毎回ここを通す
+    /// 実際に影響を与えた値を返す
+    /// </summary>
+    public static int ChangeHp(this BattleMonsterInfo monster, int value)
     {
         var existsShield = monster.shield() > 0;
         
         if(existsShield && value < 0){
+            // 計算しやすいように効果量の絶対値に直す
+            value = Math.Abs(value);
+            
+            // 影響値用にも値を保存
+            var initialValue = value;
+            
             // ダメージかつシールドを保持していたら、体力ではなくシールドを削る
             monster.battleConditionList
                 .Where(c => c.battleCondition.battleConditionType == BattleConditionType.Shield)
@@ -134,19 +144,25 @@ public static class BattleMonsterInfoExtentions
                 var isValidShield = c.battleCondition.battleConditionType == BattleConditionType.Shield && c.shieldValue > 0;
                 return isNotShield || isValidShield;
             }).ToList();
+            
+            // 最初の効果量からシールド削り後の効果値を引いたものが実際の影響値
+            return initialValue - value;
         }else{
             var tempHp = monster.currentHp + value;
             if (tempHp > monster.maxHp)
             {
                 monster.currentHp = monster.maxHp;
+                return value - (tempHp - monster.maxHp);
             }
             else if (tempHp < 0)
             {
                 monster.currentHp = 0;
+                return value - tempHp;
             }
             else
             {
                 monster.currentHp = tempHp;
+                return value;
             }
         }
     }
