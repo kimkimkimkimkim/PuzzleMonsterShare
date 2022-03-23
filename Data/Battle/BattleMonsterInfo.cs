@@ -89,6 +89,21 @@ public class BattleMonsterInfo
     /// パッシブスキル発動回数
     /// </summary>
     public int passiveSkillExecuteCount { get; set; }
+    
+    /// <summary>
+    /// バトル中の合計与ダメージ量
+    /// </summary>
+    public int totalGiveDamage { get; set; }
+    
+    /// <summary>
+    /// バトル中の合計被ダメージ量
+    /// </summary>
+    public int totalTakeDamage { get; set; }
+    
+    /// <summary>
+    /// バトル中の合計与回復量
+    /// </summary>
+    public int totalHealing { get; set; }
 }
 
 public static class BattleMonsterInfoExtentions
