@@ -60,4 +60,9 @@ public class BattleLogInfo
     /// アクションタイプ
     /// </summary>
     public BattleActionType actionType { get; set; }
+    
+    /// <summary>
+    /// Wave毎の敵バトルモンスターリスト
+    /// </summary>
+    public List<List<BattleMonsterInfo>> enemyBattleMonsterListByWave { get; set; }
 }
