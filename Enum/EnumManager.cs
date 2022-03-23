@@ -794,6 +794,29 @@ namespace PM
                 EnergyUpRate = 16,
                 HealedRate = 17,
             }
+
+            /// <summary>
+            /// スキル演出の位置タイプ
+            /// </summary>
+            public enum SkillFxPositionType
+            {
+                None = 0,
+
+                /// <summary>
+                /// 対象の個人
+                /// </summary>
+                TargetIndividual = 1,
+
+                /// <summary>
+                /// 対象の全体
+                /// </summary>
+                TargetWhole = 2,
+
+                /// <summary>
+                /// スキル発動者自身
+                /// </summary>
+                Myself = 3,
+            }
         }
 
         namespace UI

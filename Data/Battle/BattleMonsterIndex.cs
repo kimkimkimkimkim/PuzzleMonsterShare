@@ -19,6 +19,6 @@ public class BattleMonsterIndex {
 
     public bool IsSame(BattleMonsterIndex battleMonsterIndex)
     {
-        return this.isPlayer == battleMonsterIndex.isPlayer && this.index == battleMonsterIndex.index;
+        return battleMonsterIndex != null && this.isPlayer == battleMonsterIndex.isPlayer && this.index == battleMonsterIndex.index;
     }
 }
