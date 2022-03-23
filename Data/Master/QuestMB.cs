@@ -46,4 +46,9 @@ public class QuestMB : MasterBookBase
     /// 消費するスタミナ量
     /// </summary>
     public int consumeStamina { get; set; }
+    
+    /// <summary>
+    /// 上限ターン数
+    /// </summary>
+    public int limitTurnNum { get; set; }
 }
