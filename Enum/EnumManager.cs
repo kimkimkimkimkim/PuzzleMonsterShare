@@ -707,6 +707,12 @@ namespace PM
                 /// HPが30%未満の時
                 /// </summary>
                 Under30PercentHP = 4,
+
+                /// <summary>
+                /// 回復可能
+                /// 生きているかつ体力が満タンではない時
+                /// </summary>
+                Healable = 5,
             }
 
             /// <summary>
@@ -816,6 +822,16 @@ namespace PM
                 /// スキル発動者自身
                 /// </summary>
                 Myself = 3,
+
+                /// <summary>
+                /// スキル発動者全体
+                /// </summary>
+                MyWhole = 4,
+
+                /// <summary>
+                /// 画面全体
+                /// </summary>
+                StageWhole = 5,
             }
         }
 
