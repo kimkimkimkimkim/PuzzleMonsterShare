@@ -85,4 +85,36 @@ public static partial class ItemUtil
             num = virtualCurrencyNum.num,
         };
     }
+
+    /// <summary>
+    /// ユーザーバトル情報から報酬アイテムリストを返します
+    /// </summary>
+    public static List<RewardItemMI> GetRewardItemList(UserBattleInfo userBattle)
+    {
+        var firstClearRewardItemList = userBattle.firstClearRewardItemList.Select(i =>
+        {
+            return new RewardItemMI()
+            {
+                itemType = i.itemType, 
+                itemId = i.itemId,
+                num = i.num,
+                isFirstClearReward = true,
+            };
+        }).ToList();
+        var clearRewardItemList = userBattle.rewardItemList.Select(i =>
+        {
+            return new RewardItemMI()
+            {
+                itemType = i.itemType,
+                itemId = i.itemId,
+                num = i.num,
+                isFirstClearReward = false,
+            };
+        }).ToList();
+
+        var rewardItemList = new List<RewardItemMI>();
+        rewardItemList.AddRange(firstClearRewardItemList);
+        rewardItemList.AddRange(clearRewardItemList);
+        return rewardItemList;
+    }
 }
