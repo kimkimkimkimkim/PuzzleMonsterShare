@@ -1263,5 +1263,12 @@ namespace PM
                 ClearQuestToday = 13,
             }
         }
+
+        namespace Notification
+        {
+            public enum NotificationType
+            {
+            }
+        }
     }
 }

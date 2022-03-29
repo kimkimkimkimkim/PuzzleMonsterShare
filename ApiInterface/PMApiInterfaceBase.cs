@@ -1,4 +1,6 @@
 ﻿// APIリクエストの変数はプロパティにしてはいけない！(シリアライズの関係)
+using System.Collections.Generic;
+
 public class PMApiRequestBase
 {
 
@@ -8,6 +10,7 @@ public class PMApiResponseBase
 {
     public PMApiStatus status;
     public PMApiException exception;
+    public List<UserNotificationInfo> userNotificationList;
 }
 
 /// <summary>
