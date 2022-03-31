@@ -24,10 +24,7 @@ public static partial class ItemUtil
         {
             id = UserDataUtil.CreateUserDataId(),
             monsterId = monster.id,
-            customData = new UserMonsterCustomData()
-            {
-                grade = monster.initialGrade,
-            }
+            customData = new UserMonsterCustomData(),
         };
     }
 
