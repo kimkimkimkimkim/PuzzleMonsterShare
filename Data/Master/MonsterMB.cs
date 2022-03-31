@@ -18,11 +18,11 @@ public class MonsterMB : MasterBookBase
     /// 属性
     /// </summary>
     public MonsterAttribute attribute { get; set; }
-
+    
     /// <summary>
-    /// 初期グレード
+    /// レアリティ
     /// </summary>
-    public int initialGrade { get; set; }
+    public MonsterRarity rarity { get; set; }
 
     /// <summary>
     /// ガチャボックスタイプリスト
