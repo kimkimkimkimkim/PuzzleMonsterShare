@@ -1001,6 +1001,111 @@ namespace PM
             public enum PropertyType
             {
                 None = 0,
+
+                /// <summary>
+                /// 火の覚醒素材1
+                /// </summary>
+                RedGradeUpMaterial1 = 1,
+
+                /// <summary>
+                /// 水の覚醒素材1
+                /// </summary>
+                BlueGradeUpMaterial1 = 2,
+
+                /// <summary>
+                /// 木の覚醒素材1
+                /// </summary>
+                GreenGradeUpMaterial1 = 3,
+
+                /// <summary>
+                /// 光の覚醒素材1
+                /// </summary>
+                YellowGradeUpMaterial1 = 4,
+
+                /// <summary>
+                /// 闇の覚醒素材1
+                /// </summary>
+                PurpleGradeUpMaterial1 = 5,
+
+                /// <summary>
+                /// 火の覚醒素材2
+                /// </summary>
+                RedGradeUpMaterial2 = 6,
+
+                /// <summary>
+                /// 水の覚醒素材2
+                /// </summary>
+                BlueGradeUpMaterial2 = 7,
+
+                /// <summary>
+                /// 木の覚醒素材2
+                /// </summary>
+                GreenGradeUpMaterial2 = 8,
+
+                /// <summary>
+                /// 光の覚醒素材2
+                /// </summary>
+                YellowGradeUpMaterial2 = 9,
+
+                /// <summary>
+                /// 闇の覚醒素材2
+                /// </summary>
+                PurpleGradeUpMaterial2 = 10,
+
+                /// <summary>
+                /// 火の覚醒素材3
+                /// </summary>
+                RedGradeUpMaterial3 = 11,
+
+                /// <summary>
+                /// 水の覚醒素材3
+                /// </summary>
+                BlueGradeUpMaterial3 = 12,
+
+                /// <summary>
+                /// 木の覚醒素材3
+                /// </summary>
+                GreenGradeUpMaterial3 = 13,
+
+                /// <summary>
+                /// 光の覚醒素材3
+                /// </summary>
+                YellowGradeUpMaterial3 = 14,
+
+                /// <summary>
+                /// 闇の覚醒素材3
+                /// </summary>
+                PurpleGradeUpMaterial3 = 15,
+
+                /// <summary>
+                /// 火の覚醒素材4
+                /// </summary>
+                RedGradeUpMaterial4 = 16,
+
+                /// <summary>
+                /// 水の覚醒素材4
+                /// </summary>
+                BlueGradeUpMaterial4 = 17,
+
+                /// <summary>
+                /// 木の覚醒素材4
+                /// </summary>
+                GreenGradeUpMaterial4 = 18,
+
+                /// <summary>
+                /// 光の覚醒素材4
+                /// </summary>
+                YellowGradeUpMaterial4 = 19,
+
+                /// <summary>
+                /// 闇の覚醒素材4
+                /// </summary>
+                PurpleGradeUpMaterial4 = 20,
+
+                /// <summary>
+                /// 虹の覚醒素材1
+                /// </summary>
+                RainbowGradeUpMaterial1 = 21,
             }
 
             /// <summary>
