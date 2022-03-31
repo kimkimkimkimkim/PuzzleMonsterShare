@@ -1164,6 +1164,18 @@ namespace PM
                 Yellow = 4,
                 Purple = 5,
             }
+            
+            /// <summary>
+            /// レアリティ
+            /// </summary>
+            public enum MonsterRarity
+            {
+                None = 0,
+                N = 1,
+                R = 2,
+                SR = 3,
+                SSR = 4,
+            }
         }
         
         namespace Condition
