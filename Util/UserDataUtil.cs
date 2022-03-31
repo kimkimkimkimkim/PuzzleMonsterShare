@@ -122,13 +122,14 @@ public static class UserDataUtil
 
     /// <summary>
     /// モンスターカスタムデータを辞書にして返す
+    /// default値のものに関しては無視する
     /// </summary>
     public static Dictionary<string,string> GetCustomDataDict(UserMonsterCustomData customData){
         var dict = new Dictionary<string,string>(){
-            {"level",customData.level.ToString()},
-            {"exp",customData.exp.ToString()},
-            {"grade",customData.grade.ToString()},
-        }.Where(kvp => kvp.Value != "0").ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+            {"level", customData.level != default ? customData.level.ToString() : default(string)},
+            {"exp",customData.exp != default ? customData.exp.ToString(): default(string)},
+            {"grade",customData.grade != default ? customData.grade.ToString(): default(string)},
+        }.Where(kvp => kvp.Value != default).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
         return dict;
     }
 
