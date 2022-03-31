@@ -80,17 +80,47 @@ public class MonsterMB : MasterBookBase
     public int level100Speed { get; set; }
 
     /// <summary>
-    /// パッシブスキルID
+    /// レベル1パッシブスキルID
     /// </summary>
-    public long passiveSkillId { get; set; }
+    public long level1PassiveSkillId { get; set; }
 
     /// <summary>
-    /// 通常スキルID
+    /// レベル2パッシブスキルID
     /// </summary>
-    public long normalSkillId { get; set; }
+    public long level2PassiveSkillId { get; set; }
 
     /// <summary>
-    /// アルティメットスキルID
+    /// レベル3パッシブスキルID
     /// </summary>
-    public long ultimateSkillId { get; set; }
+    public long level3PassiveSkillId { get; set; }
+
+    /// <summary>
+    /// レベル1通常スキルID
+    /// </summary>
+    public long level1NormalSkillId { get; set; }
+
+    /// <summary>
+    /// レベル2通常スキルID
+    /// </summary>
+    public long level2NormalSkillId { get; set; }
+
+    /// <summary>
+    /// レベル3通常スキルID
+    /// </summary>
+    public long level3NormalSkillId { get; set; }
+
+    /// <summary>
+    /// レベル1アルティメットスキルID
+    /// </summary>
+    public long level1UltimateSkillId { get; set; }
+
+    /// <summary>
+    /// レベル2アルティメットスキルID
+    /// </summary>
+    public long level2UltimateSkillId { get; set; }
+
+    /// <summary>
+    /// レベル3アルティメットスキルID
+    /// </summary>
+    public long level3UltimateSkillId { get; set; }
 }
