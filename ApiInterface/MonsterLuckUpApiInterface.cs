@@ -12,9 +12,9 @@ public class MonsterLuckUpApiRequest : PMApiRequestBase
     public string userMonsterId;
     
     /// <summary>
-    /// モンスター消費量
+    /// スタック消費量
     /// </summary>
-    public int consumeMonsterNum;
+    public int consumeStackNum;
 }
 
 public class MonsterLuckUpApiResponse : PMApiResponseBase
