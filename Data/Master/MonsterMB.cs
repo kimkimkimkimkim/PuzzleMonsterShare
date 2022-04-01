@@ -23,6 +23,11 @@ public class MonsterMB : MasterBookBase
     /// レアリティ
     /// </summary>
     public MonsterRarity rarity { get; set; }
+    
+    /// <summary>
+    /// ガチャモンスターか否か
+    /// </summary>
+    public bool isGachaMonster { get; set; }
 
     /// <summary>
     /// ガチャボックスタイプリスト
