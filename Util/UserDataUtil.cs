@@ -127,8 +127,9 @@ public static class UserDataUtil
     public static Dictionary<string,string> GetCustomDataDict(UserMonsterCustomData customData){
         var dict = new Dictionary<string,string>(){
             {"level", customData.level != default ? customData.level.ToString() : default(string)},
-            {"exp",customData.exp != default ? customData.exp.ToString(): default(string)},
-            {"grade",customData.grade != default ? customData.grade.ToString(): default(string)},
+            {"exp", customData.exp != default ? customData.exp.ToString() : default(string)},
+            {"grade", customData.grade != default ? customData.grade.ToString() : default(string)},
+            {"luck", customData.luck != default ? customData.luck.ToString() : default(string)},
         }.Where(kvp => kvp.Value != default).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
         return dict;
     }
