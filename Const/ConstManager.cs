@@ -51,6 +51,11 @@ public class ConstManager
         /// 最大レベル
         /// </summary>
         public static int MAX_LEVEL = 100;
+        
+        /// <summary>
+        /// 対象モンスターを1体消費した際のラック上昇量
+        /// </summary>
+        public static int LUCK_UP_NUM(bool isGachaMonster) => isGachaMonster ? 5 : 1;
     }
 
     public class Battle
