@@ -19,7 +19,7 @@ public class UserMonsterCustomData
     public int grade { get; set; }
     
     /// <summary>
-    /// 限界突破値
+    /// ラック
     /// </summary>
-    public int limitBreak { get; set; }
+    public int luck { get; set; }
 }
