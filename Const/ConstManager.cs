@@ -56,6 +56,11 @@ public class ConstManager
         /// 対象モンスターを1体消費した際のラック上昇量
         /// </summary>
         public static int LUCK_UP_NUM(bool isGachaMonster) => isGachaMonster ? 5 : 1;
+        
+        /// <summary>
+        /// 最大ラック
+        /// </summary>
+        public static int MAX_LUCK = 100;
     }
 
     public class Battle
