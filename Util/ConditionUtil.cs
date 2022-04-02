@@ -2,6 +2,7 @@ using PM.Enum.Condition;
 using System.Collections.Generic;
 using System.Linq;
 using PM.Enum.Battle;
+using System;
 
 public static class ConditionUtil {
     /// <summary>
@@ -27,7 +28,20 @@ public static class ConditionUtil {
                     return DateTimeUtil.Now < DateTimeUtil.GetDateFromMasterString(condition.valueString);
                 case ConditionType.UpperMissionId:
                     // 指定ミッションをクリアしているか
-                    return userData.userMissionList.Any(u => u.missionId == condition.valueInt && u.completedDate > DateTimeUtil.Epoch && u.startExpirationDate <= DateTimeUtil.Now && DateTimeUtil.Now < u.endExpirationDate);
+                    return userData.userMissionList
+                        .Where(u =>
+                        {
+                            // クリア済みの指定ミッションがあるか
+                            return u.missionId == condition.valueInt && u.completedDate > DateTimeUtil.Epoch;
+                        })
+                        .Where(u =>
+                        {
+                            // そのミッションに期限がないかあるいは有効期限内だったらOK
+                            var isNotExpirationDate = u.startExpirationDate <= DateTimeUtil.Epoch && u.endExpirationDate <= DateTimeUtil.Epoch;
+                            var isValidExpirationDate = u.startExpirationDate <= DateTimeUtil.Now && DateTimeUtil.Now < u.endExpirationDate;
+                            return isNotExpirationDate || isValidExpirationDate;
+                        })
+                        .Any();
                 case ConditionType.LowerMissionId:
                     return true;
                 case ConditionType.UpperPlayerRank:
@@ -56,6 +70,11 @@ public static class ConditionUtil {
                 case ConditionType.ClearQuestToday:
                     // 今日クエストをクリアしたか
                     return userData.userBattleList.Any(u => u.winOrLose == WinOrLose.Win && DateTimeUtil.IsToday(u.completedDate));
+                case ConditionType.TargetDayOfWeekToday:
+                    // 本日が指定曜日か否か
+                    var dayOfWeekList = condition.valueString.Split(',').Select(dow => (DayOfWeek)int.Parse(dow)).ToList();
+                    var todayDow = DateTimeUtil.Now.DayOfWeek;
+                    return dayOfWeekList.Any(dow => dow == todayDow);
                 default:
                     return true;
             }

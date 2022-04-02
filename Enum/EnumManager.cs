@@ -1236,8 +1236,22 @@ namespace PM
             /// </summary>
             public enum QuestType
             {
+                /// <summary>
+                /// メイン
+                /// </summary>
                 Normal = 1,
+
+                /// <summary>
+                /// イベント
+                /// 降臨など
+                /// </summary>
                 Event = 2,
+
+                /// <summary>
+                /// ゲリラ
+                /// 育成素材用
+                /// </summary>
+                Guerrilla = 3,
             }
         }
 
@@ -1356,6 +1370,14 @@ namespace PM
                 /// 本日クエストを一つでもクリアしたか
                 /// </summary>
                 ClearQuestToday = 13,
+
+                /// <summary>
+                /// 本日が対象の曜日か
+                /// リストで指定
+                /// 文字列の欄に　0,3,5 のように
+                /// 日曜=0 ~ 土曜=6
+                /// </summary>
+                TargetDayOfWeekToday = 14,
             }
         }
 
