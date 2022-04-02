@@ -1387,5 +1387,24 @@ namespace PM
             {
             }
         }
+
+        namespace Sound
+        {
+            /// <summary>
+            /// BGMのファイル名
+            /// Enum名はそのファイル名にする
+            /// </summary>
+            public enum BGM
+            {
+                None,
+                Main,
+            }
+
+            public enum SE
+            {
+                None,
+                Click,
+            }
+        }
     }
 }
