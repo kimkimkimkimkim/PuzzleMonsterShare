@@ -4,11 +4,13 @@ using PM.Enum.Mission;
 
 public static class DateTimeUtil
 {
+    private static readonly TimeZoneInfo TIMEZONE_JST = TimeZoneInfo.FindSystemTimeZoneById("Tokyo Standard Time");
+
     /// <summary>
     /// 現在日時を返します
-    /// TODO : 海外などの対応
+    /// 常に日本時間を返す
     /// </summary>
-    public static DateTime Now => DateTime.Now;
+    public static DateTime Now => TimeZoneInfo.ConvertTime(DateTimeOffset.Now, TIMEZONE_JST).DateTime;
 
     /// <summary>
     /// 初期値を返します
