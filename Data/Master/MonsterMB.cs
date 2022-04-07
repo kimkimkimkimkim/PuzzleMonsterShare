@@ -35,54 +35,24 @@ public class MonsterMB : MasterBookBase
     public List<GachaBoxType> gachaBoxTypeList { get; set; }
 
     /// <summary>
-    /// レベル1でのHP
+    /// HP種族値
     /// </summary>
-    public int level1Hp { get; set; }
+    public int hpBaseStatus { get; set; }
 
     /// <summary>
-    /// レベル1での攻撃力
+    /// 攻撃力種族値
     /// </summary>
-    public int level1Attack { get; set; }
+    public int attackBaseStatus { get; set; }
 
     /// <summary>
-    /// レベル1での回復力
+    /// 防御力種族値
     /// </summary>
-    public int level1Heal { get; set; }
+    public int defenseBaseStatus { get; set; }
 
     /// <summary>
-    /// レベル1での防御力
+    /// 素早さ種族値
     /// </summary>
-    public int level1Defense { get; set; }
-
-    /// <summary>
-    /// レベル1でのスピード
-    /// </summary>
-    public int level1Speed { get; set; }
-
-    /// <summary>
-    /// レベル100でのHP
-    /// </summary>
-    public int level100Hp { get; set; }
-
-    /// <summary>
-    /// レベル100での攻撃力
-    /// </summary>
-    public int level100Attack { get; set; }
-
-    /// <summary>
-    /// レベル100での回復力
-    /// </summary>
-    public int level100Heal { get; set; }
-
-    /// <summary>
-    /// レベル100での防御力
-    /// </summary>
-    public int level100Defense { get; set; }
-
-    /// <summary>
-    /// レベル100でのスピード
-    /// </summary>
-    public int level100Speed { get; set; }
+    public int speedBaseStatus { get; set; }
 
     /// <summary>
     /// レベル1パッシブスキルID
