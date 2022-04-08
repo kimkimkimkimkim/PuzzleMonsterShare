@@ -18,19 +18,19 @@ public class QuestMB : MasterBookBase
     public long questCategoryId { get; set; }
 
     /// <summary>
-    /// 初回報酬バンドルID
+    /// 初回報酬アイテムリスト
     /// </summary>
-    public long firstRewardBundleId { get; set; }
+    public List<ItemMI> firstRewardItemList { get; set; }
 
     /// <summary>
-    /// ドロップアイテムバンドルID
+    /// ドロップアイテムリスト
     /// </summary>
-    public long dropBundleId { get; set; }
+    public List<ProbabilityItemMI> dropItemList { get; set; }
 
     /// <summary>
-    /// クエストウェーブIDリスト
+    /// ウェーブ毎のクエストモンスターリスト
     /// </summary>
-    public List<long> questWaveIdList { get; set; }
+    public List<List<QuestMonsterMI>> questMonsterListByWave { get; set; }
 
     /// <summary>
     /// クエストが表示されるのに必要な条件リスト
