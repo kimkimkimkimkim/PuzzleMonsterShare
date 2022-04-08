@@ -4,7 +4,14 @@
 public class ProbabilityItemMI : ItemMI
 {
     /// <summary>
-    /// 確率
+    /// 確率(%)
+    /// 0 ~ 100
     /// </summary>
-    public int probability { get; set; }
+    public double percent { get; set; }
+    
+    /// <summary>
+    /// 重み
+    /// 主にガチャ用
+    /// </summary>
+    public int weight { get; set; }
 }
