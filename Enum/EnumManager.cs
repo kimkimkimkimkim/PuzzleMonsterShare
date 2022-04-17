@@ -1406,5 +1406,31 @@ namespace PM
                 Click,
             }
         }
+
+        namespace LoginBonus
+        {
+            public enum RepeatType
+            {
+                /// <summary>
+                /// 繰り返しなし
+                /// </summary>
+                None = 0,
+
+                /// <summary>
+                /// 繰り返し条件なし
+                /// </summary>
+                Always = 1,
+
+                /// <summary>
+                /// 日付
+                /// </summary>
+                Date = 2,
+
+                /// <summary>
+                /// 曜日 日:0-土:6
+                /// </summary>
+                DayOfWeek = 3,
+            }
+        }
     }
 }

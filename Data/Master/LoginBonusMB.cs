@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using PM.Enum.LoginBonus;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 [Description("LoginBonusMB")]
@@ -15,9 +16,14 @@ public class LoginBonusMB : MasterBookBase
     public string description { get; set; }
 
     /// <summary>
-    /// 付与するコンテナID
+    /// 繰り返しタイプ
     /// </summary>
-    public long containerId { get; set; }
+    public RepeatType repeatType { get; set; }
+
+    /// <summary>
+    /// 繰り返し値
+    /// </summary>
+    public int repeatValue { get; set; }
 
     /// <summary>
     /// 付与条件リスト
@@ -25,7 +31,8 @@ public class LoginBonusMB : MasterBookBase
     public List<ConditionMI> conditionList { get; set; }
 
     /// <summary>
-    /// 条件を満たしていれば何度でも付与するか否か
+    /// 報酬アイテムリスト
+    /// 1日ずつの報酬が各要素に格納されている
     /// </summary>
-    public bool isContinue { get; set; }
+    public List<ItemMI> rewardItemList { get; set; }
 }
