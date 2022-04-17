@@ -41,6 +41,15 @@ public static class DateTimeUtil
     }
 
     /// <summary>
+    /// 指定した日時のゲーム内当日開始日時を返す
+    /// 例) 4/12 12:22 → 4/12 04:00
+    /// </summary>
+    public static DateTime GetStartDate(DateTime date){
+        var startAndEndDate = GetStartAndEndDate(MissionType.Daily);
+        return startAndEndDate.startDate;
+    }
+
+    /// <summary>
     /// 指定した日時がゲーム内の今日かどうかを判定する
     /// </summary>
     public static bool IsToday(DateTime date)
@@ -49,6 +58,13 @@ public static class DateTimeUtil
 
         // 終了日時は開始日時と被らないようになっているのでどちらもイコールをつける
         return startAndEndDate.startDate <= date && date <= startAndEndDate.endDate;
+    }
+
+    /// <summary>
+    /// 指定した2つの日時の日付が等しいか否か
+    /// </summary>
+    public static bool IsSameDate(DateTime dateA, DateTime dateB){
+        return dateA.Year == dateB.Year && dateA.Month == dateB.Month && dateA.Day == dateB.Day;
     }
 
     /// <summary>

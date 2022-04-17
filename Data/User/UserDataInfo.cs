@@ -46,4 +46,19 @@ public class UserDataInfo
     /// ユーザープレゼントリスト
     /// </summary>
     public List<UserPresentInfo> userPresentList { get; set; } = new List<UserPresentInfo>();
+
+    /// <summary>
+    /// ユーザーログインボーナスリスト
+    /// </summary>
+    public List<UserLoginBonusInfo> userLoginBonusList{ get; set; } = new List<UserLoginBonusInfo>();
+
+    /// <summary>
+    /// ユーザーモンスターリスト
+    /// </summary>
+    public List<UserMonsterInfo> userMonsterList { get; set; } = new List<UserMonsterInfo>();
+
+    /// <summary>
+    /// ユーザー資産リスト
+    /// </summary>
+    public List<UserPropertyInfo> userPropertyList { get; set; } = new List<UserPropertyInfo>();
 }

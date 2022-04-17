@@ -10,7 +10,7 @@ public class PMApiResponseBase
 {
     public PMApiStatus status;
     public PMApiException exception;
-    public List<UserNotificationInfo> userNotificationList;
+    public List<UserNotificationInfo> userNotificationList = new List<UserNotificationInfo>();
 }
 
 /// <summary>

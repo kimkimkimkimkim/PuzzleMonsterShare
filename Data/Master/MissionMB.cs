@@ -24,9 +24,9 @@ public class MissionMB : MasterBookBase
     public string description { get; set; }
 
     /// <summary>
-    /// 報酬バンドルID
+    /// 報酬アイテムリスト
     /// </summary>
-    public long rewardBundleId { get; set; }
+    public List<ItemMI> rewardItemList { get; set; }
 
     /// <summary>
     /// ミッションが表示されるのに必要な条件リスト

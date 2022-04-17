@@ -1106,6 +1106,26 @@ namespace PM
                 /// 虹の覚醒素材1
                 /// </summary>
                 RainbowGradeUpMaterial1 = 21,
+
+                /// <summary>
+                /// スタミナ回復アイテム
+                /// </summary>
+                StaminaRecovery = 22,
+
+                /// <summary>
+                /// プレイヤー経験値
+                /// </summary>
+                PlayerExp = 23,
+
+                /// <summary>
+                /// モンスター経験値
+                /// </summary>
+                MonsterExp = 24,
+
+                /// <summary>
+                /// ガチャチケット
+                /// </summary>
+                GachaTicket = 25,
             }
 
             /// <summary>
@@ -1226,6 +1246,7 @@ namespace PM
                 userBattleList,
                 userMissionList,
                 userPresentList,
+                userLoginBonusList,
             }
         }
 
@@ -1385,6 +1406,8 @@ namespace PM
         {
             public enum NotificationType
             {
+                None,
+                LoginBonus,
             }
         }
 

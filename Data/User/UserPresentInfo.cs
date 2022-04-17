@@ -6,22 +6,17 @@
 public class UserPresentInfo : UserDataBase
 {
     /// <summary>
-    /// コンテナID
+    /// アイテム内容
     /// </summary>
-    public long containerId { get; set; }
+    public ItemMI item { get; set; }
 
     /// <summary>
-    /// ユーザーコンテナID
-    /// </summary>
-    public string userContainerId { get; set; }
-
-    /// <summary>
-    /// コンテナが付与された日時
+    /// 付与された日時
     /// </summary>
     public DateTime grantedDate { get; set; }
 
     /// <summary>
-    /// コンテナを開けた日時
+    /// プレゼントを受け取った日時
     /// </summary>
-    public DateTime unlockedDate { get; set; }
+    public DateTime receivedDate { get; set; }
 }
