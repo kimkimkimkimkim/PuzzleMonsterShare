@@ -974,10 +974,6 @@ namespace PM
                             return "オーブ";
                         case VirtualCurrencyType.CN:
                             return "コイン";
-                        case VirtualCurrencyType.PE:
-                            return "プレイヤー経験値";
-                        case VirtualCurrencyType.ME:
-                            return "モンスター経験値";
                         default:
                             return "";
                     }
