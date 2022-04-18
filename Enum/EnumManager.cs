@@ -1189,6 +1189,21 @@ namespace PM
                 /// 通常十連
                 /// </summary>
                 Ten = 2,
+
+                /// <summary>
+                /// SR以上1体確定十連
+                /// </summary>
+                TenUpperSR1 = 3,
+
+                /// <summary>
+                /// SSR1体確定十連
+                /// </summary>
+                TenUpperSSR1 = 4,
+
+                /// <summary>
+                /// SSR1体確定単発
+                /// </summary>
+                OneUpperSSR1 = 5,
             }
 
             /// <summary>

@@ -16,14 +16,9 @@ public class GachaBoxDetailMB : MasterBookBase
     public string title { get; set; }
 
     /// <summary>
-    /// PlayFabで設定しているバンドルID
+    /// 必要アイテム
     /// </summary>
-    public long bundleId { get; set; }
-
-    /// <summary>
-    /// 必要アイテムリスト
-    /// </summary>
-    public List<ItemMI> requiredItemList { get; set; }
+    public ItemMI requiredItem { get; set; }
 
     /// <summary>
     /// ガチャ実行タイプ
