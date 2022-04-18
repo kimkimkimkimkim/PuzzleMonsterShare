@@ -61,8 +61,6 @@ public static class UserDataUtil
         {
             if (virtualCurrency.Key == VirtualCurrencyType.OB.ToString()) userVirtualCurrency.orb = virtualCurrency.Value;
             if (virtualCurrency.Key == VirtualCurrencyType.CN.ToString()) userVirtualCurrency.coin = virtualCurrency.Value;
-            if (virtualCurrency.Key == VirtualCurrencyType.PE.ToString()) userVirtualCurrency.playerExp = virtualCurrency.Value;
-            if (virtualCurrency.Key == VirtualCurrencyType.ME.ToString()) userVirtualCurrency.monsterExp = virtualCurrency.Value;
         }
         return userVirtualCurrency;
     }

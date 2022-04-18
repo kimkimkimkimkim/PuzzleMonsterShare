@@ -17,16 +17,6 @@ public class UserVirtualCurrencyInfo
     public int coin { get; set; } = 0;
 
     /// <summary>
-    /// プレイヤー経験値
-    /// </summary>
-    public int playerExp { get; set; } = 0;
-
-    /// <summary>
-    /// モンスター経験値
-    /// </summary>
-    public int monsterExp { get; set; } = 0;
-
-    /// <summary>
     /// 仮想通貨とその個数の情報リスト
     /// </summary>
     public List<VirtualCurrencyNumInfo> virtualCurrencyNumList {
@@ -41,16 +31,6 @@ public class UserVirtualCurrencyInfo
                 new VirtualCurrencyNumInfo() {
                     virtualCurrencyId = (long)VirtualCurrencyType.CN,
                     num = this.coin,
-                },
-                // プレイヤー経験値
-                new VirtualCurrencyNumInfo() {
-                    virtualCurrencyId = (long)VirtualCurrencyType.PE,
-                    num = this.playerExp,
-                },
-                // モンスター経験値
-                new VirtualCurrencyNumInfo() {
-                    virtualCurrencyId = (long)VirtualCurrencyType.ME,
-                    num = this.monsterExp,
                 },
             };
         }
