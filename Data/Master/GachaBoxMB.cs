@@ -23,15 +23,15 @@ public class GachaBoxMB : MasterBookBase
     /// <summary>
     /// 通常枠抽選時のレアリティ別排出確率
     /// </summary>
-    public EmisionPercentByRarity normalEmisionPercentByRarity { get; set; }
+    public EmisionPercentByRarity normalEmissionPercentByRarity { get; set; }
 
     /// <summary>
     /// SR以上確定枠抽選時のレアリティ別排出確率
     /// </summary>
-    public EmisionPercentByRarity upperSrEmisionPercentByRarity { get; set; }
+    public EmisionPercentByRarity upperSrEmissionPercentByRarity { get; set; }
 
     /// <summary>
     /// SSR確定枠抽選時のレアリティ別排出確率
     /// </summary>
-    public EmisionPercentByRarity upperSsrEmisionPercentByRarity { get; set; }
+    public EmisionPercentByRarity upperSsrEmissionPercentByRarity { get; set; }
 }
