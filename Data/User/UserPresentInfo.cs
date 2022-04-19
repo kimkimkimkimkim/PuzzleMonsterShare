@@ -29,4 +29,9 @@ public class UserPresentInfo : UserDataBase
     /// プレゼントを受け取った日時
     /// </summary>
     public DateTime receivedDate { get; set; }
+
+    /// <summary>
+    /// 受け取り期限日時
+    /// </summary>
+    public DateTime deadlineDate { get; set; }
 }
