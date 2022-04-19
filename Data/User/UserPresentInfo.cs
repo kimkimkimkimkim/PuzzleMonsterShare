@@ -34,4 +34,12 @@ public class UserPresentInfo : UserDataBase
     /// 受け取り期限日時
     /// </summary>
     public DateTime deadlineDate { get; set; }
+
+    /// <summary>
+    /// 受け取り可能なプレゼントか否か
+    /// </summary>
+    public bool IsValid()
+    {
+        return receivedDate <= DateTimeUtil.Epoch && (deadlineDate <= DateTimeUtil.Epoch || deadlineDate > DateTimeUtil.Now);
+    }
 }
