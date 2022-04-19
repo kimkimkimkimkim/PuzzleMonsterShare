@@ -6,6 +6,16 @@
 public class UserPresentInfo : UserDataBase
 {
     /// <summary>
+    /// タイトル
+    /// </summary>
+    public string title { get; set; }
+
+    /// <summary>
+    /// 本文
+    /// </summary>
+    public string message { get; set; }
+
+    /// <summary>
     /// アイテム内容
     /// </summary>
     public ItemMI item { get; set; }
