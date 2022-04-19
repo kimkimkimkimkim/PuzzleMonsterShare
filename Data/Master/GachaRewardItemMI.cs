@@ -4,6 +4,11 @@
 public class GachaRewardItemMI : ItemMI
 {   
     /// <summary>
+    /// 初ゲットか否か
+    /// </summary>
+    public bool isFirst { get; set; }
+
+    /// <summary>
     /// 確定枠か否か
     /// </summary>
     public bool isConfirmed { get; set; }
