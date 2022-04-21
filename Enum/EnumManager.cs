@@ -1405,9 +1405,16 @@ namespace PM
 
         namespace Notification
         {
+            /// <summary>
+            /// 通知タイプ
+            /// </summary>
             public enum NotificationType
             {
                 None,
+
+                /// <summary>
+                /// ログインボーナス
+                /// </summary>
                 LoginBonus,
             }
         }

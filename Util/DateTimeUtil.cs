@@ -68,19 +68,36 @@ public static class DateTimeUtil
     }
 
     /// <summary>
+    /// 指定した2つの日時がゲーム内日時として等しいか否か
+    /// </summary>
+    public static bool IsSameGameDate(DateTime dateA, DateTime dateB)
+    {
+        var startAndEndDate = GetStartAndEndDate(MissionType.Daily, dateA);
+
+        // 終了日時は開始日時と被らないようになっているのでどちらもイコールをつける
+        return startAndEndDate.startDate <= dateB && dateB <= startAndEndDate.endDate;
+    }
+
+    /// <summary>
     /// 指定したミッションタイプに応じた開始日時、終了日時を返す
     /// </summary>
     public static (DateTime startDate, DateTime endDate) GetStartAndEndDate(MissionType missionType){
-        switch(missionType){
+        return GetStartAndEndDate(missionType, Now);
+    }
+
+    public static (DateTime startDate, DateTime endDate) GetStartAndEndDate(MissionType missionType, DateTime date)
+    {
+        switch (missionType)
+        {
             case MissionType.Daily:
                 var endDayHour = ConstManager.System.START_DAY_HOUR - 1;
-                if(endDayHour < 0) endDayHour += 24;
+                if (endDayHour < 0) endDayHour += 24;
 
                 // 現在時刻とゲーム内の今日が同じ日にちか否か
-                var isSameDate = Now.Hour >= ConstManager.System.START_DAY_HOUR;
+                var isSameDate = date.Hour >= ConstManager.System.START_DAY_HOUR;
 
                 // 現在時刻とゲーム内の今日が同じ日にちなら基準日は現在時刻、違うなら基準日は現在時刻の一日前
-                var baseDate = isSameDate ? Now : Now.AddDays(-1);
+                var baseDate = isSameDate ? date : date.AddDays(-1);
 
                 var startDate = new DateTime(baseDate.Year, baseDate.Month, baseDate.Day, ConstManager.System.START_DAY_HOUR, 0, 0);
                 var endDate = startDate.AddDays(1);
