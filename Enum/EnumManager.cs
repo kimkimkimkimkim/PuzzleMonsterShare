@@ -902,6 +902,16 @@ namespace PM
                 /// </summary>
                 BattleCondition = 5,
             }
+
+            /// <summary>
+            /// スタッカブルダイアログの優先度
+            /// 低いものから表示される
+            /// </summary>
+            public enum StackableDialogPriority
+            {
+                None = 0,
+                LoginBonus,
+            }
         }
 
         namespace Item
