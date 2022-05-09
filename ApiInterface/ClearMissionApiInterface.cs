@@ -9,17 +9,17 @@ public class ClearMissionApiInterface
 public class ClearMissionApiRequest : PMApiRequestBase
 {
     /// <summary>
-    /// ミッションID
+    /// ミッションIDリスト
     /// </summary>
-    public long missionId;
+    public List<long> missionIdList;
 }
 
 public class ClearMissionApiResponse : PMApiResponseBase
 {
     /// <summary>
-    /// ユーザーミッション情報
+    /// ユーザーミッション情報リスト
     /// </summary>
-    public UserMissionInfo userMission;
+    public List<UserMissionInfo> userMissionList;
 
     /// <summary>
     /// 報酬アイテムリスト
