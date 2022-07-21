@@ -10,7 +10,7 @@ public static class DateTimeUtil
     /// 現在日時を返します
     /// 常に日本時間を返す
     /// </summary>
-    public static DateTime Now => TimeZoneInfo.ConvertTime(DateTimeOffset.Now, TIMEZONE_JST).DateTime;
+    public static DateTime Now => DateTime.UtcNow.AddHours(9);
 
     /// <summary>
     /// 初期値を返します
