@@ -16,10 +16,19 @@ public static class ConditionUtil {
         return conditionList.All(condition => {
             switch(condition.type) {
                 case ConditionType.UpperQuestId:
-                    // 指定クエスト以上進んでいるか
-                    return userData.userBattleList.Any(u => u.questId == condition.valueInt && u.winOrLose == WinOrLose.Win && u.completedDate > DateTimeUtil.Epoch);
-                case ConditionType.LowerQuestId:
-                    return true;
+                case ConditionType.LowerQuestId: 
+                    {
+                        var isCleared = userData.userBattleList.Any(u => u.questId == condition.valueInt && u.winOrLose == WinOrLose.Win && u.completedDate > DateTimeUtil.Epoch);
+
+                        if (condition.type == ConditionType.UpperQuestId) {
+                            // 指定クエスト以上進んでいるか
+                            return isCleared;
+                        } else {
+                            // 指定クエスト以下の進捗か
+                            // 指定クエストをクリアしていなければtrue
+                            return !isCleared;
+                        }
+                    }
                 case ConditionType.UpperDate:
                     // 指定日時以降か
                     return DateTimeUtil.GetDateFromMasterString(condition.valueString) <= DateTimeUtil.Now;
@@ -27,23 +36,29 @@ public static class ConditionUtil {
                     // 指定日時以前か
                     return DateTimeUtil.Now < DateTimeUtil.GetDateFromMasterString(condition.valueString);
                 case ConditionType.UpperMissionId:
-                    // 指定ミッションをクリアしているか
-                    return userData.userMissionList
-                        .Where(u =>
-                        {
+                case ConditionType.LowerMissionId: 
+                    {
+                        var isCleared = userData.userMissionList
+                            .Where(u => {
                             // クリア済みの指定ミッションがあるか
                             return u.missionId == condition.valueInt && u.completedDate > DateTimeUtil.Epoch;
-                        })
-                        .Where(u =>
-                        {
+                            })
+                            .Where(u => {
                             // そのミッションに期限がないかあるいは有効期限内だったらOK
                             var isNotExpirationDate = u.startExpirationDate <= DateTimeUtil.Epoch && u.endExpirationDate <= DateTimeUtil.Epoch;
-                            var isValidExpirationDate = u.startExpirationDate <= DateTimeUtil.Now && DateTimeUtil.Now < u.endExpirationDate;
-                            return isNotExpirationDate || isValidExpirationDate;
-                        })
-                        .Any();
-                case ConditionType.LowerMissionId:
-                    return true;
+                                var isValidExpirationDate = u.startExpirationDate <= DateTimeUtil.Now && DateTimeUtil.Now < u.endExpirationDate;
+                                return isNotExpirationDate || isValidExpirationDate;
+                            })
+                            .Any();
+
+                        if(condition.type == ConditionType.UpperMissionId) {
+                            // 指定ミッションをクリアしているか
+                            return isCleared;
+                        } else {
+                            // 指定ミッションをクリアしていないか
+                            return !isCleared;
+                        }
+                    }
                 case ConditionType.UpperPlayerRank:
                     // 指定プレイヤーランク以上か
                     return userData.rank >= condition.valueInt;
