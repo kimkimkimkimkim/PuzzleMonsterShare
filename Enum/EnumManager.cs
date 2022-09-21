@@ -912,6 +912,23 @@ namespace PM
                 None = 0,
                 LoginBonus,
             }
+
+            /// <summary>
+            /// ロッカブルのロックタイプ
+            /// </summary>
+            public enum LockType {
+                None = 0,
+
+                /// <summary>
+                /// ロック中はブロッカーを表示する
+                /// </summary>
+                ShowBlocker = 1,
+
+                /// <summary>
+                /// ロック中は非表示にする
+                /// </summary>
+                MakeInvisible = 2,
+            }
         }
 
         namespace Item
