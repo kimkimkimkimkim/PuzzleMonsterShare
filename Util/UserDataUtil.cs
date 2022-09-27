@@ -120,16 +120,27 @@ public static class UserDataUtil
 
     /// <summary>
     /// モンスターカスタムデータを辞書にして返す
-    /// default値のものに関しては無視する
     /// </summary>
     public static Dictionary<string,string> GetCustomDataDict(UserMonsterCustomData customData){
         var dict = new Dictionary<string,string>(){
-            {"level", customData.level != default ? customData.level.ToString() : default(string)},
-            {"exp", customData.exp != default ? customData.exp.ToString() : default(string)},
-            {"grade", customData.grade != default ? customData.grade.ToString() : default(string)},
-            {"luck", customData.luck != default ? customData.luck.ToString() : default(string)},
+            {"level", customData.level != default ? customData.level.ToString() : default },
+            {"exp", customData.exp != default ? customData.exp.ToString() : default },
+            {"grade", customData.grade != default ? customData.grade.ToString() : default },
+            {"luck", customData.luck != default ? customData.luck.ToString() : default },
         }.Where(kvp => kvp.Value != default).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
         return dict;
+    }
+
+    /// <summary>
+    /// 更新後のモンスターカスタムデータを返す
+    /// </summary>
+    public static UserMonsterCustomData GetUpdatedCustomData(UserMonsterCustomData baseCustomData, UserMonsterCustomData updatedCustomData){
+        return new UserMonsterCustomData(){
+            level = updatedCustomData.level != default ? updatedCustomData.level: baseCustomData.level,
+            exp = updatedCustomData.exp != default ? updatedCustomData.exp : baseCustomData.exp,
+            grade = updatedCustomData.grade != default ? updatedCustomData.grade : baseCustomData.grade,
+            luck = updatedCustomData.luck != default ? updatedCustomData.luck : baseCustomData.luck,
+        };
     }
 
     /// <summary>
