@@ -61,6 +61,11 @@ public class ConstManager
         /// 最大ラック
         /// </summary>
         public static int MAX_LUCK = 100;
+
+        /// <summary>
+        /// 最大グレード
+        /// </summary>
+        public static int MAX_GRADE = 6;
     }
 
     public class Battle
