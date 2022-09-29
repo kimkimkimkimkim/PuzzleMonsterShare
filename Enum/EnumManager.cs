@@ -45,6 +45,7 @@ namespace PM
                 Win,
                 Lose,
                 Continue,
+                Interruption,
             }
 
             /// <summary>
