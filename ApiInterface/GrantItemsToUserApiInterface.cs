@@ -5,6 +5,7 @@ public class GrantItemsToUserApiInterface
     public static string functionName = "GrantItemsToUser";
 }
 
+// APIリクエストの変数はプロパティにしてはいけない！(シリアライズの関係)
 public class GrantItemsToUserApiRequest : PMApiRequestBase
 {
     /// <summary>

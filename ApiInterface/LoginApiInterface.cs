@@ -3,6 +3,7 @@
     public static string functionName = "Login";
 }
 
+// APIリクエストの変数はプロパティにしてはいけない！(シリアライズの関係)
 public class LoginApiRequest : PMApiRequestBase
 {
 }
