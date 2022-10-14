@@ -1276,6 +1276,7 @@ namespace PM
                 userMissionList,
                 userPresentList,
                 userLoginBonusList,
+                userGachaHistoryList,
             }
         }
 
