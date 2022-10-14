@@ -1393,7 +1393,7 @@ namespace PM
                 UpperPlayerRank = 7,
 
                 /// <summary>
-                /// 指定したプレイヤーランク以下か
+                /// 指定したプレイヤーランク未満か
                 /// </summary>
                 LowerPlayerRank = 8,
 
@@ -1408,7 +1408,7 @@ namespace PM
                 UpperTotalLoginDate = 10,
 
                 /// <summary>
-                /// 通算ログイン日数が指定日数以下か
+                /// 通算ログイン日数が指定日数未満か
                 /// </summary>
                 LowerTotalLoginDate = 11,
 
@@ -1429,6 +1429,20 @@ namespace PM
                 /// 日曜=0 ~ 土曜=6
                 /// </summary>
                 TargetDayOfWeekToday = 14,
+
+                /// <summary>
+                /// 指定ガチャ詳細を引いている回数が指定回数以上か
+                /// valueInt: gachaBoxDetailId
+                /// valueString: 回数
+                /// </summary>
+                UpperGachaBoxDetailIdExecutedTimes = 15,
+
+                /// <summary>
+                /// 指定ガチャ詳細を引いている回数が指定回数未満か
+                /// valueInt: gachaBoxDetailId
+                /// valueString: 回数
+                /// </summary>
+                LowerGachaBoxDetailIdExecutedTimes = 16,
             }
         }
 

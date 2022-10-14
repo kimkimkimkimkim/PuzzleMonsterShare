@@ -90,6 +90,18 @@ public static class ConditionUtil {
                     var dayOfWeekList = condition.valueString.Split(',').Select(dow => (DayOfWeek)int.Parse(dow)).ToList();
                     var todayDow = DateTimeUtil.Now.DayOfWeek;
                     return dayOfWeekList.Any(dow => dow == todayDow);
+                case ConditionType.UpperGachaBoxDetailIdExecutedTimes: {
+                    // 指定ガチャ詳細を引いている回数が指定回数以上か
+                    var gachaBoxDetailId = condition.valueInt;
+                    var executeNum = int.Parse(condition.valueString);
+                    return userData.userGachaHistoryList.Where(u => u.gachaBoxDetailId == gachaBoxDetailId).ToList().Count >= executeNum;
+                }
+                case ConditionType.LowerGachaBoxDetailIdExecutedTimes: {
+                    // 指定ガチャ詳細を引いている回数が指定回数未満か
+                    var gachaBoxDetailId = condition.valueInt;
+                    var executeNum = int.Parse(condition.valueString);
+                    return userData.userGachaHistoryList.Where(u => u.gachaBoxDetailId == gachaBoxDetailId).ToList().Count < executeNum;
+                }
                 default:
                     return true;
             }
