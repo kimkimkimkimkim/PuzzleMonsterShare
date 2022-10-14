@@ -61,4 +61,9 @@ public class UserDataInfo
     /// ユーザー資産リスト
     /// </summary>
     public List<UserPropertyInfo> userPropertyList { get; set; } = new List<UserPropertyInfo>();
+
+    /// <summary>
+    /// ユーザーガチャ履歴リスト
+    /// </summary>
+    public List<UserGachaHistoryInfo> userGachaHistoryList { get; set; } = new List<UserGachaHistoryInfo>();
 }
