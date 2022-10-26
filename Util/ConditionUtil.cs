@@ -102,6 +102,20 @@ public static class ConditionUtil {
                     var executeNum = int.Parse(condition.valueString);
                     return userData.userGachaHistoryList.Where(u => u.gachaBoxDetailId == gachaBoxDetailId).ToList().Count < executeNum;
                 }
+                case ConditionType.UpperPropertyNum: {
+                    // 指定素材の所持数が指定数以上か
+                    var propertyId = condition.valueInt;
+                    var num = int.Parse(condition.valueString);
+                    var userProperty = userData.userPropertyList.FirstOrDefault(u => u.propertyId == propertyId);
+                    return userProperty == null ? false : userProperty.num >= num;
+                }
+                case ConditionType.LowerPropertyNum: {
+                    // 指定素材の所持数が指定数未満か
+                    var propertyId = condition.valueInt;
+                    var num = int.Parse(condition.valueString);
+                    var userProperty = userData.userPropertyList.FirstOrDefault(u => u.propertyId == propertyId);
+                    return userProperty == null ? true : userProperty.num < num;
+                    }
                 default:
                     return true;
             }

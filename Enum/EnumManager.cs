@@ -1443,6 +1443,20 @@ namespace PM
                 /// valueString: 回数
                 /// </summary>
                 LowerGachaBoxDetailIdExecutedTimes = 16,
+
+                /// <summary>
+                /// 指定素材の所持数が指定数以上か
+                /// valueInt: propertyId
+                /// valueString: 数
+                /// </summary>
+                UpperPropertyNum = 17,
+
+                /// <summary>
+                /// 指定素材の所持数が指定数未満か
+                /// valueInt: propertyId
+                /// valueString: 回数
+                /// </summary>
+                LowerPropertyNum = 18,
             }
         }
 
