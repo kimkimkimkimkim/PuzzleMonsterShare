@@ -14,10 +14,10 @@ public class UserRankUpTableMB : MasterBookBase
     /// <summary>
     /// １つ前のランクからこのランクに上がるために必要な経験値量
     /// </summary>
-    public int requiredExp { get; set; }
+    public long requiredExp { get; set; }
 
     /// <summary>
     /// このランクになるために必要な総経験値量
     /// </summary>
-    public int totalRequiredExp { get; set; }
+    public long totalRequiredExp { get; set; }
 }
