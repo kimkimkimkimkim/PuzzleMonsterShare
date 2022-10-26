@@ -17,6 +17,11 @@ public class ItemDescriptionMB : MasterBookBase {
     public long itemId { get; set; }
 
     /// <summary>
+    /// アイテム名
+    /// </summary>
+    public string name { get; set; }
+
+    /// <summary>
     /// 説明文
     /// </summary>
     public string description { get; set; }
