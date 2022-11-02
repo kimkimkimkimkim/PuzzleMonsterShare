@@ -1520,5 +1520,22 @@ namespace PM
                 DayOfWeek = 3,
             }
         }
+
+        namespace SortOrder 
+        {
+            public enum SortOrderTypeMonster 
+            {
+                Id = 0,
+                Attribute = 1,
+                Rarity = 2,
+                Level = 3,
+                Grade = 4,
+                Luck = 5,
+                Hp = 6,
+                Attack = 7,
+                Defense = 8,
+                Speed = 9,
+            }
+        }
     }
 }
