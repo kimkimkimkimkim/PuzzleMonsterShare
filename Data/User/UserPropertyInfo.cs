@@ -14,5 +14,5 @@ public class UserPropertyInfo: InventoryDataBase
     /// <summary>
     /// 数
     /// </summary>
-    public int num { get; set; }
+    public long num { get; set; }
 }

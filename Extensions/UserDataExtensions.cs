@@ -10,7 +10,7 @@ public static class UserDataExtensions
         return userPropertyList.FirstOrDefault(u => (PropertyType)u.propertyId == propertyType);
     }
 
-    public static int GetNum(this List<UserPropertyInfo> userPropertyList, PropertyType propertyType)
+    public static long GetNum(this List<UserPropertyInfo> userPropertyList, PropertyType propertyType)
     {
         return userPropertyList.FirstOrDefault(u => (PropertyType)u.propertyId == propertyType)?.num ?? 0;
     }
