@@ -930,6 +930,36 @@ namespace PM
                 /// </summary>
                 MakeInvisible = 2,
             }
+
+            /// <summary>
+            /// プロパティパネルタイプ
+            /// </summary>
+            public enum PropertyPanelType {
+                /// <summary>
+                /// オーブ
+                /// </summary>
+                Orb = 0,
+
+                /// <summary>
+                /// コイン
+                /// </summary>
+                Coin = 1,
+
+                /// <summary>
+                /// ガチャチケット
+                /// </summary>
+                GachaTicket = 2,
+
+                /// <summary>
+                /// SSR確定ガチャチケット
+                /// </summary>
+                SsrGachaTicket = 3,
+
+                /// <summary>
+                /// ブランク1
+                /// </summary>
+                Blank1 = 4,
+            }
         }
 
         namespace Item
@@ -1140,6 +1170,11 @@ namespace PM
                 /// ガチャチケット
                 /// </summary>
                 GachaTicket = 25,
+
+                /// <summary>
+                /// SSR確定ガチャチケット
+                /// </summary>
+                SsrGachaTicket = 26,
             }
 
             /// <summary>
