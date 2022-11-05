@@ -13,6 +13,11 @@ public class UserDataInfo
     public List<UserMonsterPartyInfo> userMonsterPartyList { get; set; } = new List<UserMonsterPartyInfo>();
 
     /// <summary>
+    /// ユーザー登録日時
+    /// </summary>
+    public DateTime registeredDateTime { get; set; } = DateTimeUtil.Epoch;
+
+    /// <summary>
     /// 前回のログイン日時
     /// </summary>
     public DateTime lastLoginDateTime { get; set; } = DateTimeUtil.Epoch;

@@ -90,31 +90,47 @@ public static class ConditionUtil {
                     var dayOfWeekList = condition.valueString.Split(',').Select(dow => (DayOfWeek)int.Parse(dow)).ToList();
                     var todayDow = DateTimeUtil.Now.DayOfWeek;
                     return dayOfWeekList.Any(dow => dow == todayDow);
-                case ConditionType.UpperGachaBoxDetailIdExecutedTimes: {
-                    // 指定ガチャ詳細を引いている回数が指定回数以上か
-                    var gachaBoxDetailId = condition.valueInt;
-                    var executeNum = int.Parse(condition.valueString);
-                    return userData.userGachaHistoryList.Where(u => u.gachaBoxDetailId == gachaBoxDetailId).ToList().Count >= executeNum;
-                }
-                case ConditionType.LowerGachaBoxDetailIdExecutedTimes: {
-                    // 指定ガチャ詳細を引いている回数が指定回数未満か
-                    var gachaBoxDetailId = condition.valueInt;
-                    var executeNum = int.Parse(condition.valueString);
-                    return userData.userGachaHistoryList.Where(u => u.gachaBoxDetailId == gachaBoxDetailId).ToList().Count < executeNum;
-                }
-                case ConditionType.UpperPropertyNum: {
-                    // 指定素材の所持数が指定数以上か
-                    var propertyId = condition.valueInt;
-                    var num = int.Parse(condition.valueString);
-                    var userProperty = userData.userPropertyList.FirstOrDefault(u => u.propertyId == propertyId);
-                    return userProperty == null ? false : userProperty.num >= num;
-                }
-                case ConditionType.LowerPropertyNum: {
-                    // 指定素材の所持数が指定数未満か
-                    var propertyId = condition.valueInt;
-                    var num = int.Parse(condition.valueString);
-                    var userProperty = userData.userPropertyList.FirstOrDefault(u => u.propertyId == propertyId);
-                    return userProperty == null ? true : userProperty.num < num;
+                case ConditionType.UpperGachaBoxDetailIdExecutedTimes: 
+                    {
+                        // 指定ガチャ詳細を引いている回数が指定回数以上か
+                        var gachaBoxDetailId = condition.valueInt;
+                        var executeNum = int.Parse(condition.valueString);
+                        return userData.userGachaHistoryList.Where(u => u.gachaBoxDetailId == gachaBoxDetailId).ToList().Count >= executeNum;
+                    }
+                case ConditionType.LowerGachaBoxDetailIdExecutedTimes: 
+                    {
+                        // 指定ガチャ詳細を引いている回数が指定回数未満か
+                        var gachaBoxDetailId = condition.valueInt;
+                        var executeNum = int.Parse(condition.valueString);
+                        return userData.userGachaHistoryList.Where(u => u.gachaBoxDetailId == gachaBoxDetailId).ToList().Count < executeNum;
+                    }
+                case ConditionType.UpperPropertyNum: 
+                    {
+                        // 指定素材の所持数が指定数以上か
+                        var propertyId = condition.valueInt;
+                        var num = int.Parse(condition.valueString);
+                        var userProperty = userData.userPropertyList.FirstOrDefault(u => u.propertyId == propertyId);
+                        return userProperty == null ? false : userProperty.num >= num;
+                    }
+                case ConditionType.LowerPropertyNum: 
+                    {
+                        // 指定素材の所持数が指定数未満か
+                        var propertyId = condition.valueInt;
+                        var num = int.Parse(condition.valueString);
+                        var userProperty = userData.userPropertyList.FirstOrDefault(u => u.propertyId == propertyId);
+                        return userProperty == null ? true : userProperty.num < num;
+                    }
+                case ConditionType.UpperElapsedSecondsFromRegistration:
+                    {
+                        // ユーザー登録から○○秒経過以上か
+                        var elapsedSeconds = condition.valueInt;
+                        return userData.registeredDateTime.AddSeconds(elapsedSeconds) >= DateTimeUtil.Now;
+                    }
+                case ConditionType.LowerElapsedSecondsFromRegistration:
+                    {
+                        // ユーザー登録から○○秒経過未満か
+                        var elapsedSeconds = condition.valueInt;
+                        return userData.registeredDateTime.AddSeconds(elapsedSeconds) > DateTimeUtil.Now;
                     }
                 default:
                     return true;

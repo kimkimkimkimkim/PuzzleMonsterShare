@@ -1492,6 +1492,16 @@ namespace PM
                 /// valueString: 回数
                 /// </summary>
                 LowerPropertyNum = 18,
+
+                /// <summary>
+                /// ユーザー登録から○○秒経過以上か
+                /// </summary>
+                UpperElapsedSecondsFromRegistration = 19,
+
+                /// <summary>
+                /// ユーザー登録から○○秒経過未満か
+                /// </summary>
+                LowerElapsedSecondsFromRegistration = 20,
             }
         }
 
