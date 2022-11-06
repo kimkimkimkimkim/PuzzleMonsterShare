@@ -1312,6 +1312,7 @@ namespace PM
                 userPresentList,
                 userLoginBonusList,
                 userGachaHistoryList,
+                registeredDateTime,
             }
         }
 
