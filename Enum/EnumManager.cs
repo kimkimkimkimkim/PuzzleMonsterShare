@@ -1583,5 +1583,21 @@ namespace PM
                 Speed = 9,
             }
         }
+
+        namespace Loading {
+            public enum TitleLoadingPhase {
+                Start = 0,
+                PlayFabLogin = 10,
+                FirstLogin = 24,
+                PMLogin = 36,
+                GetTitleData = 43,
+                GetPlayerProfile = 52,
+                GetUserData = 67,
+                GetUserInventory = 72,
+                UpdateUserTitleDisplayName = 84,
+                InitializeAddressables = 92,
+                End = 100,
+            }
+        }
     }
 }
