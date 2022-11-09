@@ -42,10 +42,16 @@ public class ConstManager
     public class Monster
     {
         /// <summary>
-        /// 全モンスターの中での最大ステータス値
+        /// 全モンスターの中での最大ステータス値(HPを除く)
         /// ゲージの最大値として使用する
         /// </summary>
-        public static int MAX_STATUS_VALUE = 5000;
+        public static int MAX_STATUS_WITHOUT_HP_VALUE = 20000;
+
+        /// <summary>
+        /// 全モンスターの中での最大HP値
+        /// ゲージの最大値として使用する
+        /// </summary>
+        public static int MAX_HP_VALUE = 75000;
 
         /// <summary>
         /// 最大レベル
