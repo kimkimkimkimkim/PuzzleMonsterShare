@@ -1313,6 +1313,7 @@ namespace PM
                 userLoginBonusList,
                 userGachaHistoryList,
                 registeredDateTime,
+                userRewardAdList,
             }
         }
 
@@ -1597,6 +1598,19 @@ namespace PM
                 UpdateUserTitleDisplayName = 84,
                 InitializeAddressables = 92,
                 End = 100,
+            }
+        }
+
+        namespace Date
+        {
+            public enum TermType
+            {
+                None = 0,
+
+                /// <summary>
+                /// 1日
+                /// </summary>
+                Day = 1,
             }
         }
     }

@@ -71,4 +71,9 @@ public class UserDataInfo
     /// ユーザーガチャ履歴リスト
     /// </summary>
     public List<UserGachaHistoryInfo> userGachaHistoryList { get; set; } = new List<UserGachaHistoryInfo>();
+
+    /// <summary>
+    /// ユーザーリワード広告リスト
+    /// </summary>
+    public List<UserRewardAdInfo> userRewardAdList { get; set; } = new List<UserRewardAdInfo>();
 }
