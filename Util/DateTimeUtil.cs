@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using PM.Enum.Date;
 using PM.Enum.Mission;
 
 public static class DateTimeUtil
@@ -109,6 +111,17 @@ public static class DateTimeUtil
             case MissionType.Event:
             default:
                 return (Epoch, Epoch);
+        }
+    }
+
+    public static List<UserRewardAdInfo> GetTermValidUserRewardAdList(TermType termType, List<UserRewardAdInfo> userRewardAdList)
+    {
+        switch (termType)
+        {
+            case TermType.Day:
+                return userRewardAdList.Where(u => IsToday(u.grantedDate)).ToList();
+            default:
+                return new List<UserRewardAdInfo>();
         }
     }
 }
