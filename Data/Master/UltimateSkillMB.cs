@@ -19,11 +19,6 @@ public class UltimateSkillMB : MasterBookBase
     public string description { get; set; }
 
     /// <summary>
-    /// スキル実行者に対する発動条件タイプ
-    /// </summary>
-    public ActivateConditionType activateConditionType { get; set; }
-
-    /// <summary>
     /// スキル効果リスト
     /// </summary>
     public List<UltimateSkillEffectMI> effectList { get; set; }

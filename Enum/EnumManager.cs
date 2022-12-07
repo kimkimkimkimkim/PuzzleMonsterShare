@@ -391,9 +391,9 @@ namespace PM
 
                 /// <summary>
                 /// すでに対象にしたモンスター
-                /// リストの最初の要素の対象
+                /// リストの直前の要素の効果の対象
                 /// </summary>
-                Target = 30,
+                JustBeforeElementTarget = 30,
 
                 /// <summary>
                 /// 味方前衛全体の中からランダムで1体
@@ -444,6 +444,12 @@ namespace PM
                 /// 敵後衛全体の中からランダムで3体
                 /// </summary>
                 EnemyBackRandom3 = 40,
+
+                /// <summary>
+                /// すでに対象にしたモンスター
+                /// リストの一番最初の要素の効果の対象
+                /// </summary>
+                FirstElementTarget = 41,
             }
 
             /// <summary>
@@ -512,6 +518,26 @@ namespace PM
                 /// 対象の最大の体力
                 /// </summary>
                 TargetMaxHp = 12,
+
+                /// <summary>
+                /// 一番最初の要素で自身が与えたダメージ
+                /// </summary>
+                FirstElementDamage = 13,
+
+                /// <summary>
+                /// 直前の要素で自身が与えたダメージ
+                /// </summary>
+                JustBeforeElementDamage = 14,
+
+                /// <summary>
+                /// 直前の要素で解除した状態異常の残りダメージ
+                /// </summary>
+                JustBeforeElementRemoveBattleConditionRemainDamage = 15,
+
+                /// <summary>
+                /// この要素より前のすべての要素で解除した状態異常の残りダメージ
+                /// </summary>
+                AllBeforeElementRemoveBattleConditionRemainDamage = 16,
             }
 
             /// <summary>
@@ -799,6 +825,8 @@ namespace PM
                 HolyDamageRate = 15,
                 EnergyUpRate = 16,
                 HealedRate = 17,
+                AttackAccuracy = 18,
+                Armor = 19,
             }
 
             /// <summary>
