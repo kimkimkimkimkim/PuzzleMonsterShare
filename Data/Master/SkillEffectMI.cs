@@ -17,9 +17,19 @@ public class SkillEffectMI
     public ActivateConditionType doMonsterActivateConditionType { get; set; }
 
     /// <summary>
+    /// スキル実行者に対する発動条件値共通）
+    /// </summary>
+    public int doMonsterActivateConditionValue { get; set; }
+
+    /// <summary>
     /// スキル対象に対する発動条件タイプ（共通）
     /// </summary>
     public ActivateConditionType activateConditionType { get; set; }
+
+    /// <summary>
+    /// スキル対象に対する発動条件値共通）
+    /// </summary>
+    public int activateConditionValue { get; set; }
 
     /// <summary>
     /// 発動確率（%）（共通）

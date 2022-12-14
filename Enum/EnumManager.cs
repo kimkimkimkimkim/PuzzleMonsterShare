@@ -685,6 +685,26 @@ namespace PM
                 /// 敵がブロックした時
                 /// </summary>
                 OnEnemyBlocked = 27,
+
+                /// <summary>
+                /// 自身が通常攻撃を発動した時
+                /// </summary>
+                OnMeExecuteNormalSkill = 28,
+
+                /// <summary>
+                /// 自身が通常攻撃を受けたとき
+                /// </summary>
+                OnMeBeExecutedNormalSkill = 29,
+
+                /// <summary>
+                /// 自身が攻撃したとき
+                /// </summary>
+                OnMeAttacked = 30,
+
+                /// <summary>
+                /// 自身が攻撃されたとき
+                /// </summary>
+                OnMeBeAttacked = 31,
             }
 
             /// <summary>
@@ -715,9 +735,9 @@ namespace PM
                 None = 0,
 
                 /// <summary>
-                /// HPが50%未満の時
+                /// HPがn%未満の時
                 /// </summary>
-                Under50PercentHP = 1,
+                UnderPercentHP = 1,
 
                 /// <summary>
                 /// 生きている時
@@ -730,15 +750,27 @@ namespace PM
                 Dead = 3,
 
                 /// <summary>
-                /// HPが30%未満の時
+                /// 特定状態異常が付与されている時
                 /// </summary>
-                Under30PercentHP = 4,
+                HaveBattleCondition = 4,
 
                 /// <summary>
                 /// 回復可能
                 /// 生きているかつ体力が満タンではない時
                 /// </summary>
                 Healable = 5,
+
+                /// <summary>
+                /// エネルギー上昇可能な時
+                /// エネルギーが最大値ではない時
+                /// </summary>
+                EnableEnergyUp = 6,
+
+                /// <summary>
+                /// エネルギー減少可能な時
+                /// エネルギーが0ではない時
+                /// </summary>
+                EnableEnergyDown = 7,
             }
 
             /// <summary>
@@ -772,6 +804,21 @@ namespace PM
                 /// 蘇生
                 /// </summary>
                 Revive = 5,
+
+                /// <summary>
+                /// エネルギー上昇
+                /// </summary>
+                EnergyUp = 6,
+
+                /// <summary>
+                /// エネルギー減少
+                /// </summary>
+                EnergyDown = 7,
+
+                /// <summary>
+                /// ステータス変化
+                /// </summary>
+                Status = 8,
             }
 
             /// <summary>
@@ -827,6 +874,37 @@ namespace PM
                 HealedRate = 17,
                 AttackAccuracy = 18,
                 Armor = 19,
+                ArmorBreakRate = 20,
+            }
+
+            /// <summary>
+            /// スキルの発動回数制限タイプ
+            /// </summary>
+            public enum SkillExecuteNumLimitType 
+            {
+                None = 0,
+
+                /// <summary>
+                /// バトル内で
+                /// </summary>
+                InBattle = 1,
+
+                /// <summary>
+                /// 1ウェーブ内で
+                /// </summary>
+                InWave = 2,
+
+                /// <summary>
+                /// 1ターン内で
+                /// </summary>
+                InTurn = 3,
+
+                /// <summary>
+                /// 1ストリーム内で
+                /// 1つのスキル効果に対する処理内で
+                /// カウンターや追加ダメージ系で使用する
+                /// </summary>
+                InStream = 4,
             }
 
             /// <summary>

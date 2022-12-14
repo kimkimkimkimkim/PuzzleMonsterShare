@@ -6,7 +6,12 @@
 public class PassiveSkillEffectMI: SkillEffectMI
 {
     /// <summary>
-    /// バトル内での発動制限回数
+    /// 発動制限回数タイプ
+    /// </summary>
+    public SkillExecuteNumLimitType executeNumLimitType { get; set; }
+
+    /// <summary>
+    /// 発動制限回数
     /// 0 は制限なし
     /// </summary>
     public int limitExecuteNum { get; set; }
