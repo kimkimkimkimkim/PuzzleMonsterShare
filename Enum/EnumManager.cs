@@ -705,6 +705,26 @@ namespace PM
                 /// 自身が攻撃されたとき
                 /// </summary>
                 OnMeBeAttacked = 31,
+
+                /// <summary>
+                /// 自身がクリティカルを受けたとき
+                /// </summary>
+                OnMeBeAttackedCritical = 32,
+
+                /// <summary>
+                /// 自身が継続ダメージを受けたとき
+                /// </summary>
+                OnMeBeAttackedDot = 33,
+
+                /// <summary>
+                /// 自身が特定状態異常の相手に攻撃したとき
+                /// </summary>
+                OnMeAttackBattleCondition = 34,
+
+                /// <summary>
+                /// 自身が特定状態異常の相手に攻撃されたとき
+                /// </summary>
+                OnMeBeAttackedBattleCondition = 35,
             }
 
             /// <summary>
@@ -902,9 +922,15 @@ namespace PM
                 /// <summary>
                 /// 1ストリーム内で
                 /// 1つのスキル効果に対する処理内で
-                /// カウンターや追加ダメージ系で使用する
                 /// </summary>
                 InStream = 4,
+
+                /// <summary>
+                /// 自身の効果に対する効果に対して
+                /// AからB→BからAに対して何回まで効果発動を許可するか
+                /// 反撃系で使用する
+                /// </summary>
+                InEffectOnOwnEffect = 5,
             }
 
             /// <summary>
