@@ -725,6 +725,26 @@ namespace PM
                 /// 自身が特定状態異常の相手に攻撃されたとき
                 /// </summary>
                 OnMeBeAttackedBattleCondition = 35,
+
+                /// <summary>
+                /// 自身が自身より特定ステータスの低い相手に攻撃したとき
+                /// </summary>
+                OnMeAttackLowerStatus = 36,
+
+                /// <summary>
+                /// 自身が自身より特定ステータスの高い相手に攻撃したとき
+                /// </summary>
+                OnMeAttackUpperStatus = 37,
+
+                /// <summary>
+                /// 自身が自身より特定ステータスの低い相手に攻撃されたとき
+                /// </summary>
+                OnMeBeAttackedLowerStatus = 38,
+
+                /// <summary>
+                /// 自身が自身より特定ステータスの高い相手に攻撃されたとき
+                /// </summary>
+                OnMeBeAttackedUpperStatus = 39,
             }
 
             /// <summary>
