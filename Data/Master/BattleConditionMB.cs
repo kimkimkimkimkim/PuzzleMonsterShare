@@ -34,6 +34,11 @@ public class BattleConditionMB : MasterBookBase
     public ActivateConditionType activateConditionType { get; set; }
 
     /// <summary>
+    /// 状態異常効果実行者に対する発動条件値
+    /// </summary>
+    public int activateConditionValue { get; set; }
+
+    /// <summary>
     /// 状態異常効果発動タイミングタイプ
     /// </summary>
     public SkillTriggerType triggerType { get; set; }

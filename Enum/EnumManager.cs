@@ -745,6 +745,16 @@ namespace PM
                 /// 自身が自身より特定ステータスの高い相手に攻撃されたとき
                 /// </summary>
                 OnMeBeAttackedUpperStatus = 39,
+
+                /// <summary>
+                /// 味方がウルトを使ったとき
+                /// </summary>
+                OnAllyUltimateSkill = 40,
+
+                /// <summary>
+                /// 自身が指定回数ブロックした時
+                /// </summary>
+                OnMeBlockNTimes = 41,
             }
 
             /// <summary>
@@ -823,7 +833,7 @@ namespace PM
                 /// <summary>
                 /// 攻撃
                 /// </summary>
-                Damage = 1,
+                Attack = 1,
 
                 /// <summary>
                 /// 回復
@@ -859,6 +869,11 @@ namespace PM
                 /// ステータス変化
                 /// </summary>
                 Status = 8,
+
+                /// <summary>
+                /// ダメージ
+                /// </summary>
+                Damage = 9,
             }
 
             /// <summary>
