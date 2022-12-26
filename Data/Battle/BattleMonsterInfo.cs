@@ -47,26 +47,86 @@ public class BattleMonsterInfo
     /// </summary>
     public int baseHeal{ get; set; }
 
+    /// <summary>
+    /// 基準シールド
+    /// </summary>
     public int baseSheild { get; set; }
 
+    /// <summary>
+    /// 基準スキルダメージ率
+    /// </summary>
     public int baseUltimateSkillDamageRate { get; set; }
 
+    /// <summary>
+    /// 基準ブロック率
+    /// </summary>
     public int baseBlockRate { get; set; }
 
+    /// <summary>
+    /// 基準クリティカル率
+    /// </summary>
     public int baseCriticalRate { get; set; }
+
+    /// <summary>
+    /// 基準クリティカルダメージ
+    /// </summary>
     public int baseCriticalDamage { get; set; }
+
+    /// <summary>
+    /// 基準強化効果耐性
+    /// </summary>
     public int baseBuffResistRate { get; set; }
+
+    /// <summary>
+    /// 基準弱体効果耐性
+    /// </summary>
     public int baseDebuffResistRate { get; set; }
+
+    /// <summary>
+    /// 基準ダメージ軽減率
+    /// </summary>
     public int baseDamageResistRate { get; set; }
+
+    /// <summary>
+    /// 基準ラックダメージ率
+    /// </summary>
     public int baseLuckDamageRate { get; set; }
+
+    /// <summary>
+    /// 基準神聖ダメージ率
+    /// </summary>
     public int baseHolyDamageRate { get; set; }
+
+    /// <summary>
+    /// 基準エネルギー上昇率
+    /// </summary>
     public int baseEnergyUpRate { get; set; }
+
+    /// <summary>
+    /// 基準被回復率
+    /// </summary>
     public int baseHealedRate { get; set; }
+
+    /// <summary>
+    /// 基準攻撃精度
+    /// </summary>
     public int baseAttackAccuracy { get; set; }
+
+    /// <summary>
+    /// 基準アーマー
+    /// </summary>
     public int baseArmor { get; set; }
+
+    /// <summary>
+    /// 基準アーマーブレイク率
+    /// </summary>
     public int baseArmorBreakRate { get; set; }
+
+    /// <summary>
+    /// 基準与回復率
+    /// </summary>
     public int baseHealingRate { get; set; }
-    
+
     /// <summary>
     /// 最大のエネルギー
     /// </summary>
