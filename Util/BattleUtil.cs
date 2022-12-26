@@ -19,6 +19,7 @@ public static class BattleUtil
             maxEnergy = ConstManager.Battle.MAX_ENERGY_VALUE,
             currentEnergy = ConstManager.Battle.INITIAL_ENERGY_VALUE,
             battleConditionList = new List<BattleConditionInfo>(),
+            passiveSkillExecuteCountList = new List<int>,
             isActed = false,
             index = new BattleMonsterIndex() { isPlayer = isPlayer, index = index},
             monsterId = monster.id,

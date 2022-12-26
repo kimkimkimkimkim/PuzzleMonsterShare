@@ -60,6 +60,12 @@ public class BattleLogInfo
     /// アクションタイプ
     /// </summary>
     public BattleActionType actionType { get; set; }
+
+    /// <summary>
+    /// アクションタイプに対応したスキル効果インデックス
+    /// 例)パッシブスキルのインデックス2の効果が発動したら2になる
+    /// </summary>
+    public int skillEffectIndex { get; set; }
     
     /// <summary>
     /// Wave毎の敵バトルモンスターリスト

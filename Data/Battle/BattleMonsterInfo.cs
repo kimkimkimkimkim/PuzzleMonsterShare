@@ -166,6 +166,12 @@ public class BattleMonsterInfo
     /// パッシブスキル発動回数
     /// </summary>
     public int passiveSkillExecuteCount { get; set; }
+
+    /// <summary>
+    /// パッシブスキル発動回数リスト
+    /// passiveSkillEffectListのIndexに対応して発動回数を格納する
+    /// </summary>
+    public List<int> passiveSkillExecuteCountList { get; set; }
     
     /// <summary>
     /// バトル中の合計与ダメージ量
