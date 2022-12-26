@@ -46,6 +46,26 @@ public class BattleMonsterInfo
     /// 基準回復力
     /// </summary>
     public int baseHeal{ get; set; }
+
+    public int baseSheild { get; set; }
+
+    public int baseUltimateSkillDamageRate { get; set; }
+
+    public int baseBlockRate { get; set; }
+
+    public int baseCriticalRate { get; set; }
+    public int baseCriticalDamage { get; set; }
+    public int baseBuffResistRate { get; set; }
+    public int baseDebuffResistRate { get; set; }
+    public int baseDamageResistRate { get; set; }
+    public int baseLuckDamageRate { get; set; }
+    public int baseHolyDamageRate { get; set; }
+    public int baseEnergyUpRate { get; set; }
+    public int baseHealedRate { get; set; }
+    public int baseAttackAccuracy { get; set; }
+    public int baseArmor { get; set; }
+    public int baseArmorBreakRate { get; set; }
+    public int baseHealingRate { get; set; }
     
     /// <summary>
     /// 最大のエネルギー

@@ -930,6 +930,7 @@ namespace PM
                 AttackAccuracy = 18,
                 Armor = 19,
                 ArmorBreakRate = 20,
+                HealingRate = 21,
             }
 
             /// <summary>
