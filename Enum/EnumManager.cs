@@ -139,6 +139,11 @@ namespace PM
                 TakeRevive,
 
                 /// <summary>
+                /// ステータス変化ログ
+                /// </summary>
+                TakeStatusChange,
+
+                /// <summary>
                 /// 死亡ログ
                 /// </summary>
                 Die,
@@ -152,6 +157,16 @@ namespace PM
                 /// アクション終了ログ
                 /// </summary>
                 EndAction,
+
+                /// <summary>
+                /// ターン終了ログ
+                /// </summary>
+                EndTurn,
+
+                /// <summary>
+                /// ウェーブ終了ログ
+                /// </summary>
+                EndWave,
 
                 /// <summary>
                 /// バトル結果ログ
