@@ -83,11 +83,6 @@ public class SkillEffectMI
     public int durationTurnNum { get; set; }
 
     /// <summary>
-    /// 解除する状態異常IDリスト
-    /// </summary>
-    public List<long> removeBattleConditionIdList { get; set; }
-
-    /// <summary>
     /// 解除する状態異常の個数
     /// 0: すべて
     /// </summary>

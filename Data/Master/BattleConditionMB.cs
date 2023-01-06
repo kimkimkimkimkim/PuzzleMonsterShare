@@ -27,21 +27,6 @@ public class BattleConditionMB : MasterBookBase
     /// バフタイプ
     /// </summary>
     public BuffType buffType { get; set; }
-    
-    /// <summary>
-    /// 状態異常効果実行者に対する発動条件タイプ
-    /// </summary>
-    public ActivateConditionType activateConditionType { get; set; }
-
-    /// <summary>
-    /// 状態異常効果実行者に対する発動条件値
-    /// </summary>
-    public int activateConditionValue { get; set; }
-
-    /// <summary>
-    /// 状態異常効果発動タイミングタイプ
-    /// </summary>
-    public SkillTriggerType triggerType { get; set; }
 
     /// <summary>
     /// 状態異常効果発動時に解除されるか否か
@@ -67,9 +52,9 @@ public class BattleConditionMB : MasterBookBase
     /// 対象の属性（属性特攻用）
     /// </summary>
     public MonsterAttribute targetMonsterAttribute { get; set; }
-    
+
     /// <summary>
-    /// スキルタイプ（アクション用）
+    /// スキル効果（アクション用）
     /// </summary>
-    public SkillType skillType { get; set; }
+    public BattleConditionSkillEfectMI skillEffect { get; set; }
 }
