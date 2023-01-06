@@ -109,6 +109,11 @@ namespace PM
                 ActionFailed,
 
                 /// <summary>
+                /// 発動確率によるスキル効果未発動ログ
+                /// </summary>
+                SkillEffectFailedOfProbabilityMiss,
+
+                /// <summary>
                 /// スキル効果発動ログ
                 /// </summary>
                 StartSkillEffect,
