@@ -94,6 +94,16 @@ namespace PM
                 MoveTurn,
 
                 /// <summary>
+                /// ターンアクション開始ログ
+                /// </summary>
+                StartTurnAction,
+
+                /// <summary>
+                /// ターンアクション終了ログ
+                /// </summary>
+                EndTurnAction,
+
+                /// <summary>
                 /// アクション開始ログ
                 /// </summary>
                 StartAction,
@@ -770,6 +780,21 @@ namespace PM
                 /// 自身が指定回数ブロックした時
                 /// </summary>
                 OnMeBlockNTimes = 41,
+
+                /// <summary>
+                /// 自身のターンアクション開始時
+                /// </summary>
+                OnMeTurnActionStart = 42,
+
+                /// <summary>
+                /// 自身のターンアクション終了時
+                /// </summary>
+                OnMeTurnActionEnd = 43,
+
+                /// <summary>
+                /// 自身に当該状態異常が付与されたときと自身のターンアクション終了時(継続ダメージ系の状態異常用)
+                /// </summary>
+                OnTargetBattleConditionAddedAndMeTurnActionEnd = 44,
             }
 
             /// <summary>
@@ -836,6 +861,11 @@ namespace PM
                 /// エネルギーが0ではない時
                 /// </summary>
                 EnableEnergyDown = 7,
+
+                /// <summary>
+                /// 当該状態異常が特定個数付与されている時(アクション状態異常用)
+                /// </summary>
+                HaveMyselfBattleConditionNum = 8,
             }
 
             /// <summary>
