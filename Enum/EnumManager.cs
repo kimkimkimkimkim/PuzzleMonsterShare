@@ -978,9 +978,10 @@ namespace PM
                 EnergyUpRate = 16,
                 HealedRate = 17,
                 AttackAccuracy = 18,
-                Armor = 19,
-                ArmorBreakRate = 20,
+                Armor = 19, // 未使用
+                ArmorBreakRate = 20, // 未使用
                 HealingRate = 21,
+                DefensePenetratingRate = 22,
             }
 
             /// <summary>
@@ -1589,7 +1590,54 @@ namespace PM
                 Yellow = 4,
                 Purple = 5,
             }
-            
+
+            public static class MonsterAttributeExtends
+            {
+                /// <summary>
+                /// selfがtargetに対して有利か否か
+                /// </summary>
+                public static bool IsAdvantageous(this MonsterAttribute self, MonsterAttribute target)
+                {
+                    switch (self)
+                    {
+                        case MonsterAttribute.Red:
+                            return target == MonsterAttribute.Green;
+                        case MonsterAttribute.Blue:
+                            return target == MonsterAttribute.Red;
+                        case MonsterAttribute.Green:
+                            return target == MonsterAttribute.Blue;
+                        case MonsterAttribute.Yellow:
+                            return target == MonsterAttribute.Purple;
+                        case MonsterAttribute.Purple:
+                            return target == MonsterAttribute.Yellow;
+                        default:
+                            return false;
+                    }
+                }
+
+                /// <summary>
+                /// selfがtargetに対して不利か否か
+                /// </summary>
+                public static bool IsDisadvantage(this MonsterAttribute self, MonsterAttribute target)
+                {
+                    switch (self)
+                    {
+                        case MonsterAttribute.Red:
+                            return target == MonsterAttribute.Blue;
+                        case MonsterAttribute.Blue:
+                            return target == MonsterAttribute.Green;
+                        case MonsterAttribute.Green:
+                            return target == MonsterAttribute.Red;
+                        case MonsterAttribute.Yellow:
+                            return target == MonsterAttribute.Purple;
+                        case MonsterAttribute.Purple:
+                            return target == MonsterAttribute.Yellow;
+                        default:
+                            return false;
+                    }
+                }
+            }
+
             /// <summary>
             /// レアリティ
             /// </summary>

@@ -128,6 +128,11 @@ public class BattleMonsterInfo
     public int baseHealingRate { get; set; }
 
     /// <summary>
+    /// 基準防御貫通率
+    /// </summary>
+    public int baseDefensePenetratingRate { get; set; }
+
+    /// <summary>
     /// 最大のエネルギー
     /// </summary>
     public int maxEnergy{ get; set; }
