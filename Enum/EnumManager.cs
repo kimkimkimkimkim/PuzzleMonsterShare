@@ -982,6 +982,7 @@ namespace PM
                 ArmorBreakRate = 20, // 未使用
                 HealingRate = 21,
                 DefensePenetratingRate = 22,
+                CurrentHp = 23,
             }
 
             /// <summary>
