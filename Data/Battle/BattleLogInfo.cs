@@ -57,6 +57,12 @@ public class BattleLogInfo
     public long skillFxId { get; set; }
 
     /// <summary>
+    /// スキルGuid
+    /// スキルの個別ID(スキルエフェクトではない)
+    /// </summary>
+    public string skillGuid { get; set; }
+
+    /// <summary>
     /// アクションタイプ
     /// </summary>
     public BattleActionType actionType { get; set; }

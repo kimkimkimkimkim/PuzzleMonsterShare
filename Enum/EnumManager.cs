@@ -952,6 +952,11 @@ namespace PM
                 /// 状態異常効果
                 /// </summary>
                 BattleCondition,
+
+                /// <summary>
+                /// 状態異常ターン進行
+                /// </summary>
+                ProgressBattleConditionTurn,
             }
 
             /// <summary>
