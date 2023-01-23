@@ -144,10 +144,15 @@ namespace PM
                 TakeBattleConditionAdd,
 
                 /// <summary>
-                /// 状態異常解除ログ
+                /// 状態異常解除前ログ
                 /// </summary>
-                TakeBattleConditionRemove,
-                
+                TakeBattleConditionRemoveBefore,
+
+                /// <summary>
+                /// 状態異常解除後ログ
+                /// </summary>
+                TakeBattleConditionRemoveAfter,
+
                 /// <summary>
                 /// 蘇生ログ
                 /// </summary>

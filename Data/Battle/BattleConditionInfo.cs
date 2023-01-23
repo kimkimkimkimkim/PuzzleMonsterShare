@@ -1,12 +1,17 @@
 public class BattleConditionInfo
 {
     /// <summary>
+    /// Guid
+    /// </summary>
+    public string guid { get; set; }
+
+    /// <summary>
     /// 状態異常マスタ
     /// </summary>
     public BattleConditionMB battleCondition { get; set; }
 
     /// <summary>
-    /// 状態異常効果
+    /// 当該状態異常を付与したスキルのスキル効果
     /// </summary>
     public SkillEffectMI skillEffect { get; set; }
 

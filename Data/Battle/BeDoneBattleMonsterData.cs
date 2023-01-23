@@ -1,4 +1,5 @@
-﻿/// <summary>
+﻿using System.Collections.Generic;
+/// <summary>
 /// スキル対象となったモンスターが何をされたのかを表す
 /// </summary>
 public class BeDoneBattleMonsterData
@@ -27,4 +28,9 @@ public class BeDoneBattleMonsterData
     /// ブロックしたか否か
     /// </summary>
     public bool isBlocked { get; set; }
+
+    /// <summary>
+    /// 状態異常情報リスト
+    /// </summary>
+    public List<BattleConditionInfo> battleConditionList { get; set; }
 }
