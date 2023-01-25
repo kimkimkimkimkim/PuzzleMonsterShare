@@ -15,6 +15,11 @@ public class BeDoneBattleMonsterData
     public int hpChanges { get; set; }
 
     /// <summary>
+    /// エネルギーの変化量
+    /// </summary>
+    public int energyChanges { get; set; }
+
+    /// <summary>
     /// 失敗したか否か
     /// </summary>
     public bool isMissed { get; set; }

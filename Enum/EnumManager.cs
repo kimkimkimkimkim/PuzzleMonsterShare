@@ -164,6 +164,16 @@ namespace PM
                 TakeStatusChange,
 
                 /// <summary>
+                /// エネルギー上昇ログ
+                /// </summary>
+                EnergyUp,
+
+                /// <summary>
+                /// エネルギー減少ログ
+                /// </summary>
+                EnergyDown,
+
+                /// <summary>
                 /// 死亡ログ
                 /// </summary>
                 Die,
