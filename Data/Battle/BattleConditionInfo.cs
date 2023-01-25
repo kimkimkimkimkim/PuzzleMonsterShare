@@ -6,6 +6,11 @@ public class BattleConditionInfo
     public string guid { get; set; }
 
     /// <summary>
+    /// 付与者のバトルモンスターインデックス
+    /// </summary>
+    public BattleMonsterIndex grantorBattleMonsterIndex { get; set; }
+
+    /// <summary>
     /// 状態異常マスタ
     /// </summary>
     public BattleConditionMB battleCondition { get; set; }

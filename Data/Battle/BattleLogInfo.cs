@@ -72,6 +72,12 @@ public class BattleLogInfo
     /// 例)パッシブスキルのインデックス2の効果が発動したら2になる
     /// </summary>
     public int skillEffectIndex { get; set; }
+
+    /// <summary>
+    /// 状態異常情報
+    /// アクションタイプが状態異常の時の効果発動状態異常情報
+    /// </summary>
+    public BattleConditionInfo battleCondition { get; set; }
     
     /// <summary>
     /// Wave毎の敵バトルモンスターリスト

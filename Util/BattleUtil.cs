@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public static class BattleUtil
 {
-    public static BattleMonsterInfo GetBattleMonster(MonsterMB monster, int level, bool isPlayer, int index){
+    public static BattleMonsterInfo GetBattleMonster(MonsterMB monster, int level, bool isPlayer, int index, int waveCount = 0){
         var status = MonsterUtil.GetMonsterStatus(monster, level);
 
         var battleMonster = new BattleMonsterInfo()
@@ -21,7 +21,7 @@ public static class BattleUtil
             battleConditionList = new List<BattleConditionInfo>(),
             passiveSkillExecuteCountList = new List<int>(),
             isActed = false,
-            index = new BattleMonsterIndex() { isPlayer = isPlayer, index = index},
+            index = new BattleMonsterIndex() { isPlayer = isPlayer, index = index, waveCount = waveCount},
             monsterId = monster.id,
         };
         return battleMonster;

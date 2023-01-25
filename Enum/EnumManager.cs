@@ -989,7 +989,7 @@ namespace PM
                 UltimateSkillDamageRate = 7,
                 BlockRate = 8,
                 CriticalRate = 9,
-                CriticalDamage = 10,
+                CriticalDamageRate = 10,
                 BuffResistRate = 11,
                 DebuffResistRate = 12,
                 DamageResistRate = 13,
@@ -997,7 +997,7 @@ namespace PM
                 HolyDamageRate = 15,
                 EnergyUpRate = 16,
                 HealedRate = 17,
-                AttackAccuracy = 18,
+                AttackAccuracyRate = 18,
                 Armor = 19, // 未使用
                 ArmorBreakRate = 20, // 未使用
                 HealingRate = 21,
