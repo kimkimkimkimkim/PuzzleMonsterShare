@@ -939,6 +939,12 @@ namespace PM
                 /// ダメージ
                 /// </summary>
                 Damage = 9,
+
+                /// <summary>
+                /// 様々な要因を無視したダメージ
+                /// 燃焼ダメージなど
+                /// </summary>
+                WithoutFactorDamage = 10,
             }
 
             /// <summary>
