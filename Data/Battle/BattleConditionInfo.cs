@@ -9,11 +9,11 @@ public class BattleConditionInfo
     /// 付与者のバトルモンスターインデックス
     /// </summary>
     public BattleMonsterIndex grantorBattleMonsterIndex { get; set; }
-
+    
     /// <summary>
-    /// 状態異常マスタ
+    /// 状態異常ID
     /// </summary>
-    public BattleConditionMB battleCondition { get; set; }
+    public long battleConditionId { get; set; }
 
     /// <summary>
     /// 当該状態異常を付与したスキルのスキル効果
