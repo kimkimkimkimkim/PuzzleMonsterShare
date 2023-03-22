@@ -1,5 +1,4 @@
-public class BattleConditionInfo
-{
+public class BattleConditionInfo {
     /// <summary>
     /// Guid
     /// </summary>
@@ -9,7 +8,7 @@ public class BattleConditionInfo
     /// 付与者のバトルモンスターインデックス
     /// </summary>
     public BattleMonsterIndex grantorBattleMonsterIndex { get; set; }
-    
+
     /// <summary>
     /// 状態異常ID
     /// </summary>
@@ -18,7 +17,12 @@ public class BattleConditionInfo
     /// <summary>
     /// 当該状態異常を付与したスキルのスキル効果
     /// </summary>
-    public SkillEffectMI skillEffect { get; set; }
+    public SkillEffectMI grantorSkillEffect { get; set; }
+
+    /// <summary>
+    /// アクション系状態異常のスキル効果
+    /// </summary>
+    public BattleConditionSkillEfectMI battleConditionSkillEffect { get; set; }
 
     /// <summary>
     /// 残りターン数
@@ -35,7 +39,7 @@ public class BattleConditionInfo
     /// シールド耐久値
     /// </summary>
     public int shieldValue { get; set; }
-    
+
     /// <summary>
     /// 順序
     /// </summary>
