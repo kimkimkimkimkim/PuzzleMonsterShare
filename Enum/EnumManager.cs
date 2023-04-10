@@ -67,7 +67,7 @@ namespace PM
                 Free,
                 Normal,
             }
-            
+
             /// <summary>
             /// ログタイプ
             /// </summary>
@@ -107,12 +107,12 @@ namespace PM
                 /// アクション開始ログ
                 /// </summary>
                 StartAction,
-                
+
                 /// <summary>
                 /// アクション開始アニメーションログ
                 /// </summary>
                 StartActionAnimation,
-                
+
                 /// <summary>
                 /// アクション失敗ログ
                 /// </summary>
@@ -132,7 +132,7 @@ namespace PM
                 /// ダメージログ
                 /// </summary>
                 TakeDamage,
-                
+
                 /// <summary>
                 /// 回復ログ
                 /// </summary>
@@ -177,7 +177,7 @@ namespace PM
                 /// 死亡ログ
                 /// </summary>
                 Die,
-                
+
                 /// <summary>
                 /// 状態異常ターン進行ログ
                 /// </summary>
@@ -203,7 +203,7 @@ namespace PM
                 /// </summary>
                 Result,
             }
-            
+
             /// <summary>
             /// 状態異常タイプ
             /// </summary>
@@ -260,12 +260,12 @@ namespace PM
                 /// 属性特攻
                 /// </summary>
                 MonsterAttributeKiller = 10,
-                
+
                 /// <summary>
                 /// 状態異常耐性
                 /// </summary>
                 BattleConditionResist = 11,
-                
+
                 /// <summary>
                 /// 指定バフタイプの耐性
                 /// </summary>
@@ -1014,7 +1014,7 @@ namespace PM
             /// <summary>
             /// スキルの発動回数制限タイプ
             /// </summary>
-            public enum SkillExecuteNumLimitType 
+            public enum SkillExecuteNumLimitType
             {
                 None = 0,
 
@@ -1163,7 +1163,8 @@ namespace PM
             /// <summary>
             /// ロッカブルのロックタイプ
             /// </summary>
-            public enum LockType {
+            public enum LockType
+            {
                 None = 0,
 
                 /// <summary>
@@ -1180,7 +1181,8 @@ namespace PM
             /// <summary>
             /// プロパティパネルタイプ
             /// </summary>
-            public enum PropertyPanelType {
+            public enum PropertyPanelType
+            {
                 /// <summary>
                 /// オーブ
                 /// </summary>
@@ -1273,11 +1275,14 @@ namespace PM
             {
                 public static string Name(this VirtualCurrencyType type)
                 {
-                    switch (type) {
+                    switch (type)
+                    {
                         case VirtualCurrencyType.OB:
                             return "オーブ";
+
                         case VirtualCurrencyType.CN:
                             return "コイン";
+
                         default:
                             return "";
                     }
@@ -1525,11 +1530,14 @@ namespace PM
                 /// </summary>
                 public static int Num(this GachaExecuteType type)
                 {
-                    switch (type) {
+                    switch (type)
+                    {
                         case GachaExecuteType.One:
                             return 1;
+
                         case GachaExecuteType.Ten:
                             return 10;
+
                         default:
                             return 1;
                     }
@@ -1629,14 +1637,19 @@ namespace PM
                     {
                         case MonsterAttribute.Red:
                             return target == MonsterAttribute.Green;
+
                         case MonsterAttribute.Blue:
                             return target == MonsterAttribute.Red;
+
                         case MonsterAttribute.Green:
                             return target == MonsterAttribute.Blue;
+
                         case MonsterAttribute.Yellow:
                             return target == MonsterAttribute.Purple;
+
                         case MonsterAttribute.Purple:
                             return target == MonsterAttribute.Yellow;
+
                         default:
                             return false;
                     }
@@ -1651,14 +1664,19 @@ namespace PM
                     {
                         case MonsterAttribute.Red:
                             return target == MonsterAttribute.Blue;
+
                         case MonsterAttribute.Blue:
                             return target == MonsterAttribute.Green;
+
                         case MonsterAttribute.Green:
                             return target == MonsterAttribute.Red;
+
                         case MonsterAttribute.Yellow:
                             return target == MonsterAttribute.Purple;
+
                         case MonsterAttribute.Purple:
                             return target == MonsterAttribute.Yellow;
+
                         default:
                             return false;
                     }
@@ -1676,8 +1694,19 @@ namespace PM
                 SR = 3,
                 SSR = 4,
             }
+
+            public enum MonsterState
+            {
+                None = 0,
+                Idle = 1,
+                Attack = 2,
+                Breathing = 3,
+                Run = 4,
+                Hit = 5,
+                Death = 6,
+            }
         }
-        
+
         namespace Condition
         {
             /// <summary>
@@ -1861,9 +1890,9 @@ namespace PM
             }
         }
 
-        namespace SortOrder 
+        namespace SortOrder
         {
-            public enum SortOrderTypeMonster 
+            public enum SortOrderTypeMonster
             {
                 Id = 0,
                 Attribute = 1,
@@ -1878,8 +1907,10 @@ namespace PM
             }
         }
 
-        namespace Loading {
-            public enum TitleLoadingPhase {
+        namespace Loading
+        {
+            public enum TitleLoadingPhase
+            {
                 Start = 0,
                 PlayFabLogin = 10,
                 FirstLogin = 24,
