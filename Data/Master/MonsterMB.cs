@@ -18,12 +18,12 @@ public class MonsterMB : MasterBookBase
     /// 属性
     /// </summary>
     public MonsterAttribute attribute { get; set; }
-    
+
     /// <summary>
     /// レアリティ
     /// </summary>
     public MonsterRarity rarity { get; set; }
-    
+
     /// <summary>
     /// ガチャモンスターか否か
     /// </summary>
@@ -98,4 +98,9 @@ public class MonsterMB : MasterBookBase
     /// レベル3アルティメットスキルID
     /// </summary>
     public long level3UltimateSkillId { get; set; }
+
+    /// <summary>
+    /// モンスタースプライトデータリスト
+    /// </summary>
+    public List<MonsterSpriteDataMI> monsterSpriteDataList { get; set; }
 }
