@@ -7,16 +7,6 @@ using UnityEngine;
 public class MonsterSpriteDataMI
 {
     /// <summary>
-    /// 対象スプライトの横方向サイズ
-    /// </summary>
-    public int width { get; set; }
-
-    /// <summary>
-    /// 対象スプライトの縦方向サイズ
-    /// </summary>
-    public int height { get; set; }
-
-    /// <summary>
     /// 対象スプライトのスプライトアトラス内でのx軸方向インデックス（左上基準）
     /// </summary>
     public int xIndex { get; set; }

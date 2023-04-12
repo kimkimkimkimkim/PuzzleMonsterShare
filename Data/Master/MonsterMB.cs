@@ -103,4 +103,14 @@ public class MonsterMB : MasterBookBase
     /// モンスタースプライトデータリスト
     /// </summary>
     public List<MonsterSpriteDataMI> monsterSpriteDataList { get; set; }
+
+    /// <summary>
+    /// スプライトの横方向サイズ
+    /// </summary>
+    public int spriteWidth { get; set; }
+
+    /// <summary>
+    /// スプライトの縦方向サイズ
+    /// </summary>
+    public int spriteHeight { get; set; }
 }
