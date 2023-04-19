@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using PM.Enum.Gacha;
 
 [Description("GachaBoxMB")]
-public class GachaBoxMB : MasterBookBase
-{
+public class GachaBoxMB : MasterBookBase {
     /// <summary>
     /// ガチャ筐体名
     /// </summary>
     public string title { get; set; }
+
+    /// <summary>
+    /// ガチャ開催タイプ
+    /// </summary>
+    public GachaOpenType openType { get; set; }
 
     /// <summary>
     /// 排出対象のガチャBOXタイプリスト
