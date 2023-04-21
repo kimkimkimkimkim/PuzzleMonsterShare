@@ -3,13 +3,7 @@ using System.ComponentModel;
 using PM.Enum.Gacha;
 
 [Description("GachaBoxDetailMB")]
-public class GachaBoxDetailMB : MasterBookBase
-{
-    /// <summary>
-    /// ガチャボックスID
-    /// </summary>
-    public long gachaBoxId { get; set; }
-
+public class GachaBoxDetailMB : MasterBookBase {
     /// <summary>
     /// タイトル
     /// </summary>

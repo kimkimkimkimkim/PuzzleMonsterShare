@@ -10,9 +10,20 @@ public class GachaBoxMB : MasterBookBase {
     public string title { get; set; }
 
     /// <summary>
+    /// 並び順
+    /// 値が小さいほど上位に表示される
+    /// </summary>
+    public int sortOrder { get; set; }
+
+    /// <summary>
     /// ガチャ開催タイプ
     /// </summary>
     public GachaOpenType openType { get; set; }
+
+    /// <summary>
+    /// ガチャBOX詳細IDリスト
+    /// </summary>
+    public List<long> gachaBoxDetailIdList { get; set; }
 
     /// <summary>
     /// 排出対象のガチャBOXタイプリスト
