@@ -1,5 +1,7 @@
 ﻿using PM.Enum.Monster;
-using UnityEngine;
+#if UNITY_EDITOR || UNITY_IOS || UNITY_ANDROID || UNITY_STANDALONE_OSX || UNITY_STANDALONE_WIN
+    using UnityEngine;
+#endif
 
 /// <summary>
 /// モンスタースプライト情報を扱うためのクラス
@@ -31,8 +33,10 @@ public class MonsterSpriteDataMI
     /// </summary>
     public int spriteAtlasIndex { get; set; }
 
+#if UNITY_EDITOR || UNITY_IOS || UNITY_ANDROID || UNITY_STANDALONE_OSX || UNITY_STANDALONE_WIN
     /// <summary>
     /// 対象スプライト
     /// </summary>
     public Sprite sprite { get; set; }
+#endif
 }

@@ -9,6 +9,11 @@ public class ExecuteGachaApiInterface
 public class ExecuteGachaApiRequest : PMApiRequestBase
 {
     /// <summary>
+    /// ガチャBOXID
+    /// </summary>
+    public long gachaBoxId;
+
+    /// <summary>
     /// ガチャBOX詳細ID
     /// </summary>
     public long gachaBoxDetailId;
