@@ -9,6 +9,7 @@ public class PMApiException : Exception
         if (info != null) this.message = info.GetString("message");
     }
 
+    public PMApiStatus status { get; set; }
     public PMErrorCode errorCode { get; set; }
     public string message { get; set; }
 }
