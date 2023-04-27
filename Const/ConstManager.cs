@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PM.Enum.Monster;
+using System;
 using System.Collections.Generic;
 
 public class ConstManager
@@ -57,12 +58,12 @@ public class ConstManager
         /// 最大レベル
         /// </summary>
         public static int MAX_LEVEL = 100;
-        
+
         /// <summary>
         /// 対象モンスターを1体消費した際のラック上昇量
         /// </summary>
         public static int LUCK_UP_NUM(bool isGachaMonster) => isGachaMonster ? 5 : 1;
-        
+
         /// <summary>
         /// 最大ラック
         /// </summary>
@@ -72,6 +73,11 @@ public class ConstManager
         /// 最大グレード
         /// </summary>
         public static int MAX_GRADE = 6;
+
+        /// <summary>
+        /// 最大レアリティ
+        /// </summary>
+        public static MonsterRarity MAX_RARITY = MonsterRarity.SSR;
     }
 
     public class Battle
@@ -125,6 +131,5 @@ public class ConstManager
         /// 後衛のインデックスリスト
         /// </summary>
         public static List<int> BACK_INDEX_LIST = new List<int>() { 2, 3, 4 };
-
     }
 }

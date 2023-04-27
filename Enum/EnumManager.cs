@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PM {
-    namespace Enum {
-        namespace Battle {
+namespace PM
+{
+    namespace Enum
+    {
+        namespace Battle
+        {
             /// <summary>
             /// ドロップタイプ
             /// </summary>
-            public enum DropType {
+            public enum DropType
+            {
                 /// <summary>
                 /// 通常
                 /// </summary>
@@ -22,7 +26,8 @@ namespace PM {
             /// <summary>
             /// コマンドの方向
             /// </summary>
-            public enum Direction {
+            public enum Direction
+            {
                 Up,
                 Down,
                 UpperRight,
@@ -34,7 +39,8 @@ namespace PM {
             /// <summary>
             /// 勝敗判定
             /// </summary>
-            public enum WinOrLose {
+            public enum WinOrLose
+            {
                 None,
                 Win,
                 Lose,
@@ -45,7 +51,8 @@ namespace PM {
             /// <summary>
             /// ピースの色
             /// </summary>
-            public enum PieceColor {
+            public enum PieceColor
+            {
                 TransParent,
                 LightBrown,
                 DarkBrown,
@@ -54,7 +61,8 @@ namespace PM {
             /// <summary>
             /// ピースのステータス
             /// </summary>
-            public enum PieceStatus {
+            public enum PieceStatus
+            {
                 None,
                 Free,
                 Normal,
@@ -63,7 +71,8 @@ namespace PM {
             /// <summary>
             /// ログタイプ
             /// </summary>
-            public enum BattleLogType {
+            public enum BattleLogType
+            {
                 /// <summary>
                 /// ログ確認用
                 /// </summary>
@@ -198,7 +207,8 @@ namespace PM {
             /// <summary>
             /// 状態異常タイプ
             /// </summary>
-            public enum BattleConditionType {
+            public enum BattleConditionType
+            {
                 None = 0,
 
                 /// <summary>
@@ -275,7 +285,8 @@ namespace PM {
             /// <summary>
             /// スキル対象タイプ
             /// </summary>
-            public enum SkillTargetType {
+            public enum SkillTargetType
+            {
                 None = 0,
 
                 /// <summary>
@@ -489,7 +500,8 @@ namespace PM {
             /// <summary>
             /// 効果量ターゲットタイプ
             /// </summary>
-            public enum ValueTargetType {
+            public enum ValueTargetType
+            {
                 None = 0,
 
                 /// <summary>
@@ -577,7 +589,8 @@ namespace PM {
             /// スキルトリガータイプ
             /// 時＋主語＋動作＋前後
             /// </summary>
-            public enum SkillTriggerType {
+            public enum SkillTriggerType
+            {
                 /// <summary>
                 /// 常時
                 /// </summary>
@@ -807,7 +820,8 @@ namespace PM {
             /// <summary>
             /// 状態異常のバフタイプ
             /// </summary>
-            public enum BuffType {
+            public enum BuffType
+            {
                 None = 0,
 
                 /// <summary>
@@ -826,7 +840,8 @@ namespace PM {
             /// above: より大きい, upper: 以上
             /// under: 未満, lower: 以下
             /// </summary>
-            public enum ActivateConditionType {
+            public enum ActivateConditionType
+            {
                 None = 0,
 
                 /// <summary>
@@ -876,7 +891,8 @@ namespace PM {
             /// <summary>
             /// スキルタイプ
             /// </summary>
-            public enum SkillType {
+            public enum SkillType
+            {
                 None = 0,
 
                 /// <summary>
@@ -934,7 +950,8 @@ namespace PM {
             /// <summary>
             /// アクションタイプ
             /// </summary>
-            public enum BattleActionType {
+            public enum BattleActionType
+            {
                 None,
 
                 /// <summary>
@@ -966,7 +983,8 @@ namespace PM {
             /// <summary>
             /// バトル用のモンスターステータスタイプ
             /// </summary>
-            public enum BattleMonsterStatusType {
+            public enum BattleMonsterStatusType
+            {
                 None = 0,
                 Hp = 1,
                 Attack = 2,
@@ -996,7 +1014,8 @@ namespace PM {
             /// <summary>
             /// スキルの発動回数制限タイプ
             /// </summary>
-            public enum SkillExecuteNumLimitType {
+            public enum SkillExecuteNumLimitType
+            {
                 None = 0,
 
                 /// <summary>
@@ -1031,7 +1050,8 @@ namespace PM {
             /// <summary>
             /// スキル演出の位置タイプ
             /// </summary>
-            public enum SkillFxPositionType {
+            public enum SkillFxPositionType
+            {
                 None = 0,
 
                 /// <summary>
@@ -1061,11 +1081,13 @@ namespace PM {
             }
         }
 
-        namespace UI {
+        namespace UI
+        {
             /// <summary>
             /// ダイアログのレスポンス種類
             /// </summary>
-            public enum DialogResponseType {
+            public enum DialogResponseType
+            {
                 None,
                 Yes,
                 No,
@@ -1074,7 +1096,8 @@ namespace PM {
             /// <summary>
             /// コモンダイアログタイプ
             /// </summary>
-            public enum CommonDialogType {
+            public enum CommonDialogType
+            {
                 NoAndYes,
                 YesOnly,
             }
@@ -1083,7 +1106,8 @@ namespace PM {
             /// フッタータイプ
             /// </summary>
             [Serializable]
-            public enum FooterType {
+            public enum FooterType
+            {
                 Home = 0,
                 Monster = 1,
                 Gacha = 2,
@@ -1093,7 +1117,8 @@ namespace PM {
             /// <summary>
             /// アイコン画像タイプ
             /// </summary>
-            public enum IconImageType {
+            public enum IconImageType
+            {
                 /// <summary>
                 /// 初期値
                 /// </summary>
@@ -1128,13 +1153,19 @@ namespace PM {
                 /// モンスターレアリティ
                 /// </summary>
                 MonsterRarity = 6,
+
+                /// <summary>
+                /// ガチャバナー
+                /// </summary>
+                GachaBanner = 7,
             }
 
             /// <summary>
             /// スタッカブルダイアログの優先度
             /// 低いものから表示される
             /// </summary>
-            public enum StackableDialogPriority {
+            public enum StackableDialogPriority
+            {
                 None = 0,
                 LoginBonus,
             }
@@ -1142,7 +1173,8 @@ namespace PM {
             /// <summary>
             /// ロッカブルのロックタイプ
             /// </summary>
-            public enum LockType {
+            public enum LockType
+            {
                 None = 0,
 
                 /// <summary>
@@ -1159,7 +1191,8 @@ namespace PM {
             /// <summary>
             /// プロパティパネルタイプ
             /// </summary>
-            public enum PropertyPanelType {
+            public enum PropertyPanelType
+            {
                 /// <summary>
                 /// オーブ
                 /// </summary>
@@ -1187,12 +1220,14 @@ namespace PM {
             }
         }
 
-        namespace Item {
+        namespace Item
+        {
             /// <summary>
             /// アイテムタイプ
             /// インベントリアイテムのクラスとも対応
             /// </summary>
-            public enum ItemType {
+            public enum ItemType
+            {
                 /// <summary>
                 /// 初期値
                 /// </summary>
@@ -1233,7 +1268,8 @@ namespace PM {
             /// 仮想通貨タイプ
             /// VirtualCurrencyMBのIDと対応
             /// </summary>
-            public enum VirtualCurrencyType {
+            public enum VirtualCurrencyType
+            {
                 /// <summary>
                 /// オーブ
                 /// </summary>
@@ -1245,9 +1281,12 @@ namespace PM {
                 CN = 2,
             }
 
-            public static class VirtualCurrencyTypeExtends {
-                public static string Name(this VirtualCurrencyType type) {
-                    switch (type) {
+            public static class VirtualCurrencyTypeExtends
+            {
+                public static string Name(this VirtualCurrencyType type)
+                {
+                    switch (type)
+                    {
                         case VirtualCurrencyType.OB:
                             return "オーブ";
 
@@ -1264,7 +1303,8 @@ namespace PM {
             /// 資産タイプ
             /// PropertyMBのIDと対応
             /// </summary>
-            public enum PropertyType {
+            public enum PropertyType
+            {
                 None = 0,
 
                 /// <summary>
@@ -1401,7 +1441,8 @@ namespace PM {
             /// <summary>
             /// アイコン色タイプ
             /// </summary>
-            public enum IconColorType {
+            public enum IconColorType
+            {
                 None = 0,
                 Red = 1,
                 Blue = 2,
@@ -1413,7 +1454,8 @@ namespace PM {
             /// <summary>
             /// テキスト色タイプ
             /// </summary>
-            public enum TextColorType {
+            public enum TextColorType
+            {
                 White = 0,
                 Focus = 1,
             }
@@ -1421,7 +1463,8 @@ namespace PM {
             /// <summary>
             /// テキストカラー拡張
             /// </summary>
-            public static class TextColorTypeExtends {
+            public static class TextColorTypeExtends
+            {
                 private static readonly Dictionary<TextColorType, string> ColorDictionary = new Dictionary<TextColorType, string>() {
                     { TextColorType.White, "#FFFFFF" },
                     { TextColorType.Focus, "#F6E19C" },
@@ -1430,17 +1473,20 @@ namespace PM {
                 /// <summary>
                 /// テキストカラーを取得
                 /// </summary>
-                public static string Color(this TextColorType textColorType) {
+                public static string Color(this TextColorType textColorType)
+                {
                     return ColorDictionary.ContainsKey(textColorType) ? ColorDictionary[textColorType] : "#FFFFFF";
                 }
             }
         }
 
-        namespace Gacha {
+        namespace Gacha
+        {
             /// <summary>
             /// ガチャのドロップテーブルタイプ
             /// </summary>
-            public enum DropTableType {
+            public enum DropTableType
+            {
                 /// <summary>
                 /// レア召喚（シングル）
                 /// </summary>
@@ -1451,7 +1497,8 @@ namespace PM {
             /// どのようなモンスターが排出するガチャなのかを示す値
             /// どのタイプのガチャから排出するモンスターなのかを示す値
             /// </summary>
-            public enum GachaBoxType {
+            public enum GachaBoxType
+            {
                 /// <summary>
                 /// 通常ガチャ
                 /// </summary>
@@ -1463,7 +1510,8 @@ namespace PM {
                 LimitedEndOfMonth = 2,
             }
 
-            public enum GachaOpenType {
+            public enum GachaOpenType
+            {
                 None = 0,
 
                 /// <summary>
@@ -1477,7 +1525,8 @@ namespace PM {
                 Condition = 2,
             }
 
-            public enum GachaExecuteType {
+            public enum GachaExecuteType
+            {
                 /// <summary>
                 /// 通常単発
                 /// </summary>
@@ -1507,12 +1556,15 @@ namespace PM {
             /// <summary>
             /// ガチャ実行タイプ拡張
             /// </summary>
-            public static class GachaExecuteTypeExtends {
+            public static class GachaExecuteTypeExtends
+            {
                 /// <summary>
                 /// ガチャ実行タイプごとのガチャ回数を取得
                 /// </summary>
-                public static int Num(this GachaExecuteType type) {
-                    switch (type) {
+                public static int Num(this GachaExecuteType type)
+                {
+                    switch (type)
+                    {
                         case GachaExecuteType.One:
                             return 1;
 
@@ -1526,12 +1578,14 @@ namespace PM {
             }
         }
 
-        namespace Data {
+        namespace Data
+        {
             /// <summary>
             /// ユーザーデータをPlayFabに保存する時のKey名
             /// UserDataInfoのパラメータ名と同じにする必要がある
             /// </summary>
-            public enum UserDataKey {
+            public enum UserDataKey
+            {
                 userMonsterList,
                 userPropertyList,
                 userMonsterPartyList,
@@ -1550,11 +1604,13 @@ namespace PM {
             }
         }
 
-        namespace Quest {
+        namespace Quest
+        {
             /// <summary>
             /// クエストタイプ
             /// </summary>
-            public enum QuestType {
+            public enum QuestType
+            {
                 /// <summary>
                 /// メイン
                 /// </summary>
@@ -1574,11 +1630,13 @@ namespace PM {
             }
         }
 
-        namespace Mission {
+        namespace Mission
+        {
             /// <summary>
             /// ミッションタイプ
             /// </summary>
-            public enum MissionType {
+            public enum MissionType
+            {
                 Main = 1,
                 Daily = 2,
                 Weekly = 3,
@@ -1587,11 +1645,13 @@ namespace PM {
             }
         }
 
-        namespace Monster {
+        namespace Monster
+        {
             /// <summary>
             /// 属性
             /// </summary>
-            public enum MonsterAttribute {
+            public enum MonsterAttribute
+            {
                 Red = 1,
                 Blue = 2,
                 Green = 3,
@@ -1599,12 +1659,15 @@ namespace PM {
                 Purple = 5,
             }
 
-            public static class MonsterAttributeExtends {
+            public static class MonsterAttributeExtends
+            {
                 /// <summary>
                 /// selfがtargetに対して有利か否か
                 /// </summary>
-                public static bool IsAdvantageous(this MonsterAttribute self, MonsterAttribute target) {
-                    switch (self) {
+                public static bool IsAdvantageous(this MonsterAttribute self, MonsterAttribute target)
+                {
+                    switch (self)
+                    {
                         case MonsterAttribute.Red:
                             return target == MonsterAttribute.Green;
 
@@ -1628,8 +1691,10 @@ namespace PM {
                 /// <summary>
                 /// selfがtargetに対して不利か否か
                 /// </summary>
-                public static bool IsDisadvantage(this MonsterAttribute self, MonsterAttribute target) {
-                    switch (self) {
+                public static bool IsDisadvantage(this MonsterAttribute self, MonsterAttribute target)
+                {
+                    switch (self)
+                    {
                         case MonsterAttribute.Red:
                             return target == MonsterAttribute.Blue;
 
@@ -1654,7 +1719,8 @@ namespace PM {
             /// <summary>
             /// レアリティ
             /// </summary>
-            public enum MonsterRarity {
+            public enum MonsterRarity
+            {
                 None = 0,
                 N = 1,
                 R = 2,
@@ -1662,7 +1728,8 @@ namespace PM {
                 SSR = 4,
             }
 
-            public enum MonsterState {
+            public enum MonsterState
+            {
                 None = 0,
                 Idle = 1,
                 Attack = 2,
@@ -1673,11 +1740,13 @@ namespace PM {
             }
         }
 
-        namespace Condition {
+        namespace Condition
+        {
             /// <summary>
             /// 条件タイプ
             /// </summary>
-            public enum ConditionType {
+            public enum ConditionType
+            {
                 /// <summary>
                 /// 指定したクエストIDをクリアしているか
                 /// </summary>
@@ -1793,11 +1862,13 @@ namespace PM {
             }
         }
 
-        namespace Notification {
+        namespace Notification
+        {
             /// <summary>
             /// 通知タイプ
             /// </summary>
-            public enum NotificationType {
+            public enum NotificationType
+            {
                 None,
 
                 /// <summary>
@@ -1807,24 +1878,29 @@ namespace PM {
             }
         }
 
-        namespace Sound {
+        namespace Sound
+        {
             /// <summary>
             /// BGMのファイル名
             /// Enum名はそのファイル名にする
             /// </summary>
-            public enum BGM {
+            public enum BGM
+            {
                 None,
                 Main,
             }
 
-            public enum SE {
+            public enum SE
+            {
                 None,
                 Click,
             }
         }
 
-        namespace LoginBonus {
-            public enum RepeatType {
+        namespace LoginBonus
+        {
+            public enum RepeatType
+            {
                 /// <summary>
                 /// 繰り返しなし
                 /// </summary>
@@ -1847,8 +1923,10 @@ namespace PM {
             }
         }
 
-        namespace SortOrder {
-            public enum SortOrderTypeMonster {
+        namespace SortOrder
+        {
+            public enum SortOrderTypeMonster
+            {
                 Id = 0,
                 Attribute = 1,
                 Rarity = 2,
@@ -1862,8 +1940,10 @@ namespace PM {
             }
         }
 
-        namespace Loading {
-            public enum TitleLoadingPhase {
+        namespace Loading
+        {
+            public enum TitleLoadingPhase
+            {
                 Start = 0,
                 PlayFabLogin = 10,
                 GetTitleData = 24,
@@ -1878,8 +1958,10 @@ namespace PM {
             }
         }
 
-        namespace Date {
-            public enum TermType {
+        namespace Date
+        {
+            public enum TermType
+            {
                 None = 0,
 
                 /// <summary>
