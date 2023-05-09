@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+
 /// <summary>
 /// スキル対象となったモンスターが何をされたのかを表す
 /// </summary>
@@ -11,6 +12,7 @@ public class BeDoneBattleMonsterData
 
     /// <summary>
     /// HPの変化量
+    /// ダメージはマイナス、回復はプラス
     /// </summary>
     public int hpChanges { get; set; }
 

@@ -10,27 +10,27 @@ public class BattleLogInfo
     /// バトルログタイプ
     /// </summary>
     public BattleLogType type { get; set; }
-    
+
     /// <summary>
     /// プレイヤーバトルモンスターリスト
     /// </summary>
     public List<BattleMonsterInfo> playerBattleMonsterList { get; set; }
-    
+
     /// <summary>
     /// 敵バトルモンスターリスト
     /// </summary>
     public List<BattleMonsterInfo> enemyBattleMonsterList { get; set; }
-    
+
     /// <summary>
     /// する側のモンスターのインデックス
     /// </summary>
     public BattleMonsterIndex doBattleMonsterIndex { get; set; }
-    
+
     /// <summary>
     /// 対象モンスターがされたことリスト
     /// </summary>
     public List<BeDoneBattleMonsterData> beDoneBattleMonsterDataList { get; set; }
-    
+
     /// <summary>
     /// ウェーブ数
     /// </summary>
@@ -78,7 +78,7 @@ public class BattleLogInfo
     /// アクションタイプが状態異常の時の効果発動状態異常情報
     /// </summary>
     public BattleConditionInfo battleCondition { get; set; }
-    
+
     /// <summary>
     /// Wave毎の敵バトルモンスターリスト
     /// </summary>

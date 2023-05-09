@@ -1,4 +1,5 @@
-public class BattleConditionInfo {
+public class BattleConditionInfo
+{
     /// <summary>
     /// Guid
     /// </summary>
@@ -21,6 +22,7 @@ public class BattleConditionInfo {
 
     /// <summary>
     /// アクション系状態異常のスキル効果
+    /// BattleConditionMBのSkillEffect
     /// </summary>
     public BattleConditionSkillEfectMI battleConditionSkillEffect { get; set; }
 

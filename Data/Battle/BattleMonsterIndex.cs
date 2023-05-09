@@ -1,9 +1,10 @@
-public class BattleMonsterIndex {
+public class BattleMonsterIndex
+{
     /// <summary>
     /// プレイヤーのモンスターか否か
     /// </summary>
     public bool isPlayer { get; set; }
-    
+
     /// <summary>
     /// インデックス
     /// </summary>
@@ -15,12 +16,14 @@ public class BattleMonsterIndex {
     /// </summary>
     public int waveCount { get; set; }
 
-    public BattleMonsterIndex() { }
+    public BattleMonsterIndex()
+    { }
 
     public BattleMonsterIndex(BattleMonsterIndex battleMonsterIndex)
     {
         this.isPlayer = battleMonsterIndex.isPlayer;
         this.index = battleMonsterIndex.index;
+        this.waveCount = battleMonsterIndex.waveCount;
     }
 
     public bool IsSame(BattleMonsterIndex battleMonsterIndex)

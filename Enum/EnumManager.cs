@@ -124,6 +124,11 @@ namespace PM
                 SkillEffectFailedOfProbabilityMiss,
 
                 /// <summary>
+                /// スキル対象決定ログ
+                /// </summary>
+                SetSkillTarget,
+
+                /// <summary>
                 /// スキル効果発動ログ
                 /// </summary>
                 StartSkillEffect,
@@ -495,6 +500,13 @@ namespace PM
                 /// リストの一番最初の要素の効果の対象
                 /// </summary>
                 FirstElementTarget = 41,
+
+                /// <summary>
+                /// すでに対象にしたモンスター
+                /// リストの直前の要素の効果の対象
+                /// その要素の効果が成功した時のみ
+                /// </summary>
+                JustBeforeElementTargetOnlySuccess = 42,
             }
 
             /// <summary>
@@ -623,6 +635,7 @@ namespace PM
 
                 /// <summary>
                 /// 自分がダメージを受けたとき
+                /// 状態異常ダメージも含む
                 /// </summary>
                 OnMeTakeDamageEnd = 6,
 
@@ -647,12 +660,12 @@ namespace PM
                 OnMeActionStart = 10,
 
                 /// <summary>
-                /// 自分がアクション処理される前
+                /// 自身以外から自分がアクション処理される前
                 /// </summary>
                 OnMeTakeActionBefore = 11,
 
                 /// <summary>
-                /// 自分がアクション処理された後
+                /// 自身以外から自分がアクション処理された後
                 /// </summary>
                 OnMeTakeActionAfter = 12,
 
@@ -667,12 +680,12 @@ namespace PM
                 OnWaveEnd = 14,
 
                 /// <summary>
-                /// 自身がダメージを与えたとき
+                /// 自身が自身以外にダメージを与えたとき
                 /// </summary>
                 OnMeExecuteDamageAfter = 15,
 
                 /// <summary>
-                /// 自身がクリティカルを発動した後
+                /// 自身が自身以外にクリティカルを発動した後
                 /// </summary>
                 OnMeExecuteCriticcalAfter = 16,
 
@@ -707,7 +720,7 @@ namespace PM
                 OnMeBeBlocked = 22,
 
                 /// <summary>
-                /// 自身が攻撃をブロックした時
+                /// 自身以外から自身が攻撃をブロックした時
                 /// </summary>
                 OnMeBlocked = 23,
 
@@ -717,7 +730,8 @@ namespace PM
                 OnMeExecuteNormalOrUltimateSkill = 24,
 
                 /// <summary>
-                /// 自身が通常攻撃またはウルトを受けたとき
+                /// 自身以外から自身が通常攻撃またはウルトを受けた時
+                /// actionTypeがNormal,UltimateでskillTypeがAttack,Damageの時
                 /// </summary>
                 OnMeBeExecutedNormalOrUltimateSkill = 25,
 
@@ -737,22 +751,24 @@ namespace PM
                 OnMeExecuteNormalSkill = 28,
 
                 /// <summary>
-                /// 自身が通常攻撃を受けたとき
+                /// 自身以外から自身が通常攻撃を受けたとき
                 /// </summary>
                 OnMeBeExecutedNormalSkill = 29,
 
                 /// <summary>
                 /// 自身が攻撃したとき
+                /// SkillType.Attackのみ
                 /// </summary>
                 OnMeAttacked = 30,
 
                 /// <summary>
-                /// 自身が攻撃されたとき
+                /// 自身以外から自身が攻撃されたとき
+                /// SkillType.Attackのみ
                 /// </summary>
                 OnMeBeAttacked = 31,
 
                 /// <summary>
-                /// 自身がクリティカルを受けたとき
+                /// 自身以外から自身がクリティカルを受けたとき
                 /// </summary>
                 OnMeBeAttackedCritical = 32,
 
@@ -767,7 +783,7 @@ namespace PM
                 OnMeAttackBattleCondition = 34,
 
                 /// <summary>
-                /// 自身が特定状態異常の相手に攻撃されたとき
+                /// 自身以外から自身が特定状態異常の相手に攻撃されたとき
                 /// </summary>
                 OnMeBeAttackedBattleCondition = 35,
 
@@ -782,7 +798,7 @@ namespace PM
                 OnMeAttackUpperStatus = 37,
 
                 /// <summary>
-                /// 自身が自身より特定ステータスの低い相手に攻撃されたとき
+                /// 自身以外からの自身より特定ステータスの低い相手に攻撃されたとき
                 /// </summary>
                 OnMeBeAttackedLowerStatus = 38,
 
@@ -793,6 +809,7 @@ namespace PM
 
                 /// <summary>
                 /// 味方がウルトを使ったとき
+                /// skillEffectIndex=0発動直後
                 /// </summary>
                 OnAllyUltimateSkill = 40,
 
@@ -815,6 +832,11 @@ namespace PM
                 /// 自身に当該状態異常が付与されたときと自身のターンアクション終了時(継続ダメージ系の状態異常用)
                 /// </summary>
                 OnTargetBattleConditionAddedAndMeTurnActionEnd = 44,
+
+                /// <summary>
+                /// 味方がウルトを使った後
+                /// </summary>
+                AfterAllyUltimateSkill = 45,
             }
 
             /// <summary>
