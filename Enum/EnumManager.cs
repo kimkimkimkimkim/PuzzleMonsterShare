@@ -970,6 +970,26 @@ namespace PM
             }
 
             /// <summary>
+            /// 状態異常の効果量タイプ
+            /// </summary>
+            public enum BattleConditionActionValueType
+            {
+                None = 0,
+
+                /// <summary>
+                /// 固定値
+                /// 付与時に計算し、その固定値を常に与える
+                /// </summary>
+                Fixed = 1,
+
+                /// <summary>
+                /// 変化値
+                /// 効果発動時に毎度計算し、その値を与える
+                /// </summary>
+                Changed = 2,
+            }
+
+            /// <summary>
             /// アクションタイプ
             /// </summary>
             public enum BattleActionType

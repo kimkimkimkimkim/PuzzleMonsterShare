@@ -54,6 +54,11 @@ public class BattleConditionMB : MasterBookBase
     public MonsterAttribute targetMonsterAttribute { get; set; }
 
     /// <summary>
+    /// 効果量タイプ（アクション用）
+    /// </summary>
+    public BattleConditionActionValueType actionValueType { get; set; }
+
+    /// <summary>
     /// スキル効果（アクション用）
     /// </summary>
     public BattleConditionSkillEfectMI skillEffect { get; set; }
