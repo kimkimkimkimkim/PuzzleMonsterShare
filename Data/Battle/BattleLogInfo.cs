@@ -83,4 +83,10 @@ public class BattleLogInfo
     /// Wave毎の敵バトルモンスターリスト
     /// </summary>
     public List<List<BattleMonsterInfo>> enemyBattleMonsterListByWave { get; set; }
+
+    /// <summary>
+    /// トリガースキル情報
+    /// トリガースキル発動時の対象トリガー情報
+    /// </summary>
+    public TriggerSkillData triggerSkillData { get; set; }
 }

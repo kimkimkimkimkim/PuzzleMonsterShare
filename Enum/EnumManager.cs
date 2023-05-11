@@ -134,6 +134,11 @@ namespace PM
                 StartSkillEffect,
 
                 /// <summary>
+                /// トリガースキルログ
+                /// </summary>
+                TriggerSkill,
+
+                /// <summary>
                 /// ダメージログ
                 /// </summary>
                 TakeDamage,
@@ -595,6 +600,12 @@ namespace PM
                 /// この要素より前のすべての要素で解除した状態異常の残りダメージ
                 /// </summary>
                 AllBeforeElementRemoveBattleConditionRemainDamage = 16,
+
+                /// <summary>
+                /// 直前に受けたダメージ
+                /// トリガーの対象スキルの被ダメージ量
+                /// </summary>
+                JustBeforeTakeDamage = 17,
             }
 
             /// <summary>

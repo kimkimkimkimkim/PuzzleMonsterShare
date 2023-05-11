@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 
-public class BattleMonsterInfo {
+public class BattleMonsterInfo
+{
     /// <summary>
     /// モンスターID
     /// </summary>
@@ -140,6 +141,11 @@ public class BattleMonsterInfo {
     /// 現在のエネルギー
     /// </summary>
     public int currentEnergy { get; set; }
+
+    /// <summary>
+    /// 基準状態異常リスト
+    /// </summary>
+    public List<BattleConditionInfo> baseBattleConditionList { get; set; }
 
     /// <summary>
     /// 状態異常リスト
