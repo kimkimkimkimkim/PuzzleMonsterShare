@@ -46,4 +46,9 @@ public class BattleConditionInfo
     /// 順序
     /// </summary>
     public int order { get; set; }
+
+    /// <summary>
+    /// 状態異常効果発動時に解除されるか否か
+    /// </summary>
+    public bool isRemovedWhenTriggered { get; set; }
 }

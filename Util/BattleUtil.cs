@@ -25,6 +25,7 @@ public static class BattleUtil
             isActed = false,
             index = new BattleMonsterIndex() { isPlayer = isPlayer, index = index, waveCount = waveCount },
             monsterId = monster.id,
+            monster = monster,
             normalSkill = normalSkill,
             ultimateSkill = ultimateSkill,
             passiveSkill = passiveSkill,
