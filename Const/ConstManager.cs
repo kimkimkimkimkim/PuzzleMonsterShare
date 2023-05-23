@@ -131,5 +131,25 @@ public class ConstManager
         /// 後衛のインデックスリスト
         /// </summary>
         public static List<int> BACK_INDEX_LIST = new List<int>() { 2, 3, 4 };
+
+        /// <summary>
+        /// 攻撃力の最大バフ値
+        /// </summary>
+        public static int MAX_ATTACK_BUFF_VALUE = 50;
+
+        /// <summary>
+        /// 攻撃力の最大デバフ値
+        /// </summary>
+        public static int MAX_ATTACK_DEBUFF_VALUE = -50;
+
+        /// <summary>
+        /// 防御力の最大バフ値
+        /// </summary>
+        public static int MAX_DEFENSE_BUFF_VALUE = 50;
+
+        /// <summary>
+        /// 防御力の最大デバフ値
+        /// </summary>
+        public static int MAX_DEFENSE_DEBUFF_VALUE = -50;
     }
 }
