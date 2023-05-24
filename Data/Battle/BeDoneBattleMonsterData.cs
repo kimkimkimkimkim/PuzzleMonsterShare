@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using PM.Enum.Monster;
+using System.Collections.Generic;
 
 /// <summary>
 /// スキル対象となったモンスターが何をされたのかを表す
 /// </summary>
-public class BeDoneBattleMonsterData
-{
+public class BeDoneBattleMonsterData {
     /// <summary>
     /// 対象のモンスターのインデックス
     /// </summary>
@@ -35,6 +35,11 @@ public class BeDoneBattleMonsterData
     /// ブロックしたか否か
     /// </summary>
     public bool isBlocked { get; set; }
+
+    /// <summary>
+    /// 属性相性タイプ
+    /// </summary>
+    public MonsterAttributeCompatibilityType monsterAttributeCompatibilityType { get; set; }
 
     /// <summary>
     /// 状態異常情報リスト

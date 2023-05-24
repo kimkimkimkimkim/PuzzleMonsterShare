@@ -1714,6 +1714,23 @@ namespace PM {
             }
 
             /// <summary>
+            /// 属性相性タイプ
+            /// </summary>
+            public enum MonsterAttributeCompatibilityType {
+                None = 0,
+
+                /// <summary>
+                /// 有利
+                /// </summary>
+                Advantage = 1,
+
+                /// <summary>
+                /// 不利
+                /// </summary>
+                Disadvantage = 2,
+            }
+
+            /// <summary>
             /// レアリティ
             /// </summary>
             public enum MonsterRarity {
