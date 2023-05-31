@@ -1971,6 +1971,37 @@ namespace PM
                 /// ログインボーナス
                 /// </summary>
                 LoginBonus,
+
+                /// <summary>
+                /// メッセージ
+                /// </summary>
+                Message,
+
+                /// <summary>
+                /// アイテム受け取り
+                /// </summary>
+                ItemReceive,
+            }
+        }
+
+        namespace News
+        {
+            /// <summary>
+            /// お知らせタイプ
+            /// </summary>
+            public enum NewsType
+            {
+                None,
+
+                /// <summary>
+                /// メッセージ
+                /// </summary>
+                Message,
+
+                /// <summary>
+                /// プレゼント付与
+                /// </summary>
+                Present,
             }
         }
 
