@@ -1982,6 +1982,27 @@ namespace PM
                 /// </summary>
                 ItemReceive,
             }
+
+            /// <summary>
+            /// 繰り返しタイプ
+            /// </summary>
+            public enum RepeatType
+            {
+                /// <summary>
+                /// 繰り返しなし
+                /// </summary>
+                None,
+
+                /// <summary>
+                /// ログインする度
+                /// </summary>
+                EveryLogIn,
+
+                /// <summary>
+                /// 1日1回
+                /// </summary>
+                OnceADay,
+            }
         }
 
         namespace News
