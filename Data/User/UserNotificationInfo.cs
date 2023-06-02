@@ -11,6 +11,11 @@ public class UserNotificationInfo : UserDataBase {
     public NotificationType notificationType { get; set; }
 
     /// <summary>
+    /// 通知イベントタイプ(オプション)
+    /// </summary>
+    public NotificationNoticeEventType notificationNoticeEventType { get; set; }
+
+    /// <summary>
     /// 通知値
     /// </summary>
     public long notificationValue { get; set; }
@@ -19,16 +24,6 @@ public class UserNotificationInfo : UserDataBase {
     /// メッセージ(オプション)
     /// </summary>
     public string message { get; set; }
-
-    /// <summary>
-    /// お知らせID(オプション)
-    /// </summary>
-    public long newsId { get; set; }
-
-    /// <summary>
-    /// アイテムリスト(オプション)
-    /// </summary>
-    public List<ItemMI> itemList { get; set; }
 
     /// <summary>
     /// 同一の通知であるかを判定する。

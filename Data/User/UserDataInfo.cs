@@ -5,8 +5,7 @@ using System.Collections.Generic;
 /// ユーザーデータ情報
 /// 新しくパラメータを追加した際はEnum.UserDataKeyの追加を忘れないように
 /// </summary>
-public class UserDataInfo
-{
+public class UserDataInfo {
     /// <summary>
     /// ユーザーモンスターパーティーリスト
     /// </summary>
@@ -55,7 +54,7 @@ public class UserDataInfo
     /// <summary>
     /// ユーザーログインボーナスリスト
     /// </summary>
-    public List<UserLoginBonusInfo> userLoginBonusList{ get; set; } = new List<UserLoginBonusInfo>();
+    public List<UserLoginBonusInfo> userLoginBonusList { get; set; } = new List<UserLoginBonusInfo>();
 
     /// <summary>
     /// ユーザーモンスターリスト
@@ -76,4 +75,9 @@ public class UserDataInfo
     /// ユーザーリワード広告リスト
     /// </summary>
     public List<UserRewardAdInfo> userRewardAdList { get; set; } = new List<UserRewardAdInfo>();
+
+    /// <summary>
+    /// ユーザーお知らせリスト
+    /// </summary>
+    public List<UserNewsInfo> userNewsList { get; set; } = new List<UserNewsInfo>();
 }
