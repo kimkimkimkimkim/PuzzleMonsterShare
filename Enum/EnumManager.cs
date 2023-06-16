@@ -1148,6 +1148,15 @@ namespace PM {
             }
 
             /// <summary>
+            /// ウインドウのレスポンス種類
+            /// </summary>
+            public enum WindowResponseType {
+                None,
+                Yes,
+                No,
+            }
+
+            /// <summary>
             /// コモンダイアログタイプ
             /// </summary>
             public enum CommonDialogType {
