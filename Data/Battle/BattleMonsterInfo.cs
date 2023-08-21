@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 
-public class BattleMonsterInfo
-{
+public class BattleMonsterInfo {
     /// <summary>
     /// モンスターID
     /// </summary>
@@ -33,9 +32,19 @@ public class BattleMonsterInfo
     public int baseAttack { get; set; }
 
     /// <summary>
+    /// 現在の攻撃力
+    /// </summary>
+    public int currentAttack { get; set; }
+
+    /// <summary>
     /// 基準防御力
     /// </summary>
     public int baseDefense { get; set; }
+
+    /// <summary>
+    /// 現在の防御力
+    /// </summary>
+    public int currentDefense { get; set; }
 
     /// <summary>
     /// 基準スピード
@@ -43,14 +52,29 @@ public class BattleMonsterInfo
     public int baseSpeed { get; set; }
 
     /// <summary>
+    /// 現在のスピード
+    /// </summary>
+    public int currentSpeed { get; set; }
+
+    /// <summary>
     /// 基準回復力
     /// </summary>
     public int baseHeal { get; set; }
 
     /// <summary>
+    /// 現在の回復力
+    /// </summary>
+    public int currentHeal { get; set; }
+
+    /// <summary>
     /// 基準シールド
     /// </summary>
-    public int baseSheild { get; set; }
+    public int baseShield { get; set; }
+
+    /// <summary>
+    /// 現在のシールド
+    /// </summary>
+    public int currentShield { get; set; }
 
     /// <summary>
     /// 基準スキルダメージ率
@@ -58,9 +82,19 @@ public class BattleMonsterInfo
     public int baseUltimateSkillDamageRate { get; set; }
 
     /// <summary>
+    /// 現在のスキルダメージ率
+    /// </summary>
+    public int currentUltimateSkillDamageRate { get; set; }
+
+    /// <summary>
     /// 基準ブロック率
     /// </summary>
     public int baseBlockRate { get; set; }
+
+    /// <summary>
+    /// 現在のブロック率
+    /// </summary>
+    public int currentBlockRate { get; set; }
 
     /// <summary>
     /// 基準クリティカル率
@@ -68,9 +102,19 @@ public class BattleMonsterInfo
     public int baseCriticalRate { get; set; }
 
     /// <summary>
+    /// 現在のクリティカル率
+    /// </summary>
+    public int currentCriticalRate { get; set; }
+
+    /// <summary>
     /// 基準クリティカルダメージ
     /// </summary>
     public int baseCriticalDamage { get; set; }
+
+    /// <summary>
+    /// 現在のクリティカルダメージ
+    /// </summary>
+    public int currentCriticalDamage { get; set; }
 
     /// <summary>
     /// 基準強化効果耐性
@@ -78,9 +122,19 @@ public class BattleMonsterInfo
     public int baseBuffResistRate { get; set; }
 
     /// <summary>
+    /// 現在の強化効果耐性
+    /// </summary>
+    public int currentBuffResistRate { get; set; }
+
+    /// <summary>
     /// 基準弱体効果耐性
     /// </summary>
     public int baseDebuffResistRate { get; set; }
+
+    /// <summary>
+    /// 現在の弱体効果耐性
+    /// </summary>
+    public int currentDebuffResistRate { get; set; }
 
     /// <summary>
     /// 基準ダメージ軽減率
@@ -88,9 +142,19 @@ public class BattleMonsterInfo
     public int baseDamageResistRate { get; set; }
 
     /// <summary>
+    /// 現在のダメージ軽減率
+    /// </summary>
+    public int currentDamageResistRate { get; set; }
+
+    /// <summary>
     /// 基準ラックダメージ率
     /// </summary>
     public int baseLuckDamageRate { get; set; }
+
+    /// <summary>
+    /// 現在のラックダメージ率
+    /// </summary>
+    public int currentLuckDamageRate { get; set; }
 
     /// <summary>
     /// 基準神聖ダメージ率
@@ -98,9 +162,19 @@ public class BattleMonsterInfo
     public int baseHolyDamageRate { get; set; }
 
     /// <summary>
+    /// 現在の神聖ダメージ率
+    /// </summary>
+    public int currentHolyDamageRate { get; set; }
+
+    /// <summary>
     /// 基準エネルギー上昇率
     /// </summary>
     public int baseEnergyUpRate { get; set; }
+
+    /// <summary>
+    /// 現在のエネルギー上昇率
+    /// </summary>
+    public int currentEnergyUpRate { get; set; }
 
     /// <summary>
     /// 基準被回復率
@@ -108,9 +182,19 @@ public class BattleMonsterInfo
     public int baseHealedRate { get; set; }
 
     /// <summary>
+    /// 現在の被回復率
+    /// </summary>
+    public int currentHealedRate { get; set; }
+
+    /// <summary>
     /// 基準攻撃精度
     /// </summary>
     public int baseAttackAccuracy { get; set; }
+
+    /// <summary>
+    /// 現在の攻撃精度
+    /// </summary>
+    public int currentAttackAccuracy { get; set; }
 
     /// <summary>
     /// 基準アーマー
@@ -118,9 +202,19 @@ public class BattleMonsterInfo
     public int baseArmor { get; set; }
 
     /// <summary>
+    /// 現在のアーマー
+    /// </summary>
+    public int currentArmor { get; set; }
+
+    /// <summary>
     /// 基準アーマーブレイク率
     /// </summary>
     public int baseArmorBreakRate { get; set; }
+
+    /// <summary>
+    /// 現在のアーマーブレイク率
+    /// </summary>
+    public int currentArmorBreakRate { get; set; }
 
     /// <summary>
     /// 基準与回復率
@@ -128,9 +222,19 @@ public class BattleMonsterInfo
     public int baseHealingRate { get; set; }
 
     /// <summary>
+    /// 現在の与回復率
+    /// </summary>
+    public int currentHealingRate { get; set; }
+
+    /// <summary>
     /// 基準防御貫通率
     /// </summary>
     public int baseDefensePenetratingRate { get; set; }
+
+    /// <summary>
+    /// 現在の防御貫通率
+    /// </summary>
+    public int currentDefensePenetratingRate { get; set; }
 
     /// <summary>
     /// 最大のエネルギー

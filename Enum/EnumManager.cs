@@ -1025,7 +1025,7 @@ namespace PM {
             /// </summary>
             public enum BattleMonsterStatusType {
                 None = 0,
-                Hp = 1,
+                Hp = 1, // 最大HP
                 Attack = 2,
                 Defense = 3,
                 Heal = 4,
